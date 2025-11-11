@@ -51,8 +51,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   settingsTheme.addEventListener("change", setTheme);
   clearButton.addEventListener("click", clearData);
   exportButton.addEventListener("click", exportData);
-  // importButton.addEventListener("click", importData);
-  importButton.addEventListener("click", handleImport);
+  importButton.addEventListener("click", importData);
   removeButtons.forEach((button) => {
     button.addEventListener("click", removeCustomItem);
   });
@@ -582,36 +581,4 @@ document.addEventListener("DOMContentLoaded", (event) => {
       successMessage.removeAttribute("hidden");
     }
   }
-
-async function handleImport() {
-    const fileInput = document.getElementById("import-db");
-    const selectedFile = fileInput.files[0] ?? undefined;
-
-    if (!selectedFile || selectedFile.type !== "application/json") {
-        // Call the old import for error handling
-        return importData();
-    }
-
-    try {
-        const raw = await selectedFile.text();
-        const data = JSON.parse(raw);
-        
-        // Check Hammergen format
-        const { isHammergenFormat, importHammergenData } = await import('./hammergen-converter.js');
-        
-        if (isHammergenFormat(data)) {
-            // Use new import for Hammergen
-            return await importHammergenData(fillFromStorage, setTheme);
-        } else {
-            // Use old import for native format
-            return importData();
-        }
-    } catch (e) {
-        console.error('Import error:', e);
-        // In case of error, use old import
-        return importData();
-    }
-}
-
 });
-

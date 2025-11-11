@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ru" dir="ltr">
+<html lang="es" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Лист персонажа Warhammer Fantasy Role Play</title>
+  <title>Hoja de Personaje de Warhammer Fantasy Role Play</title>
   <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -11,7 +11,7 @@
   <link rel="mask-icon" href="../safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#b7b7b7">
   <meta name="theme-color" content="#b7b7b7">
-  <meta property="og:title" content="Лист персонажа Warhammer Fantasy Role Play">
+  <meta property="og:title" content="Hoja de Personaje de Warhammer Fantasy Role Play">
   <meta property="og:description" content="An online tool to help you manage your Warhammer Fantasy Role Play game&apos;s character sheet">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://gooz.github.io/wfrp-sheet/android-chrome-192x192.png">
@@ -35,72 +35,72 @@
       <path d="M5 13C5.55228 13 6 12.5523 6 12C6 11.4477 5.55228 11 5 11C4.44772 11 4 11.4477 4 12C4 12.5523 4.44772 13 5 13Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
     </symbol>
   </svg>
-  <h1 class="sr-only">Лист персонажа</h1>
+  <h1 class="sr-only">Hoja de Personaje</h1>
   <form class="app" id="app-form" action="#" method="POST">
-    <button type="button" class="button-modal open-modal" id="open-modal" aria-label="Открыть настройки">
+    <button type="button" class="button-modal open-modal" id="open-modal" aria-label="Abrir ajustes">
       <svg fill="currentColor" viewBox="0 0 24 24">
         <path d="M4,13.743l-1,.579a1,1,0,0,0-.366,1.366l1.488,2.578a1,1,0,0,0,1.366.366L6.5,18.05a1.987,1.987,0,0,1,1.986,0l.02.011a1.989,1.989,0,0,1,1,1.724V21a1,1,0,0,0,1,1h3a1,1,0,0,0,1-1V19.782a1.985,1.985,0,0,1,.995-1.721l.021-.012a1.987,1.987,0,0,1,1.986,0l1.008.582a1,1,0,0,0,1.366-.366l1.488-2.578A1,1,0,0,0,21,14.322l-1-.579a1.994,1.994,0,0,1-1-1.733v-.021a1.991,1.991,0,0,1,1-1.732l1-.579a1,1,0,0,0,.366-1.366L19.876,5.734a1,1,0,0,0-1.366-.366L17.5,5.95a1.987,1.987,0,0,1-1.986,0L15.5,5.94a1.989,1.989,0,0,1-1-1.724V3a1,1,0,0,0-1-1h-3a1,1,0,0,0-1,1V4.294A1.856,1.856,0,0,1,8.57,5.9l-.153.088a1.855,1.855,0,0,1-1.853,0L5.49,5.368a1,1,0,0,0-1.366.366L2.636,8.312A1,1,0,0,0,3,9.678l1,.579A1.994,1.994,0,0,1,5,11.99v.021A1.991,1.991,0,0,1,4,13.743ZM12,9a3,3,0,1,1-3,3A3,3,0,0,1,12,9Z"/>
       </svg>
     </button>
     <div class="page first">
       <fieldset class="info simple">
-        <legend class="sr-only">Данные персонажа</legend>
+        <legend class="sr-only">Información Personal del Personaje</legend>
         <div class="name field">
-          <label id="name-label" for="name">Имя</label>
+          <label id="name-label" for="name">Nombre</label>
           <input type="text" id="name" name="name">
         </div>
         <div class="species field">
-          <label id="species-label" for="species">Раса</label>
+          <label id="species-label" for="species">Especie</label>
           <select id="species" name="species">
             <option value="">-</option>
-            <option value="human">Человек</option>
-            <option value="halfling">Полурослик</option>
-            <option value="dwarf">Гном</option>
-            <option value="high elf">Высший Эльф</option>
-            <option value="wood elf">Лесной Эльф</option>
-            <option value="ogre">Огр</option>
-            <option value="gnome">Карлик</option>
+            <option value="human">Humano</option>
+            <option value="halfling">Mediano</option>
+            <option value="dwarf">Enano</option>
+            <option value="high elf">Alto Elfo</option>
+            <option value="wood elf">Elfo Silvano</option>
+            <option value="ogre">Ogro</option>
+            <option value="gnome">Gnomo</option>
           </select>
         </div>
         <div class="class field">
-          <label id="class-label" for="class">Класс</label>
+          <label id="class-label" for="class">Clase</label>
           <input type="text" id="class" name="class">
         </div>
         <div class="career field">
-          <label id="career-label" for="career">Карьера</label>
+          <label id="career-label" for="career">Carrera</label>
           <input type="text" id="career" name="career">
         </div>
         <div class="career-tier field">
-          <label id="career-tier-label" for="career-tier">Ступень карьеры</label>
+          <label id="career-tier-label" for="career-tier">Nivel de Carrera</label>
           <input type="text" id="career-tier" name="career-tier">
         </div>
         <div class="career-path field">
-          <label id="career-path-label" for="career-path">Карьерный путь</label>
+          <label id="career-path-label" for="career-path">Itinerario de Carrera</label>
           <input type="text" id="career-path" name="career-path">
         </div>
         <div class="status field">
-          <label id="status-label" for="status">Статус</label>
+          <label id="status-label" for="status">Estatus</label>
           <input type="text" id="status" name="status">
         </div>
         <div class="age field">
-          <label id="age-label" for="age">Возраст</label>
+          <label id="age-label" for="age">Edad</label>
           <input type="text" id="age" name="age">
         </div>
         <div class="height field">
-          <label id="height-label" for="height">Рост</label>
+          <label id="height-label" for="height">Altura</label>
           <input type="text" id="height" name="height">
         </div>
         <div class="hair field">
-          <label id="hair-label" for="hair">Волосы</label>
+          <label id="hair-label" for="hair">Cabello</label>
           <input type="text" id="hair" name="hair">
         </div>
         <div class="eyes field">
-          <label id="eyes-label" for="eyes">Глаза</label>
+          <label id="eyes-label" for="eyes">Ojos</label>
           <input type="text" id="eyes" name="eyes">
         </div>
       </fieldset>
       <fieldset class="charac addition">
-        <legend id="charac-title">Характеристики</legend>
+        <legend id="charac-title">Características</legend>
         <table class="left-aligned" aria-labelledby="charac-title">
           <colgroup>
             <col>
@@ -120,137 +120,137 @@
             <th scope="col" id="charac-ws-label">
               <div class="hl-wrapper-checkbox hl-charac">
                 <input type="checkbox" name="ws-hl" id="ws-hl" class="sr-only highlight-toggle">
-                <label for="ws-hl" title="Подсветить характеристику">
+                <label for="ws-hl" title="Resaltar esta característica">
                   <svg>
                     <use href="#highlight-inactive"/>
                     <use href="#highlight-active"/>
                   </svg>
-                  <span class="sr-only">Подсветить характеристику</span>
+                  <span class="sr-only">Resaltar esta característica</span>
                 </label>
               </div>
-              <abbr title="Ближний бой">ББ</abbr>
+              <abbr title="Habilidad de Armas">HA</abbr>
             </th>
             <th scope="col" id="charac-bs-label">
               <div class="hl-wrapper-checkbox hl-charac">
                 <input type="checkbox" name="bs-hl" id="bs-hl" class="sr-only highlight-toggle">
-                <label for="bs-hl" title="Подсветить характеристику">
+                <label for="bs-hl" title="Resaltar esta característica">
                   <svg>
                     <use href="#highlight-inactive"/>
                     <use href="#highlight-active"/>
                   </svg>
-                  <span class="sr-only">Подсветить характеристику</span>
+                  <span class="sr-only">Resaltar esta característica</span>
                 </label>
               </div>
-              <abbr title="Дистанционный бой">ДБ</abbr>
+              <abbr title="Habilidad de Proyectiles">HP</abbr>
             </th>
             <th scope="col" id="charac-s-label">
               <div class="hl-wrapper-checkbox hl-charac">
                 <input type="checkbox" name="s-hl" id="s-hl" class="sr-only highlight-toggle">
-                <label for="s-hl" title="Подсветить характеристику">
+                <label for="s-hl" title="Resaltar esta característica">
                   <svg>
                     <use href="#highlight-inactive"/>
                     <use href="#highlight-active"/>
                   </svg>
-                  <span class="sr-only">Подсветить характеристику</span>
+                  <span class="sr-only">Resaltar esta característica</span>
                 </label>
               </div>
-              <abbr title="Сила">С</abbr>
+              <abbr title="Fuerza">F</abbr>
             </th>
             <th scope="col" id="charac-t-label">
               <div class="hl-wrapper-checkbox hl-charac">
                 <input type="checkbox" name="t-hl" id="t-hl" class="sr-only highlight-toggle">
-                <label for="t-hl" title="Подсветить характеристику">
+                <label for="t-hl" title="Resaltar esta característica">
                   <svg>
                     <use href="#highlight-inactive"/>
                     <use href="#highlight-active"/>
                   </svg>
-                  <span class="sr-only">Подсветить характеристику</span>
+                  <span class="sr-only">Resaltar esta característica</span>
                 </label>
               </div>
-              <abbr title="Выносливость">В</abbr>
+              <abbr title="Resistencia">R</abbr>
             </th>
             <th scope="col" id="charac-i-label">
               <div class="hl-wrapper-checkbox hl-charac">
                 <input type="checkbox" name="i-hl" id="i-hl" class="sr-only highlight-toggle">
-                <label for="i-hl" title="Подсветить характеристику">
+                <label for="i-hl" title="Resaltar esta característica">
                   <svg>
                     <use href="#highlight-inactive"/>
                     <use href="#highlight-active"/>
                   </svg>
-                  <span class="sr-only">Подсветить характеристику</span>
+                  <span class="sr-only">Resaltar esta característica</span>
                 </label>
               </div>
-              <abbr title="Инициатива">И</abbr>
+              <abbr title="Iniciativa">Ini</abbr>
             </th>
             <th scope="col" id="charac-ag-label">
               <div class="hl-wrapper-checkbox hl-charac">
                 <input type="checkbox" name="ag-hl" id="ag-hl" class="sr-only highlight-toggle">
-                <label for="ag-hl" title="Подсветить характеристику">
+                <label for="ag-hl" title="Resaltar esta característica">
                   <svg>
                     <use href="#highlight-inactive"/>
                     <use href="#highlight-active"/>
                   </svg>
-                  <span class="sr-only">Подсветить характеристику</span>
+                  <span class="sr-only">Resaltar esta característica</span>
                 </label>
               </div>
-              <abbr title="Проворство">Пр</abbr>
+              <abbr title="Agilidad">A</abbr>
             </th>
             <th scope="col" id="charac-dex-label">
               <div class="hl-wrapper-checkbox hl-charac">
                 <input type="checkbox" name="dex-hl" id="dex-hl" class="sr-only highlight-toggle">
-                <label for="dex-hl" title="Подсветить характеристику">
+                <label for="dex-hl" title="Resaltar esta característica">
                   <svg>
                     <use href="#highlight-inactive"/>
                     <use href="#highlight-active"/>
                   </svg>
-                  <span class="sr-only">Подсветить характеристику</span>
+                  <span class="sr-only">Resaltar esta característica</span>
                 </label>
               </div>
-              <abbr title="Ловкость">Л</abbr>
+              <abbr title="Destreza">De</abbr>
             </th>
             <th scope="col" id="charac-int-label">
               <div class="hl-wrapper-checkbox hl-charac">
                 <input type="checkbox" name="int-hl" id="int-hl" class="sr-only highlight-toggle">
-                <label for="int-hl" title="Подсветить характеристику">
+                <label for="int-hl" title="Resaltar esta característica">
                   <svg>
                     <use href="#highlight-inactive"/>
                     <use href="#highlight-active"/>
                   </svg>
-                  <span class="sr-only">Подсветить характеристику</span>
+                  <span class="sr-only">Resaltar esta característica</span>
                 </label>
               </div>
-              <abbr title="Интеллект">Инт</abbr>
+              <abbr title="Inteligencia">I</abbr>
             </th>
             <th scope="col" id="charac-wp-label">
               <div class="hl-wrapper-checkbox hl-charac">
                 <input type="checkbox" name="wp-hl" id="wp-hl" class="sr-only highlight-toggle">
-                <label for="wp-hl" title="Подсветить характеристику">
+                <label for="wp-hl" title="Resaltar esta característica">
                   <svg>
                     <use href="#highlight-inactive"/>
                     <use href="#highlight-active"/>
                   </svg>
-                  <span class="sr-only">Подсветить характеристику</span>
+                  <span class="sr-only">Resaltar esta característica</span>
                 </label>
               </div>
-              <abbr title="Сила воли">СВ</abbr>
+              <abbr title="Voluntad">V</abbr>
             </th>
             <th scope="col" id="charac-fel-label">
               <div class="hl-wrapper-checkbox hl-charac">
                 <input type="checkbox" name="fel-hl" id="fel-hl" class="sr-only highlight-toggle">
-                <label for="fel-hl" title="Подсветить характеристику">
+                <label for="fel-hl" title="Resaltar esta característica">
                   <svg>
                     <use href="#highlight-inactive"/>
                     <use href="#highlight-active"/>
                   </svg>
-                  <span class="sr-only">Подсветить характеристику</span>
+                  <span class="sr-only">Resaltar esta característica</span>
                 </label>
               </div>
-              <abbr title="Харизма">Х</abbr>
+              <abbr title="Empatía">E</abbr>
             </th>
           </thead>
           <tbody>
             <tr>
-              <th scope="row" id="charac-initial-label">Начальное значение</th>
+              <th scope="row" id="charac-initial-label">Inicial</th>
               <td>
                 <input type="number" id="ws-i" name="ws-i" aria-labelledBy="charac-ws-label charac-initial-label">
               </td>
@@ -283,7 +283,7 @@
               </td>
             </tr>
             <tr>
-              <th scope="row" id="charac-advances-label">Шаги развития</th>
+              <th scope="row" id="charac-advances-label">Avances</th>
               <td>
                 <input type="number" id="ws-a" name="ws-a" aria-labelledBy="charac-ws-label charac-advances-label">
               </td>
@@ -316,7 +316,7 @@
               </td>
             </tr>
             <tr>
-              <th scope="row">Текущее значение</th>
+              <th scope="row">Actual</th>
               <td><output id="current-ws" name="current-ws" for="ws-i ws-a"></output></td>
               <td><output id="current-bs" name="current-bs" for="bs-i bs-a"></output></td>
               <td><output id="current-s" name="current-s" for="s-i s-a"></output></td>
@@ -347,77 +347,77 @@
       <div class="points">
         <div class="points-wrapper">
           <fieldset class="counter simple">
-            <legend id="fate-title">Судьба</legend>
+            <legend id="fate-title">Destino</legend>
             <table class="left-aligned" aria-labelledby="fate-title">
               <tbody>
                 <tr>
-                  <th scope="row">Судьба</th>
+                  <th scope="row">Destino</th>
                   <td>
-                    <label class="sr-only" for="fate-current">Доступные очки судьбы</label>
-                    <label class="sr-only" for="fate-total">Всего очков судьбы</label>
+                    <label class="sr-only" for="fate-current">Puntos de Destino disponibles</label>
+                    <label class="sr-only" for="fate-total">Puntos de Destino totales</label>
                     <input type="number" id="fate-current" name="fate-current">/<input type="number" id="fate-total" name="fate-total"></td>
                 </tr>
                 <tr>
-                  <th scope="row">Удача</th>
+                  <th scope="row">Fortuna</th>
                   <td>
-                    <label class="sr-only" for="fortune-current">Доступные очки удачи</label>
-                    <label class="sr-only" for="fortune-total">Доступные очки удачи</label>
+                    <label class="sr-only" for="fortune-current">Puntos de Fortuna disponibles</label>
+                    <label class="sr-only" for="fortune-total">Puntos de Fortuna disponibles</label>
                     <input type="number" id="fortune-current" name="fortune-current">/<input type="number" id="fortune-total" name="fortune-total"></td>
                 </tr>
               </tbody>
             </table>
           </fieldset>
           <fieldset id="resilience-title" class="counter simple">
-            <legend>Упорство</legend>
+            <legend>Resiliencia</legend>
             <table aria-labelledby="resilience-title">
               <thead>
                 <tr>
-                  <th scope="col"><abbr title="Упорство">Уп.</abbr></th>
-                  <th scope="col"><abbr title="Решимость">Реш.</abbr></th>
-                  <th scope="col"><abbr title="Мотивация">Мотив.</abbr></th>
+                  <th scope="col"><abbr title="Resiliencia">Resi.</abbr></th>
+                  <th scope="col"><abbr title="Resolución">Reso.</abbr></th>
+                  <th scope="col"><abbr title="Motivación">Motiv.</abbr></th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td>
-                    <label class="sr-only" for="resilience-current">Доступные очки упорства</label>
-                    <label class="sr-only" for="resilience-total">Всего очков упорства</label>
+                    <label class="sr-only" for="resilience-current">Puntos de Resiliencia disponibles</label>
+                    <label class="sr-only" for="resilience-total">Puntos de Resiliencia totales</label>
                     <input type="number" id="resilience-current" name="resilience-current">/<input type="number" id="resilience-total" name="resilience-total"></td>
                   <td>
-                    <label class="sr-only" for="resolve-current">Доступные очки решимости</label>
-                    <label class="sr-only" for="resolve-total">Всего очков решимости</label>
+                    <label class="sr-only" for="resolve-current">Puntos de Resolución disponibles</label>
+                    <label class="sr-only" for="resolve-total">Puntos de Resolución totales</label>
                     <input type="number" id="resolve-current" name="resolve-current">/<input type="number" id="resolve-total" name="resolve-total"></td>
                   <td>
-                    <label class="sr-only" for="motivation">Мотивация</label>
+                    <label class="sr-only" for="motivation">Motivación</label>
                     <input type="text" id="motivation" name="motivation"></td>
                 </tr>
               </tbody>
             </table>
           </fieldset>
           <fieldset class="addition">
-            <legend id="experience-title">Опыт</legend>
+            <legend id="experience-title">Experiencia</legend>
             <table class="layout-fixed" aria-labelledby="experience-title">
               <thead>
                 <tr>
                   <th scope="col">
-                    <abbr title="Запас">Запас</abbr>
+                    <abbr title="Actual">Act.</abbr>
                   </th>
                   <th scope="col">
-                    <abbr title="Потрачено">Траты</abbr>
+                    <abbr title="Gastada">Gas.</abbr>
                   </th>
                   <th scope="col">
-                    <abbr title="Всего очков опыта">Всего</abbr>
+                    <abbr title="Total">Tot.</abbr>
                   </th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td>
-                    <label class="sr-only" for="current-xp">Непотраченные очки опыта</label>
+                    <label class="sr-only" for="current-xp">Experiencia por gastar</label>
                     <input type="number" id="current-xp" name="current-xp">
                   </td>
                   <td>
-                    <label class="sr-only" for="spent-xp">Потрачено очков опыта</label>
+                    <label class="sr-only" for="spent-xp">Experiencia gastada</label>
                     <input type="number" id="spent-xp" name="spent-xp">
                   </td>
                   <td><output id="total-xp" name="total-xp" for="current-xp spent-xp"></output></td>
@@ -428,18 +428,18 @@
         </div>
       </div>
       <fieldset class="movement addition">
-        <legend>Перемещение</legend>
+        <legend>Movimiento</legend>
         <div class="movement-wrapper">
           <div>
-            <label for="movement">Перемещение</label>
+            <label for="movement">Movimiento</label>
             <input type="number" name="movement" id="movement">
           </div>
           <div>
-            <label for="walk">Шаг</label>
+            <label for="walk">Andar</label>
             <output for="movement" id="walk" name="walk">
           </div>
           <div>
-            <label for="run">Бег</label>
+            <label for="run">Correr</label>
             <output for="movement" id="run" name="run">
           </div>
         </div>
@@ -447,20 +447,20 @@
       <div class="skills">
         <div class="skills-wrapper">
           <fieldset class="addition basic">
-            <legend id="skills-title" class="sr-only">Общие навыки</legend>
-            <div class="fake-legend" aria-hidden>Общие навыки</div>
+            <legend id="skills-title" class="sr-only">Habilidades Básicas</legend>
+            <div class="fake-legend" aria-hidden>Habilidades Básicas</div>
             <table class="left-aligned" aria-labelledby="skills-title">
               <thead>
                 <tr>
-                  <th scope="col">Навык</th>
+                  <th scope="col">Nombre</th>
                   <th colspan="2" scope="col">
-                    <abbr title="Характеристика">Хар.</abbr>
+                    <abbr title="Característica">Carac.</abbr>
                   </th>
                   <th scope="col">
-                    <abbr title="Шаги развития">Шаги</abbr>
+                    <abbr title="Avance">Av.</abbr>
                   </th>
                   <th scope="col">
-                    <abbr title="Значение">Знач.</abbr>
+                    <abbr title="Habilidad">Habil.</abbr>
                   </th>
                 </tr>
               </thead>
@@ -473,29 +473,58 @@
     <td>
       <div class="hl-wrapper">
         <div class="hl-wrapper-checkbox">
-          <input type="checkbox" name="gamble-hl" id="gamble-hl" class="sr-only highlight-toggle">
-          <label for="gamble-hl" title="Подсветить навык">
+          <input type="checkbox" name="melee-basic-hl" id="melee-basic-hl" class="sr-only highlight-toggle">
+          <label for="melee-basic-hl" title="Resaltar esta habilidad">
             <svg>
               <use href="#highlight-inactive"/>
               <use href="#highlight-active"/>
             </svg>
-           <span class="sr-only">Подсветить навык</span>
+           <span class="sr-only">Resaltar esta habilidad</span>
          </label>
         </div>
         <div class="hl-wrapper-name">
-          Азартные игры
+          A cuerpo (Básica)
         </div>
       </div>
     </td>
-    <td><abbr title="Интеллект">Инт</abbr></td>
-    <td><output id="gamble-current" name="gamble-current" for="int-i int-a"></output></td>
+    <td><abbr title="Habilidad de Armas">HA</abbr></td>
+    <td><output id="melee-basic-current" name="melee-basic-current" for="ws-i ws-a"></output></td>
     <td>
-      <label class="sr-only" for="gamble-aug">
-        Азартные игры
-        Шаги развития
+      <label class="sr-only" for="melee-basic-aug">
+        A cuerpo (Básica)
+        Avance
       </label>
-      <input type="number" name="gamble-aug" id="gamble-aug"></td>
-    <td><output id="gamble-final" for="int-i int-a gamble-aug"></output></td>
+      <input type="number" name="melee-basic-aug" id="melee-basic-aug"></td>
+    <td><output id="melee-basic-final" for="ws-i ws-a melee-basic-aug"></output></td>
+  </tr>
+  
+  <tr>
+    <td>
+      <div class="hl-wrapper">
+        <div class="hl-wrapper-checkbox">
+          <input type="checkbox" name="endurance-hl" id="endurance-hl" class="sr-only highlight-toggle">
+          <label for="endurance-hl" title="Resaltar esta habilidad">
+            <svg>
+              <use href="#highlight-inactive"/>
+              <use href="#highlight-active"/>
+            </svg>
+           <span class="sr-only">Resaltar esta habilidad</span>
+         </label>
+        </div>
+        <div class="hl-wrapper-name">
+          Aguante
+        </div>
+      </div>
+    </td>
+    <td><abbr title="Resistencia">R</abbr></td>
+    <td><output id="endurance-current" name="endurance-current" for="t-i t-a"></output></td>
+    <td>
+      <label class="sr-only" for="endurance-aug">
+        Aguante
+        Avance
+      </label>
+      <input type="number" name="endurance-aug" id="endurance-aug"></td>
+    <td><output id="endurance-final" for="t-i t-a endurance-aug"></output></td>
   </tr>
   
   <tr>
@@ -503,25 +532,25 @@
       <div class="hl-wrapper">
         <div class="hl-wrapper-checkbox">
           <input type="checkbox" name="entertain-hl" id="entertain-hl" class="sr-only highlight-toggle">
-          <label for="entertain-hl" title="Подсветить навык">
+          <label for="entertain-hl" title="Resaltar esta habilidad">
             <svg>
               <use href="#highlight-inactive"/>
               <use href="#highlight-active"/>
             </svg>
-           <span class="sr-only">Подсветить навык</span>
+           <span class="sr-only">Resaltar esta habilidad</span>
          </label>
         </div>
         <div class="hl-wrapper-name">
-          Артистизм
+          Animar
         </div>
       </div>
     </td>
-    <td><abbr title="Харизма">Х</abbr></td>
+    <td><abbr title="Empatía">E</abbr></td>
     <td><output id="entertain-current" name="entertain-current" for="fel-i fel-a"></output></td>
     <td>
       <label class="sr-only" for="entertain-aug">
-        Артистизм
-        Шаги развития
+        Animar
+        Avance
       </label>
       <input type="number" name="entertain-aug" id="entertain-aug"></td>
     <td><output id="entertain-final" for="fel-i fel-a entertain-aug"></output></td>
@@ -531,26 +560,55 @@
     <td>
       <div class="hl-wrapper">
         <div class="hl-wrapper-checkbox">
-          <input type="checkbox" name="athletics-hl" id="athletics-hl" class="sr-only highlight-toggle">
-          <label for="athletics-hl" title="Подсветить навык">
+          <input type="checkbox" name="art-hl" id="art-hl" class="sr-only highlight-toggle">
+          <label for="art-hl" title="Resaltar esta habilidad">
             <svg>
               <use href="#highlight-inactive"/>
               <use href="#highlight-active"/>
             </svg>
-           <span class="sr-only">Подсветить навык</span>
+           <span class="sr-only">Resaltar esta habilidad</span>
          </label>
         </div>
         <div class="hl-wrapper-name">
-          Атлетика
+          Arte
         </div>
       </div>
     </td>
-    <td><abbr title="Проворство">Пр</abbr></td>
+    <td><abbr title="Destreza">De</abbr></td>
+    <td><output id="art-current" name="art-current" for="dex-i dex-a"></output></td>
+    <td>
+      <label class="sr-only" for="art-aug">
+        Arte
+        Avance
+      </label>
+      <input type="number" name="art-aug" id="art-aug"></td>
+    <td><output id="art-final" for="dex-i dex-a art-aug"></output></td>
+  </tr>
+  
+  <tr>
+    <td>
+      <div class="hl-wrapper">
+        <div class="hl-wrapper-checkbox">
+          <input type="checkbox" name="athletics-hl" id="athletics-hl" class="sr-only highlight-toggle">
+          <label for="athletics-hl" title="Resaltar esta habilidad">
+            <svg>
+              <use href="#highlight-inactive"/>
+              <use href="#highlight-active"/>
+            </svg>
+           <span class="sr-only">Resaltar esta habilidad</span>
+         </label>
+        </div>
+        <div class="hl-wrapper-name">
+          Atletismo
+        </div>
+      </div>
+    </td>
+    <td><abbr title="Agilidad">A</abbr></td>
     <td><output id="athletics-current" name="athletics-current" for="ag-i ag-a"></output></td>
     <td>
       <label class="sr-only" for="athletics-aug">
-        Атлетика
-        Шаги развития
+        Atletismo
+        Avance
       </label>
       <input type="number" name="athletics-aug" id="athletics-aug"></td>
     <td><output id="athletics-final" for="ag-i ag-a athletics-aug"></output></td>
@@ -560,29 +618,29 @@
     <td>
       <div class="hl-wrapper">
         <div class="hl-wrapper-checkbox">
-          <input type="checkbox" name="ride-hl" id="ride-hl" class="sr-only highlight-toggle">
-          <label for="ride-hl" title="Подсветить навык">
+          <input type="checkbox" name="charm-hl" id="charm-hl" class="sr-only highlight-toggle">
+          <label for="charm-hl" title="Resaltar esta habilidad">
             <svg>
               <use href="#highlight-inactive"/>
               <use href="#highlight-active"/>
             </svg>
-           <span class="sr-only">Подсветить навык</span>
+           <span class="sr-only">Resaltar esta habilidad</span>
          </label>
         </div>
         <div class="hl-wrapper-name">
-          Верховая езда
+          Carisma
         </div>
       </div>
     </td>
-    <td><abbr title="Проворство">Пр</abbr></td>
-    <td><output id="ride-current" name="ride-current" for="ag-i ag-a"></output></td>
+    <td><abbr title="Empatía">E</abbr></td>
+    <td><output id="charm-current" name="charm-current" for="fel-i fel-a"></output></td>
     <td>
-      <label class="sr-only" for="ride-aug">
-        Верховая езда
-        Шаги развития
+      <label class="sr-only" for="charm-aug">
+        Carisma
+        Avance
       </label>
-      <input type="number" name="ride-aug" id="ride-aug"></td>
-    <td><output id="ride-final" for="ag-i ag-a ride-aug"></output></td>
+      <input type="number" name="charm-aug" id="charm-aug"></td>
+    <td><output id="charm-final" for="fel-i fel-a charm-aug"></output></td>
   </tr>
   
   <tr>
@@ -590,25 +648,25 @@
       <div class="hl-wrapper">
         <div class="hl-wrapper-checkbox">
           <input type="checkbox" name="drive-hl" id="drive-hl" class="sr-only highlight-toggle">
-          <label for="drive-hl" title="Подсветить навык">
+          <label for="drive-hl" title="Resaltar esta habilidad">
             <svg>
               <use href="#highlight-inactive"/>
               <use href="#highlight-active"/>
             </svg>
-           <span class="sr-only">Подсветить навык</span>
+           <span class="sr-only">Resaltar esta habilidad</span>
          </label>
         </div>
         <div class="hl-wrapper-name">
-          Вождение
+          Conducir
         </div>
       </div>
     </td>
-    <td><abbr title="Проворство">Пр</abbr></td>
+    <td><abbr title="Agilidad">A</abbr></td>
     <td><output id="drive-current" name="drive-current" for="ag-i ag-a"></output></td>
     <td>
       <label class="sr-only" for="drive-aug">
-        Вождение
-        Шаги развития
+        Conducir
+        Avance
       </label>
       <input type="number" name="drive-aug" id="drive-aug"></td>
     <td><output id="drive-final" for="ag-i ag-a drive-aug"></output></td>
@@ -618,58 +676,230 @@
     <td>
       <div class="hl-wrapper">
         <div class="hl-wrapper-checkbox">
-          <input type="checkbox" name="outdoor-survival-hl" id="outdoor-survival-hl" class="sr-only highlight-toggle">
-          <label for="outdoor-survival-hl" title="Подсветить навык">
+          <input type="checkbox" name="consume-alcohol-hl" id="consume-alcohol-hl" class="sr-only highlight-toggle">
+          <label for="consume-alcohol-hl" title="Resaltar esta habilidad">
             <svg>
               <use href="#highlight-inactive"/>
               <use href="#highlight-active"/>
             </svg>
-           <span class="sr-only">Подсветить навык</span>
+           <span class="sr-only">Resaltar esta habilidad</span>
          </label>
         </div>
         <div class="hl-wrapper-name">
-          Выживание
+          Consumir Alcohol
         </div>
       </div>
     </td>
-    <td><abbr title="Интеллект">Инт</abbr></td>
-    <td><output id="outdoor-survival-current" name="outdoor-survival-current" for="int-i int-a"></output></td>
+    <td><abbr title="Resistencia">R</abbr></td>
+    <td><output id="consume-alcohol-current" name="consume-alcohol-current" for="t-i t-a"></output></td>
     <td>
-      <label class="sr-only" for="outdoor-survival-aug">
-        Выживание
-        Шаги развития
+      <label class="sr-only" for="consume-alcohol-aug">
+        Consumir Alcohol
+        Avance
       </label>
-      <input type="number" name="outdoor-survival-aug" id="outdoor-survival-aug"></td>
-    <td><output id="outdoor-survival-final" for="int-i int-a outdoor-survival-aug"></output></td>
+      <input type="number" name="consume-alcohol-aug" id="consume-alcohol-aug"></td>
+    <td><output id="consume-alcohol-final" for="t-i t-a consume-alcohol-aug"></output></td>
   </tr>
   
   <tr>
     <td>
       <div class="hl-wrapper">
         <div class="hl-wrapper-checkbox">
-          <input type="checkbox" name="row-hl" id="row-hl" class="sr-only highlight-toggle">
-          <label for="row-hl" title="Подсветить навык">
+          <input type="checkbox" name="gossip-hl" id="gossip-hl" class="sr-only highlight-toggle">
+          <label for="gossip-hl" title="Resaltar esta habilidad">
             <svg>
               <use href="#highlight-inactive"/>
               <use href="#highlight-active"/>
             </svg>
-           <span class="sr-only">Подсветить навык</span>
+           <span class="sr-only">Resaltar esta habilidad</span>
          </label>
         </div>
         <div class="hl-wrapper-name">
-          Гребля
+          Cotillear
         </div>
       </div>
     </td>
-    <td><abbr title="Сила">С</abbr></td>
-    <td><output id="row-current" name="row-current" for="s-i s-a"></output></td>
+    <td><abbr title="Empatía">E</abbr></td>
+    <td><output id="gossip-current" name="gossip-current" for="fel-i fel-a"></output></td>
     <td>
-      <label class="sr-only" for="row-aug">
-        Гребля
-        Шаги развития
+      <label class="sr-only" for="gossip-aug">
+        Cotillear
+        Avance
       </label>
-      <input type="number" name="row-aug" id="row-aug"></td>
-    <td><output id="row-final" for="s-i s-a row-aug"></output></td>
+      <input type="number" name="gossip-aug" id="gossip-aug"></td>
+    <td><output id="gossip-final" for="fel-i fel-a gossip-aug"></output></td>
+  </tr>
+  
+  <tr>
+    <td>
+      <div class="hl-wrapper">
+        <div class="hl-wrapper-checkbox">
+          <input type="checkbox" name="melee-hl" id="melee-hl" class="sr-only highlight-toggle">
+          <label for="melee-hl" title="Resaltar esta habilidad">
+            <svg>
+              <use href="#highlight-inactive"/>
+              <use href="#highlight-active"/>
+            </svg>
+           <span class="sr-only">Resaltar esta habilidad</span>
+         </label>
+        </div>
+        <div class="hl-wrapper-name">
+          Cuerpo a cuerpo
+        </div>
+      </div>
+    </td>
+    <td><abbr title="Habilidad de Armas">HA</abbr></td>
+    <td><output id="melee-current" name="melee-current" for="ws-i ws-a"></output></td>
+    <td>
+      <label class="sr-only" for="melee-aug">
+        Cuerpo a cuerpo
+        Avance
+      </label>
+      <input type="number" name="melee-aug" id="melee-aug"></td>
+    <td><output id="melee-final" for="ws-i ws-a melee-aug"></output></td>
+  </tr>
+  
+  <tr>
+    <td>
+      <div class="hl-wrapper">
+        <div class="hl-wrapper-checkbox">
+          <input type="checkbox" name="charm-animal-hl" id="charm-animal-hl" class="sr-only highlight-toggle">
+          <label for="charm-animal-hl" title="Resaltar esta habilidad">
+            <svg>
+              <use href="#highlight-inactive"/>
+              <use href="#highlight-active"/>
+            </svg>
+           <span class="sr-only">Resaltar esta habilidad</span>
+         </label>
+        </div>
+        <div class="hl-wrapper-name">
+          Encantar Animales
+        </div>
+      </div>
+    </td>
+    <td><abbr title="Voluntad">V</abbr></td>
+    <td><output id="charm-animal-current" name="charm-animal-current" for="wp-i wp-a"></output></td>
+    <td>
+      <label class="sr-only" for="charm-animal-aug">
+        Encantar Animales
+        Avance
+      </label>
+      <input type="number" name="charm-animal-aug" id="charm-animal-aug"></td>
+    <td><output id="charm-animal-final" for="wp-i wp-a charm-animal-aug"></output></td>
+  </tr>
+  
+  <tr>
+    <td>
+      <div class="hl-wrapper">
+        <div class="hl-wrapper-checkbox">
+          <input type="checkbox" name="climb-hl" id="climb-hl" class="sr-only highlight-toggle">
+          <label for="climb-hl" title="Resaltar esta habilidad">
+            <svg>
+              <use href="#highlight-inactive"/>
+              <use href="#highlight-active"/>
+            </svg>
+           <span class="sr-only">Resaltar esta habilidad</span>
+         </label>
+        </div>
+        <div class="hl-wrapper-name">
+          Escalar
+        </div>
+      </div>
+    </td>
+    <td><abbr title="Fuerza">F</abbr></td>
+    <td><output id="climb-current" name="climb-current" for="s-i s-a"></output></td>
+    <td>
+      <label class="sr-only" for="climb-aug">
+        Escalar
+        Avance
+      </label>
+      <input type="number" name="climb-aug" id="climb-aug"></td>
+    <td><output id="climb-final" for="s-i s-a climb-aug"></output></td>
+  </tr>
+  
+  <tr>
+    <td>
+      <div class="hl-wrapper">
+        <div class="hl-wrapper-checkbox">
+          <input type="checkbox" name="dodge-hl" id="dodge-hl" class="sr-only highlight-toggle">
+          <label for="dodge-hl" title="Resaltar esta habilidad">
+            <svg>
+              <use href="#highlight-inactive"/>
+              <use href="#highlight-active"/>
+            </svg>
+           <span class="sr-only">Resaltar esta habilidad</span>
+         </label>
+        </div>
+        <div class="hl-wrapper-name">
+          Esquivar
+        </div>
+      </div>
+    </td>
+    <td><abbr title="Agilidad">A</abbr></td>
+    <td><output id="dodge-current" name="dodge-current" for="ag-i ag-a"></output></td>
+    <td>
+      <label class="sr-only" for="dodge-aug">
+        Esquivar
+        Avance
+      </label>
+      <input type="number" name="dodge-aug" id="dodge-aug"></td>
+    <td><output id="dodge-final" for="ag-i ag-a dodge-aug"></output></td>
+  </tr>
+  
+
+              </tbody>
+            </table>
+          </fieldset>
+          <fieldset class="addition basic">
+            <legend class="sr-only">Habilidades Básicas</legend>
+            <div class="fake-legend" aria-hidden>Habilidades Básicas</div>
+            <table class="left-aligned" aria-labelledby="skills-title">
+              <thead>
+                <tr>
+                  <th scope="col">Nombre</th>
+                  <th colspan="2" scope="col">
+                    <abbr title="Característica">Carac.</abbr>
+                  </th>
+                  <th scope="col">
+                    <abbr title="Avance">Av.</abbr>
+                  </th>
+                  <th scope="col">
+                    <abbr title="Habilidad">Habil.</abbr>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                
+
+
+
+  <tr>
+    <td>
+      <div class="hl-wrapper">
+        <div class="hl-wrapper-checkbox">
+          <input type="checkbox" name="cool-hl" id="cool-hl" class="sr-only highlight-toggle">
+          <label for="cool-hl" title="Resaltar esta habilidad">
+            <svg>
+              <use href="#highlight-inactive"/>
+              <use href="#highlight-active"/>
+            </svg>
+           <span class="sr-only">Resaltar esta habilidad</span>
+         </label>
+        </div>
+        <div class="hl-wrapper-name">
+          Frialdad
+        </div>
+      </div>
+    </td>
+    <td><abbr title="Voluntad">V</abbr></td>
+    <td><output id="cool-current" name="cool-current" for="wp-i wp-a"></output></td>
+    <td>
+      <label class="sr-only" for="cool-aug">
+        Frialdad
+        Avance
+      </label>
+      <input type="number" name="cool-aug" id="cool-aug"></td>
+    <td><output id="cool-final" for="wp-i wp-a cool-aug"></output></td>
   </tr>
   
   <tr>
@@ -677,25 +907,25 @@
       <div class="hl-wrapper">
         <div class="hl-wrapper-checkbox">
           <input type="checkbox" name="intimidate-hl" id="intimidate-hl" class="sr-only highlight-toggle">
-          <label for="intimidate-hl" title="Подсветить навык">
+          <label for="intimidate-hl" title="Resaltar esta habilidad">
             <svg>
               <use href="#highlight-inactive"/>
               <use href="#highlight-active"/>
             </svg>
-           <span class="sr-only">Подсветить навык</span>
+           <span class="sr-only">Resaltar esta habilidad</span>
          </label>
         </div>
         <div class="hl-wrapper-name">
-          Запугивание
+          Intimidar
         </div>
       </div>
     </td>
-    <td><abbr title="Сила">С</abbr></td>
+    <td><abbr title="Fuerza">F</abbr></td>
     <td><output id="intimidate-current" name="intimidate-current" for="s-i s-a"></output></td>
     <td>
       <label class="sr-only" for="intimidate-aug">
-        Запугивание
-        Шаги развития
+        Intimidar
+        Avance
       </label>
       <input type="number" name="intimidate-aug" id="intimidate-aug"></td>
     <td><output id="intimidate-final" for="s-i s-a intimidate-aug"></output></td>
@@ -706,25 +936,25 @@
       <div class="hl-wrapper">
         <div class="hl-wrapper-checkbox">
           <input type="checkbox" name="intuition-hl" id="intuition-hl" class="sr-only highlight-toggle">
-          <label for="intuition-hl" title="Подсветить навык">
+          <label for="intuition-hl" title="Resaltar esta habilidad">
             <svg>
               <use href="#highlight-inactive"/>
               <use href="#highlight-active"/>
             </svg>
-           <span class="sr-only">Подсветить навык</span>
+           <span class="sr-only">Resaltar esta habilidad</span>
          </label>
         </div>
         <div class="hl-wrapper-name">
-          Интуиция
+          Intuición
         </div>
       </div>
     </td>
-    <td><abbr title="Инициатива">И</abbr></td>
+    <td><abbr title="Iniciativa">Ini</abbr></td>
     <td><output id="intuition-current" name="intuition-current" for="i-i i-a"></output></td>
     <td>
       <label class="sr-only" for="intuition-aug">
-        Интуиция
-        Шаги развития
+        Intuición
+        Avance
       </label>
       <input type="number" name="intuition-aug" id="intuition-aug"></td>
     <td><output id="intuition-final" for="i-i i-a intuition-aug"></output></td>
@@ -734,317 +964,29 @@
     <td>
       <div class="hl-wrapper">
         <div class="hl-wrapper-checkbox">
-          <input type="checkbox" name="art-hl" id="art-hl" class="sr-only highlight-toggle">
-          <label for="art-hl" title="Подсветить навык">
+          <input type="checkbox" name="gamble-hl" id="gamble-hl" class="sr-only highlight-toggle">
+          <label for="gamble-hl" title="Resaltar esta habilidad">
             <svg>
               <use href="#highlight-inactive"/>
               <use href="#highlight-active"/>
             </svg>
-           <span class="sr-only">Подсветить навык</span>
+           <span class="sr-only">Resaltar esta habilidad</span>
          </label>
         </div>
         <div class="hl-wrapper-name">
-          Искусство
+          Jugar
         </div>
       </div>
     </td>
-    <td><abbr title="Ловкость">Л</abbr></td>
-    <td><output id="art-current" name="art-current" for="dex-i dex-a"></output></td>
+    <td><abbr title="Inteligencia">I</abbr></td>
+    <td><output id="gamble-current" name="gamble-current" for="int-i int-a"></output></td>
     <td>
-      <label class="sr-only" for="art-aug">
-        Искусство
-        Шаги развития
+      <label class="sr-only" for="gamble-aug">
+        Jugar
+        Avance
       </label>
-      <input type="number" name="art-aug" id="art-aug"></td>
-    <td><output id="art-final" for="dex-i dex-a art-aug"></output></td>
-  </tr>
-  
-  <tr>
-    <td>
-      <div class="hl-wrapper">
-        <div class="hl-wrapper-checkbox">
-          <input type="checkbox" name="consume-alcohol-hl" id="consume-alcohol-hl" class="sr-only highlight-toggle">
-          <label for="consume-alcohol-hl" title="Подсветить навык">
-            <svg>
-              <use href="#highlight-inactive"/>
-              <use href="#highlight-active"/>
-            </svg>
-           <span class="sr-only">Подсветить навык</span>
-         </label>
-        </div>
-        <div class="hl-wrapper-name">
-          Кутеж
-        </div>
-      </div>
-    </td>
-    <td><abbr title="Выносливость">В</abbr></td>
-    <td><output id="consume-alcohol-current" name="consume-alcohol-current" for="t-i t-a"></output></td>
-    <td>
-      <label class="sr-only" for="consume-alcohol-aug">
-        Кутеж
-        Шаги развития
-      </label>
-      <input type="number" name="consume-alcohol-aug" id="consume-alcohol-aug"></td>
-    <td><output id="consume-alcohol-final" for="t-i t-a consume-alcohol-aug"></output></td>
-  </tr>
-  
-  <tr>
-    <td>
-      <div class="hl-wrapper">
-        <div class="hl-wrapper-checkbox">
-          <input type="checkbox" name="climb-hl" id="climb-hl" class="sr-only highlight-toggle">
-          <label for="climb-hl" title="Подсветить навык">
-            <svg>
-              <use href="#highlight-inactive"/>
-              <use href="#highlight-active"/>
-            </svg>
-           <span class="sr-only">Подсветить навык</span>
-         </label>
-        </div>
-        <div class="hl-wrapper-name">
-          Лазание
-        </div>
-      </div>
-    </td>
-    <td><abbr title="Сила">С</abbr></td>
-    <td><output id="climb-current" name="climb-current" for="s-i s-a"></output></td>
-    <td>
-      <label class="sr-only" for="climb-aug">
-        Лазание
-        Шаги развития
-      </label>
-      <input type="number" name="climb-aug" id="climb-aug"></td>
-    <td><output id="climb-final" for="s-i s-a climb-aug"></output></td>
-  </tr>
-  
-  <tr>
-    <td>
-      <div class="hl-wrapper">
-        <div class="hl-wrapper-checkbox">
-          <input type="checkbox" name="leadership-hl" id="leadership-hl" class="sr-only highlight-toggle">
-          <label for="leadership-hl" title="Подсветить навык">
-            <svg>
-              <use href="#highlight-inactive"/>
-              <use href="#highlight-active"/>
-            </svg>
-           <span class="sr-only">Подсветить навык</span>
-         </label>
-        </div>
-        <div class="hl-wrapper-name">
-          Лидерство
-        </div>
-      </div>
-    </td>
-    <td><abbr title="Харизма">Х</abbr></td>
-    <td><output id="leadership-current" name="leadership-current" for="fel-i fel-a"></output></td>
-    <td>
-      <label class="sr-only" for="leadership-aug">
-        Лидерство
-        Шаги развития
-      </label>
-      <input type="number" name="leadership-aug" id="leadership-aug"></td>
-    <td><output id="leadership-final" for="fel-i fel-a leadership-aug"></output></td>
-  </tr>
-  
-
-              </tbody>
-            </table>
-          </fieldset>
-          <fieldset class="addition basic">
-            <legend class="sr-only">Общие навыки</legend>
-            <div class="fake-legend" aria-hidden>Общие навыки</div>
-            <table class="left-aligned" aria-labelledby="skills-title">
-              <thead>
-                <tr>
-                  <th scope="col">Навык</th>
-                  <th colspan="2" scope="col">
-                    <abbr title="Характеристика">Хар.</abbr>
-                  </th>
-                  <th scope="col">
-                    <abbr title="Шаги развития">Шаги</abbr>
-                  </th>
-                  <th scope="col">
-                    <abbr title="Значение">Знач.</abbr>
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                
-
-
-
-  <tr>
-    <td>
-      <div class="hl-wrapper">
-        <div class="hl-wrapper-checkbox">
-          <input type="checkbox" name="perception-hl" id="perception-hl" class="sr-only highlight-toggle">
-          <label for="perception-hl" title="Подсветить навык">
-            <svg>
-              <use href="#highlight-inactive"/>
-              <use href="#highlight-active"/>
-            </svg>
-           <span class="sr-only">Подсветить навык</span>
-         </label>
-        </div>
-        <div class="hl-wrapper-name">
-          Наблюдательность
-        </div>
-      </div>
-    </td>
-    <td><abbr title="Инициатива">И</abbr></td>
-    <td><output id="perception-current" name="perception-current" for="i-i i-a"></output></td>
-    <td>
-      <label class="sr-only" for="perception-aug">
-        Наблюдательность
-        Шаги развития
-      </label>
-      <input type="number" name="perception-aug" id="perception-aug"></td>
-    <td><output id="perception-final" for="i-i i-a perception-aug"></output></td>
-  </tr>
-  
-  <tr>
-    <td>
-      <div class="hl-wrapper">
-        <div class="hl-wrapper-checkbox">
-          <input type="checkbox" name="charm-hl" id="charm-hl" class="sr-only highlight-toggle">
-          <label for="charm-hl" title="Подсветить навык">
-            <svg>
-              <use href="#highlight-inactive"/>
-              <use href="#highlight-active"/>
-            </svg>
-           <span class="sr-only">Подсветить навык</span>
-         </label>
-        </div>
-        <div class="hl-wrapper-name">
-          Обаяние
-        </div>
-      </div>
-    </td>
-    <td><abbr title="Харизма">Х</abbr></td>
-    <td><output id="charm-current" name="charm-current" for="fel-i fel-a"></output></td>
-    <td>
-      <label class="sr-only" for="charm-aug">
-        Обаяние
-        Шаги развития
-      </label>
-      <input type="number" name="charm-aug" id="charm-aug"></td>
-    <td><output id="charm-final" for="fel-i fel-a charm-aug"></output></td>
-  </tr>
-  
-  <tr>
-    <td>
-      <div class="hl-wrapper">
-        <div class="hl-wrapper-checkbox">
-          <input type="checkbox" name="navigation-hl" id="navigation-hl" class="sr-only highlight-toggle">
-          <label for="navigation-hl" title="Подсветить навык">
-            <svg>
-              <use href="#highlight-inactive"/>
-              <use href="#highlight-active"/>
-            </svg>
-           <span class="sr-only">Подсветить навык</span>
-         </label>
-        </div>
-        <div class="hl-wrapper-name">
-          Ориентирование
-        </div>
-      </div>
-    </td>
-    <td><abbr title="Инициатива">И</abbr></td>
-    <td><output id="navigation-current" name="navigation-current" for="i-i i-a"></output></td>
-    <td>
-      <label class="sr-only" for="navigation-aug">
-        Ориентирование
-        Шаги развития
-      </label>
-      <input type="number" name="navigation-aug" id="navigation-aug"></td>
-    <td><output id="navigation-final" for="i-i i-a navigation-aug"></output></td>
-  </tr>
-  
-  <tr>
-    <td>
-      <div class="hl-wrapper">
-        <div class="hl-wrapper-checkbox">
-          <input type="checkbox" name="bribery-hl" id="bribery-hl" class="sr-only highlight-toggle">
-          <label for="bribery-hl" title="Подсветить навык">
-            <svg>
-              <use href="#highlight-inactive"/>
-              <use href="#highlight-active"/>
-            </svg>
-           <span class="sr-only">Подсветить навык</span>
-         </label>
-        </div>
-        <div class="hl-wrapper-name">
-          Подкуп
-        </div>
-      </div>
-    </td>
-    <td><abbr title="Харизма">Х</abbr></td>
-    <td><output id="bribery-current" name="bribery-current" for="fel-i fel-a"></output></td>
-    <td>
-      <label class="sr-only" for="bribery-aug">
-        Подкуп
-        Шаги развития
-      </label>
-      <input type="number" name="bribery-aug" id="bribery-aug"></td>
-    <td><output id="bribery-final" for="fel-i fel-a bribery-aug"></output></td>
-  </tr>
-  
-  <tr>
-    <td>
-      <div class="hl-wrapper">
-        <div class="hl-wrapper-checkbox">
-          <input type="checkbox" name="melee-hl" id="melee-hl" class="sr-only highlight-toggle">
-          <label for="melee-hl" title="Подсветить навык">
-            <svg>
-              <use href="#highlight-inactive"/>
-              <use href="#highlight-active"/>
-            </svg>
-           <span class="sr-only">Подсветить навык</span>
-         </label>
-        </div>
-        <div class="hl-wrapper-name">
-          Рукопашный бой
-        </div>
-      </div>
-    </td>
-    <td><abbr title="Ближний бой">ББ</abbr></td>
-    <td><output id="melee-current" name="melee-current" for="ws-i ws-a"></output></td>
-    <td>
-      <label class="sr-only" for="melee-aug">
-        Рукопашный бой
-        Шаги развития
-      </label>
-      <input type="number" name="melee-aug" id="melee-aug"></td>
-    <td><output id="melee-final" for="ws-i ws-a melee-aug"></output></td>
-  </tr>
-  
-  <tr>
-    <td>
-      <div class="hl-wrapper">
-        <div class="hl-wrapper-checkbox">
-          <input type="checkbox" name="melee-basic-hl" id="melee-basic-hl" class="sr-only highlight-toggle">
-          <label for="melee-basic-hl" title="Подсветить навык">
-            <svg>
-              <use href="#highlight-inactive"/>
-              <use href="#highlight-active"/>
-            </svg>
-           <span class="sr-only">Подсветить навык</span>
-         </label>
-        </div>
-        <div class="hl-wrapper-name">
-          Рукопашный бой (осн.)
-        </div>
-      </div>
-    </td>
-    <td><abbr title="Ближний бой">ББ</abbr></td>
-    <td><output id="melee-basic-current" name="melee-basic-current" for="ws-i ws-a"></output></td>
-    <td>
-      <label class="sr-only" for="melee-basic-aug">
-        Рукопашный бой (осн.)
-        Шаги развития
-      </label>
-      <input type="number" name="melee-basic-aug" id="melee-basic-aug"></td>
-    <td><output id="melee-basic-final" for="ws-i ws-a melee-basic-aug"></output></td>
+      <input type="number" name="gamble-aug" id="gamble-aug"></td>
+    <td><output id="gamble-final" for="int-i int-a gamble-aug"></output></td>
   </tr>
   
   <tr>
@@ -1052,25 +994,25 @@
       <div class="hl-wrapper">
         <div class="hl-wrapper-checkbox">
           <input type="checkbox" name="stealth-hl" id="stealth-hl" class="sr-only highlight-toggle">
-          <label for="stealth-hl" title="Подсветить навык">
+          <label for="stealth-hl" title="Resaltar esta habilidad">
             <svg>
               <use href="#highlight-inactive"/>
               <use href="#highlight-active"/>
             </svg>
-           <span class="sr-only">Подсветить навык</span>
+           <span class="sr-only">Resaltar esta habilidad</span>
          </label>
         </div>
         <div class="hl-wrapper-name">
-          Скрытность
+          M. Silencioso
         </div>
       </div>
     </td>
-    <td><abbr title="Проворство">Пр</abbr></td>
+    <td><abbr title="Agilidad">A</abbr></td>
     <td><output id="stealth-current" name="stealth-current" for="ag-i ag-a"></output></td>
     <td>
       <label class="sr-only" for="stealth-aug">
-        Скрытность
-        Шаги развития
+        M. Silencioso
+        Avance
       </label>
       <input type="number" name="stealth-aug" id="stealth-aug"></td>
     <td><output id="stealth-final" for="ag-i ag-a stealth-aug"></output></td>
@@ -1080,58 +1022,116 @@
     <td>
       <div class="hl-wrapper">
         <div class="hl-wrapper-checkbox">
-          <input type="checkbox" name="gossip-hl" id="gossip-hl" class="sr-only highlight-toggle">
-          <label for="gossip-hl" title="Подсветить навык">
+          <input type="checkbox" name="leadership-hl" id="leadership-hl" class="sr-only highlight-toggle">
+          <label for="leadership-hl" title="Resaltar esta habilidad">
             <svg>
               <use href="#highlight-inactive"/>
               <use href="#highlight-active"/>
             </svg>
-           <span class="sr-only">Подсветить навык</span>
+           <span class="sr-only">Resaltar esta habilidad</span>
          </label>
         </div>
         <div class="hl-wrapper-name">
-          Сплетничество
+          Mando
         </div>
       </div>
     </td>
-    <td><abbr title="Харизма">Х</abbr></td>
-    <td><output id="gossip-current" name="gossip-current" for="fel-i fel-a"></output></td>
+    <td><abbr title="Empatía">E</abbr></td>
+    <td><output id="leadership-current" name="leadership-current" for="fel-i fel-a"></output></td>
     <td>
-      <label class="sr-only" for="gossip-aug">
-        Сплетничество
-        Шаги развития
+      <label class="sr-only" for="leadership-aug">
+        Mando
+        Avance
       </label>
-      <input type="number" name="gossip-aug" id="gossip-aug"></td>
-    <td><output id="gossip-final" for="fel-i fel-a gossip-aug"></output></td>
+      <input type="number" name="leadership-aug" id="leadership-aug"></td>
+    <td><output id="leadership-final" for="fel-i fel-a leadership-aug"></output></td>
   </tr>
   
   <tr>
     <td>
       <div class="hl-wrapper">
         <div class="hl-wrapper-checkbox">
-          <input type="checkbox" name="endurance-hl" id="endurance-hl" class="sr-only highlight-toggle">
-          <label for="endurance-hl" title="Подсветить навык">
+          <input type="checkbox" name="ride-hl" id="ride-hl" class="sr-only highlight-toggle">
+          <label for="ride-hl" title="Resaltar esta habilidad">
             <svg>
               <use href="#highlight-inactive"/>
               <use href="#highlight-active"/>
             </svg>
-           <span class="sr-only">Подсветить навык</span>
+           <span class="sr-only">Resaltar esta habilidad</span>
          </label>
         </div>
         <div class="hl-wrapper-name">
-          Стойкость
+          Montar
         </div>
       </div>
     </td>
-    <td><abbr title="Выносливость">В</abbr></td>
-    <td><output id="endurance-current" name="endurance-current" for="t-i t-a"></output></td>
+    <td><abbr title="Agilidad">A</abbr></td>
+    <td><output id="ride-current" name="ride-current" for="ag-i ag-a"></output></td>
     <td>
-      <label class="sr-only" for="endurance-aug">
-        Стойкость
-        Шаги развития
+      <label class="sr-only" for="ride-aug">
+        Montar
+        Avance
       </label>
-      <input type="number" name="endurance-aug" id="endurance-aug"></td>
-    <td><output id="endurance-final" for="t-i t-a endurance-aug"></output></td>
+      <input type="number" name="ride-aug" id="ride-aug"></td>
+    <td><output id="ride-final" for="ag-i ag-a ride-aug"></output></td>
+  </tr>
+  
+  <tr>
+    <td>
+      <div class="hl-wrapper">
+        <div class="hl-wrapper-checkbox">
+          <input type="checkbox" name="navigation-hl" id="navigation-hl" class="sr-only highlight-toggle">
+          <label for="navigation-hl" title="Resaltar esta habilidad">
+            <svg>
+              <use href="#highlight-inactive"/>
+              <use href="#highlight-active"/>
+            </svg>
+           <span class="sr-only">Resaltar esta habilidad</span>
+         </label>
+        </div>
+        <div class="hl-wrapper-name">
+          Orientación
+        </div>
+      </div>
+    </td>
+    <td><abbr title="Iniciativa">Ini</abbr></td>
+    <td><output id="navigation-current" name="navigation-current" for="i-i i-a"></output></td>
+    <td>
+      <label class="sr-only" for="navigation-aug">
+        Orientación
+        Avance
+      </label>
+      <input type="number" name="navigation-aug" id="navigation-aug"></td>
+    <td><output id="navigation-final" for="i-i i-a navigation-aug"></output></td>
+  </tr>
+  
+  <tr>
+    <td>
+      <div class="hl-wrapper">
+        <div class="hl-wrapper-checkbox">
+          <input type="checkbox" name="perception-hl" id="perception-hl" class="sr-only highlight-toggle">
+          <label for="perception-hl" title="Resaltar esta habilidad">
+            <svg>
+              <use href="#highlight-inactive"/>
+              <use href="#highlight-active"/>
+            </svg>
+           <span class="sr-only">Resaltar esta habilidad</span>
+         </label>
+        </div>
+        <div class="hl-wrapper-name">
+          Percepción
+        </div>
+      </div>
+    </td>
+    <td><abbr title="Iniciativa">Ini</abbr></td>
+    <td><output id="perception-current" name="perception-current" for="i-i i-a"></output></td>
+    <td>
+      <label class="sr-only" for="perception-aug">
+        Percepción
+        Avance
+      </label>
+      <input type="number" name="perception-aug" id="perception-aug"></td>
+    <td><output id="perception-final" for="i-i i-a perception-aug"></output></td>
   </tr>
   
   <tr>
@@ -1139,25 +1139,25 @@
       <div class="hl-wrapper">
         <div class="hl-wrapper-checkbox">
           <input type="checkbox" name="haggle-hl" id="haggle-hl" class="sr-only highlight-toggle">
-          <label for="haggle-hl" title="Подсветить навык">
+          <label for="haggle-hl" title="Resaltar esta habilidad">
             <svg>
               <use href="#highlight-inactive"/>
               <use href="#highlight-active"/>
             </svg>
-           <span class="sr-only">Подсветить навык</span>
+           <span class="sr-only">Resaltar esta habilidad</span>
          </label>
         </div>
         <div class="hl-wrapper-name">
-          Торговля
+          Regatear
         </div>
       </div>
     </td>
-    <td><abbr title="Харизма">Х</abbr></td>
+    <td><abbr title="Empatía">E</abbr></td>
     <td><output id="haggle-current" name="haggle-current" for="fel-i fel-a"></output></td>
     <td>
       <label class="sr-only" for="haggle-aug">
-        Торговля
-        Шаги развития
+        Regatear
+        Avance
       </label>
       <input type="number" name="haggle-aug" id="haggle-aug"></td>
     <td><output id="haggle-final" for="fel-i fel-a haggle-aug"></output></td>
@@ -1167,87 +1167,87 @@
     <td>
       <div class="hl-wrapper">
         <div class="hl-wrapper-checkbox">
-          <input type="checkbox" name="dodge-hl" id="dodge-hl" class="sr-only highlight-toggle">
-          <label for="dodge-hl" title="Подсветить навык">
+          <input type="checkbox" name="row-hl" id="row-hl" class="sr-only highlight-toggle">
+          <label for="row-hl" title="Resaltar esta habilidad">
             <svg>
               <use href="#highlight-inactive"/>
               <use href="#highlight-active"/>
             </svg>
-           <span class="sr-only">Подсветить навык</span>
+           <span class="sr-only">Resaltar esta habilidad</span>
          </label>
         </div>
         <div class="hl-wrapper-name">
-          Уклонение
+          Remar
         </div>
       </div>
     </td>
-    <td><abbr title="Проворство">Пр</abbr></td>
-    <td><output id="dodge-current" name="dodge-current" for="ag-i ag-a"></output></td>
+    <td><abbr title="Fuerza">F</abbr></td>
+    <td><output id="row-current" name="row-current" for="s-i s-a"></output></td>
     <td>
-      <label class="sr-only" for="dodge-aug">
-        Уклонение
-        Шаги развития
+      <label class="sr-only" for="row-aug">
+        Remar
+        Avance
       </label>
-      <input type="number" name="dodge-aug" id="dodge-aug"></td>
-    <td><output id="dodge-final" for="ag-i ag-a dodge-aug"></output></td>
+      <input type="number" name="row-aug" id="row-aug"></td>
+    <td><output id="row-final" for="s-i s-a row-aug"></output></td>
   </tr>
   
   <tr>
     <td>
       <div class="hl-wrapper">
         <div class="hl-wrapper-checkbox">
-          <input type="checkbox" name="charm-animal-hl" id="charm-animal-hl" class="sr-only highlight-toggle">
-          <label for="charm-animal-hl" title="Подсветить навык">
+          <input type="checkbox" name="bribery-hl" id="bribery-hl" class="sr-only highlight-toggle">
+          <label for="bribery-hl" title="Resaltar esta habilidad">
             <svg>
               <use href="#highlight-inactive"/>
               <use href="#highlight-active"/>
             </svg>
-           <span class="sr-only">Подсветить навык</span>
+           <span class="sr-only">Resaltar esta habilidad</span>
          </label>
         </div>
         <div class="hl-wrapper-name">
-          Усмирение животных
+          Sobornar
         </div>
       </div>
     </td>
-    <td><abbr title="Сила воли">СВ</abbr></td>
-    <td><output id="charm-animal-current" name="charm-animal-current" for="wp-i wp-a"></output></td>
+    <td><abbr title="Empatía">E</abbr></td>
+    <td><output id="bribery-current" name="bribery-current" for="fel-i fel-a"></output></td>
     <td>
-      <label class="sr-only" for="charm-animal-aug">
-        Усмирение животных
-        Шаги развития
+      <label class="sr-only" for="bribery-aug">
+        Sobornar
+        Avance
       </label>
-      <input type="number" name="charm-animal-aug" id="charm-animal-aug"></td>
-    <td><output id="charm-animal-final" for="wp-i wp-a charm-animal-aug"></output></td>
+      <input type="number" name="bribery-aug" id="bribery-aug"></td>
+    <td><output id="bribery-final" for="fel-i fel-a bribery-aug"></output></td>
   </tr>
   
   <tr>
     <td>
       <div class="hl-wrapper">
         <div class="hl-wrapper-checkbox">
-          <input type="checkbox" name="cool-hl" id="cool-hl" class="sr-only highlight-toggle">
-          <label for="cool-hl" title="Подсветить навык">
+          <input type="checkbox" name="outdoor-survival-hl" id="outdoor-survival-hl" class="sr-only highlight-toggle">
+          <label for="outdoor-survival-hl" title="Resaltar esta habilidad">
             <svg>
               <use href="#highlight-inactive"/>
               <use href="#highlight-active"/>
             </svg>
-           <span class="sr-only">Подсветить навык</span>
+           <span class="sr-only">Resaltar esta habilidad</span>
          </label>
         </div>
         <div class="hl-wrapper-name">
-          Хладнокровие
+          Supervivencia
         </div>
       </div>
     </td>
-    <td><abbr title="Сила воли">СВ</abbr></td>
-    <td><output id="cool-current" name="cool-current" for="wp-i wp-a"></output></td>
+    <td><abbr title="Inteligencia">I</abbr></td>
+    <td><output id="outdoor-survival-current" name="outdoor-survival-current" for="int-i int-a"></output></td>
     <td>
-      <label class="sr-only" for="cool-aug">
-        Хладнокровие
-        Шаги развития
+      <label class="sr-only" for="outdoor-survival-aug">
+        Supervivencia
+        Avance
       </label>
-      <input type="number" name="cool-aug" id="cool-aug"></td>
-    <td><output id="cool-final" for="wp-i wp-a cool-aug"></output></td>
+      <input type="number" name="outdoor-survival-aug" id="outdoor-survival-aug"></td>
+    <td><output id="outdoor-survival-final" for="int-i int-a outdoor-survival-aug"></output></td>
   </tr>
   
 
@@ -1255,23 +1255,23 @@
             </table>
           </fieldset>
           <fieldset class="addition custom" id="custom-skill">
-            <legend id="custom-skill-title" class="sr-only">Профессиональные навыки</legend>
-            <div class="fake-legend" aria-hidden>Профессиональные навыки</div>
+            <legend id="custom-skill-title" class="sr-only">Habilidades Avanzadas</legend>
+            <div class="fake-legend" aria-hidden>Habilidades Avanzadas</div>
             <table class="left-aligned" aria-labelledby="custom-skill-title">
               <thead>
                 <tr>
-                  <th scope="col" id="skills-name-label">Навык</th>
+                  <th scope="col" id="skills-name-label">Nombre</th>
                   <th colspan="2" scope="col">
-                    <abbr title="Характеристика">Хар.</abbr>
+                    <abbr title="Característica">Carac.</abbr>
                   </th>
                   <th scope="col">
-                    <abbr title="Шаги развития">Шаги</abbr>
+                    <abbr title="Avance">Av.</abbr>
                   </th>
                   <th scope="col">
-                    <abbr title="Значение">Знач.</abbr>
+                    <abbr title="Habilidad">Habil.</abbr>
                   </th>
                   <th scope="col" class="narrow actions">
-                    <span class="sr-only" id="skills-actions-title">Действия</span>
+                    <span class="sr-only" id="skills-actions-title">Acciones</span>
                     <svg class="svg-actions" role="img" aria-labelledBy="skills-actions-title">
                       <use href="#actions" />
                     </svg>
@@ -1284,12 +1284,12 @@
                     <div class="hl-wrapper">
                       <div class="hl-wrapper-checkbox">
                         <input type="checkbox" name="custom-skill-hl-0" id="custom-skill-hl-0" class="sr-only highlight-toggle">
-                        <label for="custom-skill-hl-0" title="Подсветить навык">
+                        <label for="custom-skill-hl-0" title="Resaltar esta habilidad">
                           <svg>
                             <use href="#highlight-inactive"/>
                             <use href="#highlight-active"/>
                           </svg>
-                         <span class="sr-only">Подсветить навык</span>
+                         <span class="sr-only">Resaltar esta habilidad</span>
                        </label>
                       </div>
                       <div class="hl-wrapper-name">
@@ -1299,32 +1299,32 @@
                     </div>
                   </td>
                   <td>
-                    <label class="sr-only" for="custom-skill-charac-0">На основе характеристик</label>
+                    <label class="sr-only" for="custom-skill-charac-0">Basada en Característica</label>
                     <select class="charac-select" name="custom-skill-charac-0" id="custom-skill-charac-0">
                       <option value="">-</option>
-                      <option value="ws">ББ</option>
-                      <option value="bs">ДБ</option>
-                      <option value="s">С</option>
-                      <option value="t">В</option>
-                      <option value="i">И</option>
-                      <option value="ag">Пр</option>
-                      <option value="dex">Л</option>
-                      <option value="int">Инт</option>
-                      <option value="wp">СВ</option>
-                      <option value="fel">Х</option>
+                      <option value="ws">HA</option>
+                      <option value="bs">HP</option>
+                      <option value="s">F</option>
+                      <option value="t">R</option>
+                      <option value="i">Ini</option>
+                      <option value="ag">A</option>
+                      <option value="dex">De</option>
+                      <option value="int">I</option>
+                      <option value="wp">V</option>
+                      <option value="fel">E</option>
                     </select>
                   </td>
                   <td>
                     <output id="custom-skill-initial-0" name="custom-skill-initial-0" for=""></output>
                   </td>
                   <td>
-                    <label class="sr-only" for="custom-skill-aug-0">Шаги развития</label>
+                    <label class="sr-only" for="custom-skill-aug-0">Avance</label>
                     <input type="number" name="custom-skill-aug-0" id="custom-skill-aug-0">
                   </td>
                   <td><output id="custom-skill-current-0" for="custom-skill-initial-0 custom-skill-aug-0"></output></td>
                   <td class="actions">
                     <button class="remove" type="button">
-                      <svg role="img" aria-label="Удалить">
+                      <svg role="img" aria-label="Eliminar">
                         <use href="#trash" />
                       </svg>
                     </button>
@@ -1338,12 +1338,12 @@
                   <div class="hl-wrapper">
                   <div class="hl-wrapper-checkbox">
                     <input type="checkbox" name="custom-skill-hl-" id="custom-skill-hl-" class="sr-only highlight-toggle">
-                    <label for="custom-skill-hl-" title="Подсветить навык">
+                    <label for="custom-skill-hl-" title="Resaltar esta habilidad">
                       <svg>
                         <use href="#highlight-inactive"/>
                         <use href="#highlight-active"/>
                       </svg>
-                     <span class="sr-only">Подсветить навык</span>
+                     <span class="sr-only">Resaltar esta habilidad</span>
                    </label>
                   </div>
                   <div class="hl-wrapper-name">
@@ -1352,29 +1352,29 @@
                   </div>
                 </div>
                 <td>
-                  <label class="sr-only" for="custom-skill-charac-">На основе характеристик</label>
+                  <label class="sr-only" for="custom-skill-charac-">Basada en Característica</label>
                   <select class="charac-select" name="custom-skill-charac-" id="custom-skill-charac-">
                     <option value="">-</option>
-                    <option value="ws">ББ</option>
-                    <option value="bs">ДБ</option>
-                    <option value="s">С</option>
-                    <option value="t">В</option>
-                    <option value="i">И</option>
-                    <option value="ag">Пр</option>
-                    <option value="dex">Л</option>
-                    <option value="int">Инт</option>
-                    <option value="wp">СВ</option>
-                    <option value="fel">Х</option>
+                    <option value="ws">HA</option>
+                    <option value="bs">HP</option>
+                    <option value="s">F</option>
+                    <option value="t">R</option>
+                    <option value="i">Ini</option>
+                    <option value="ag">A</option>
+                    <option value="dex">De</option>
+                    <option value="int">I</option>
+                    <option value="wp">V</option>
+                    <option value="fel">E</option>
                   </select>
                 </td>
                 <td><output id="custom-skill-initial-" name="custom-skill-initial-" for=""></output></td>
                 <td>
-                  <label class="sr-only" for="custom-skill-aug-">Шаги развития</label>
+                  <label class="sr-only" for="custom-skill-aug-">Avance</label>
                   <input type="number" name="custom-skill-aug-" id="custom-skill-aug-"></td>
                 <td><output id="custom-skill-current-" for=""></output></td>
                 <td class="actions">
                   <button class="remove" type="button">
-                    <svg role="img" aria-label="Удалить">
+                    <svg role="img" aria-label="Eliminar">
                       <use href="#trash" />
                     </svg>
                   </button>
@@ -1385,21 +1385,21 @@
         </div>
       </div>
       <fieldset class="talents simple custom" id="talents">
-        <legend id="talents-title">Таланты</legend>
+        <legend id="talents-title">Talentos</legend>
         <table aria-labelledby="talents-title">
           <thead>
             <tr>
               <th scope="col">
-                <span id="talents-name-label">Талант</span>
+                <span id="talents-name-label">Nombre del Talento</span>
               </th>
               <th scope="col" class="narrow">
-                <abbr id="talents-counter-label" title="Уровень">Уровень</abbr>
+                <abbr id="talents-counter-label" title="Veces Adquirido">Adq.</abbr>
               </th>
               <th scope="col">
-                <span id="talents-desc-label">Описание</span>
+                <span id="talents-desc-label">Descripción</span>
               </th>
               <th scope="col" class="narrow actions">
-                <span class="sr-only" id="talents-actions-title">Действия</span>
+                <span class="sr-only" id="talents-actions-title">Acciones</span>
                 <svg class="svg-actions" role="img" aria-labelledBy="talents-actions-title">
                   <use href="#actions" />
                 </svg>
@@ -1412,12 +1412,12 @@
                 <div class="hl-wrapper">
                   <div class="hl-wrapper-checkbox">
                     <input type="checkbox" name="talents-hl-0" id="talents-hl-0" class="sr-only highlight-toggle">
-                    <label for="talents-hl-0" title="Подсветить навык">
+                    <label for="talents-hl-0" title="Resaltar esta habilidad">
                       <svg>
                         <use href="#highlight-inactive"/>
                         <use href="#highlight-active"/>
                       </svg>
-                    <span class="sr-only">Подсветить талант</span>
+                    <span class="sr-only">Resaltar este talento</span>
                   </label>
                   </div>
                   <div class="hl-wrapper-name">
@@ -1435,7 +1435,7 @@
               </td>
               <td class="actions">
                 <button class="remove" type="button">
-                  <svg role="img" aria-label="Удалить">
+                  <svg role="img" aria-label="Eliminar">
                     <use href="#trash" />
                   </svg>
                 </button>
@@ -1449,12 +1449,12 @@
               <div class="hl-wrapper">
                 <div class="hl-wrapper-checkbox">
                   <input type="checkbox" name="talents-hl-" id="talents-hl-" class="sr-only highlight-toggle">
-                  <label for="talents-hl-" title="Подсветить талант">
+                  <label for="talents-hl-" title="Resaltar este talento">
                     <svg>
                       <use href="#highlight-inactive"/>
                       <use href="#highlight-active"/>
                     </svg>
-                  <span class="sr-only">Подсветить талант</span>
+                  <span class="sr-only">Resaltar este talento</span>
                 </label>
                 </div>
                 <div class="hl-wrapper-name">
@@ -1472,7 +1472,7 @@
             </td>
             <td class="actions">
               <button class="remove" type="button">
-                <svg role="img" aria-label="Удалить">
+                <svg role="img" aria-label="Eliminar">
                   <use href="#trash" />
                 </svg>
               </button>
@@ -1481,18 +1481,18 @@
         </template>
       </fieldset>
       <fieldset class="ambitions">
-        <legend class="sr-only">Амбиции</legend>
-        <div class="fake-legend" aria-hidden>Амбиции</div>
+        <legend class="sr-only">Ambiciones</legend>
+        <div class="fake-legend" aria-hidden>Ambiciones</div>
         <div class="blocktext-wrapper">
           <div class="item">
-            <div class="item-label" id="ambitions-short-label">Краткосрочная</div>
+            <div class="item-label" id="ambitions-short-label">Corto Plazo</div>
             <div class="item-desc">
               <div contenteditable tabindex="0" role="textbox" aria-multiline="true" aria-labelledby="ambitions-short-label"></div>
               <input type="hidden" name="ambitions-short" id="ambitions-short">
             </div>
           </div>
           <div class="item">
-            <div class="item-label" id="ambitions-long-label">Долгосрочная</div>
+            <div class="item-label" id="ambitions-long-label">Largo Plazo</div>
             <div class="item-desc">
               <div contenteditable tabindex="0" role="textbox" aria-multiline="true" aria-labelledby="ambitions-long-label"></div>
               <input type="hidden" name="ambitions-long" id="ambitions-long">
@@ -1501,32 +1501,32 @@
         </div>
       </fieldset>
       <fieldset class="party">
-        <legend class="sr-only">Команда</legend>
-        <div class="fake-legend" aria-hidden>Команда</div>
+        <legend class="sr-only">Grupo</legend>
+        <div class="fake-legend" aria-hidden>Grupo</div>
         <div class="blocktext-wrapper">
           <div class="item">
-            <div class="item-label" id="party-name-label">Название команды</div>
+            <div class="item-label" id="party-name-label">Nombre del Grupo</div>
             <div class="item-desc">
               <div contenteditable tabindex="0" role="textbox" aria-labelledBy="party-name-label"></div>
               <input type="hidden" name="party-name" id="party-name">
             </div>
           </div>
           <div class="item">
-            <div class="item-label" id="party-short-label">Краткосрочная амбиция</div>
+            <div class="item-label" id="party-short-label">Corto Plazo</div>
             <div class="item-desc">
               <div contenteditable tabindex="0" role="textbox" aria-multiline="true" aria-labelledBy="party-short-label"></div>
               <input type="hidden" name="party-short" id="party-short">
             </div>
           </div>
           <div class="item">
-            <div class="item-label" id="party-long-label">Долгосрочная амбиция</div>
+            <div class="item-label" id="party-long-label">Largo Plazo</div>
             <div class="item-desc">
               <div contenteditable tabindex="0" role="textbox" aria-multiline="true" aria-labelledBy="party-long-label"></div>
               <input type="hidden" name="party-long" id="party-long">
             </div>
           </div>
           <div class="item">
-            <div class="item-label" id="party-members-label">Члены команды</div>
+            <div class="item-label" id="party-members-label">Miembros</div>
             <div class="item-desc">
               <div contenteditable tabindex="0" role="textbox" aria-multiline="true" aria-labelledBy="party-members-label"></div>
               <input type="hidden" name="party-members" id="party-members">
@@ -1537,33 +1537,33 @@
     </div>
     <div class="page second">
       <fieldset class="armour simple encumbrance-src custom" id="armour">
-        <legend id="armour-title">Броня</legend>
+        <legend id="armour-title">Armadura</legend>
         <table aria-labelledby="armour-title">
           <thead>
             <th scope="col">
-              <span id="armour-name-label">Название</span>
+              <span id="armour-name-label">Nombre</span>
             </th>
             <th scope="col">
-              <span id="armour-location-label">Зоны попадания</span>
+              <span id="armour-location-label">Ubicaciones</span>
             </th>
             <th scope="col" class="narrow">
               <span id="armour-encumbrance-label">
-                <abbr title="Вес">Вес</abbr>
+                <abbr title="Impedimenta">Imp.</abbr>
               </span>
             </th>
             <th scope="col" class="narrow">
               <span id="armour-ap-label">
-                <abbr title="Класс брони">КБ</abbr>
+                <abbr title="Puntos de Armadura">PA</abbr>
               </span>
             </th>
             <th scope="col">
-              <span id="armour-qualities-label">Качества</span>
+              <span id="armour-qualities-label">Cualidades</span>
             </th>
             <th scope="col" class="narrow">
-              <span id="armour-worn-label">Снаряжен</span>
+              <span id="armour-worn-label">Equipada</span>
             </th>
             <th scope="col" class="narrow actions">
-              <span class="sr-only" id="armour-actions-title">Действия</span>
+              <span class="sr-only" id="armour-actions-title">Acciones</span>
               <svg class="svg-actions" role="img" aria-labelledBy="armour-actions-title">
                 <use href="#actions" />
               </svg>
@@ -1589,7 +1589,7 @@
               </td>
               <td class="actions">
                 <button class="remove" type="button">
-                  <svg role="img" aria-label="Удалить">
+                  <svg role="img" aria-label="Eliminar">
                     <use href="#trash" />
                   </svg>
                 </button>
@@ -1617,7 +1617,7 @@
             </td>
             <td class="actions">
               <button class="remove" type="button">
-                <svg role="img" aria-label="Удалить">
+                <svg role="img" aria-label="Eliminar">
                   <use href="#trash" />
                 </svg>
               </button>
@@ -1627,36 +1627,36 @@
         <output class="hidden" id="encumbrance-armour-total"></output>
       </fieldset>
       <fieldset class="armour-points simple">
-        <legend class="sr-only">Класс брони (КБ)</legend>
-        <div class="fake-legend" aria-hidden>Класс брони (КБ)</div>
+        <legend class="sr-only">Puntos de Armadura (PA)</legend>
+        <div class="fake-legend" aria-hidden>Puntos de Armadura (PA)</div>
         <div class="armour-points-box">
           <div class="armour-points-stat">
-            <label for="ap-head">Голова</label>
+            <label for="ap-head">Cabeza</label>
             <input type="number" name="ap-head" id="ap-head" aria-describedBy="ap-head-desc">
             <span id="ap-head-desc">01-09</span>
           </div>
           <div class="armour-points-stat">
-            <label for="ap-left-arm">Левая рука</label>
+            <label for="ap-left-arm">Brazo Izquierdo</label>
             <input type="number" name="ap-left-arm" id="ap-left-arm" aria-describedBy="ap-left-arm-desc">
             <span id="ap-left-arm-desc">10-24</span>
           </div>
           <div class="armour-points-stat">
-            <label for="ap-right-arm">Правая рука</label>
+            <label for="ap-right-arm">Brazo Derecho</label>
             <input type="number" name="ap-right-arm" id="ap-right-arm" aria-describedBy="ap-right-arm-desc">
             <span id="ap-right-arm-desc">25-44</span>
           </div>
           <div class="armour-points-stat">
-            <label for="ap-body">Торс</label>
+            <label for="ap-body">Cuerpo</label>
             <input type="number" name="ap-body" id="ap-body" aria-describedBy="ap-body-desc">
             <span id="ap-body-desc">45-79</span>
           </div>
           <div class="armour-points-stat">
-            <label for="ap-left-leg">Левая нога</label>
+            <label for="ap-left-leg">Pierna Izquierda</label>
             <input type="number" name="ap-left-leg" id="ap-left-leg" aria-describedBy="ap-left-leg-desc">
             <span id="ap-left-leg-desc">80-89</span>
           </div>
           <div class="armour-points-stat">
-            <label for="ap-right-leg">Правая нога</label>
+            <label for="ap-right-leg">Pierna Derecha</label>
             <input type="number" name="ap-right-leg" id="ap-right-leg" aria-describedBy="ap-right-leg-desc">
             <span id="ap-right-leg-desc">90-00</span>
           </div>
@@ -1664,19 +1664,19 @@
             <svg role="presentation" width="800px" height="800px" viewBox="-6 0 32 32" class="shield">
               <path d="M10.133 2.667l-10.133 1.92c0 0 0 12.16 0 14.347 0 3.467 3.040 7.947 10.133 10.4 7.093-2.453 10.133-6.933 10.133-10.4 0-2.187 0-14.347 0-14.347l-10.133-1.92zM19.2 18.933c0 2.987-2.827 6.987-9.067 9.28-6.24-2.293-9.067-6.293-9.067-9.28v-13.44l9.067-1.76 9.067 1.707v13.493z" fill="currentColor"></path>
             </svg>
-            <label for="ap-shield">Щит</label>
+            <label for="ap-shield">Escudo</label>
             <input type="number" name="ap-shield" id="ap-shield" aria-describedBy="ap-shield-desc">
           </div>
         </div>
       </fieldset>
       <fieldset class="wounds simple">
-        <legend id="wounds-title">Здоровье</legend>
+        <legend id="wounds-title">Heridas</legend>
         <div class="wounds-wrapper">
           <table class="left-aligned wounds-total" aria-labelledby="wounds-title">
             <tbody>
               <tr>
                 <th scope="row" class="narrow">
-                  <abbr title="Рейтинг Силы">РС</abbr>
+                  <abbr title="Bonificador de Fuerza">BF</abbr>
                 </th>
                 <td>
                   <output for="bonus-s" id="strength-bonus" name="strength-bonus">
@@ -1684,7 +1684,7 @@
               </tr>
               <tr>
                 <th scope="row" class="narrow">
-                  <abbr title="Рейтинг Выносилвости помноженный на два">РВх2</abbr>
+                  <abbr title="Bonificador de Resistencia (x2)">BRx2</abbr>
                 </th>
                 <td>
                   <output for="bonus-t" id="toughness-bonus" name="toughness-bonus">
@@ -1692,21 +1692,21 @@
               </tr>
               <tr>
                 <th scope="row" class="narrow">
-                  <abbr title="Рейтинг Силы Воли">РСВ</abbr>
+                  <abbr title="Bonificador de Voluntad">BV</abbr>
                 </th>
                 <td>
                   <output for="bonus-wp" id="will-power-bonus" name="will-power-bonus">
                 </td>
               </tr>
               <tr>
-                <th scope="row" class="narrow">Здоровяк (ур.)</th>
+                <th scope="row" class="narrow">Recio</th>
                 <td>
-                  <label class="sr-only" for="hardy-bonus">Уровень таланта Здоровяк</label>
+                  <label class="sr-only" for="hardy-bonus">Nivel del Talento Recio</label>
                   <input type="number" name="hardy-bonus" id="hardy-bonus">
                 </td>
               </tr>
               <tr>
-                <th scope="row" class="narrow">Здоровье</th>
+                <th scope="row" class="narrow">Heridas</th>
                 <td>
                   <output for="bonus-s toughness-bonus bonus-wp" id="wounds" name="wounds">
                 </td>
@@ -1714,28 +1714,28 @@
             </tbody>
           </table>
           <div class="wounds-current simple">
-            <label class="sr-only" for="current-wounds">Пункты здоровья</label>
+            <label class="sr-only" for="current-wounds">Heridas</label>
             <input type="text" name="current-wounds" id="current-wounds">
           </div>
         </div>
       </fieldset>
       <fieldset class="trappings simple custom encumbrance-src" id="trappings">
-        <legend id="trappings-title">Имущество</legend>
+        <legend id="trappings-title">Accesorios</legend>
         <table aria-labelledby="trappings-title">
           <thead>
             <th scope="col">
-              <span id="trappings-name-label">Название</span>
+              <span id="trappings-name-label">Nombre</span>
             </th>
             <th scope="col" class="narrow">
               <span id="trappings-encumbrance-label">
-                <abbr title="Вес">Вес</abbr>
+                <abbr title="Impedimenta">Imp.</abbr>
               </span>
             </th>
             <th scope="col" class="narrow">
-              <span id="trappings-worn-label">Снаряжен</span>
+              <span id="trappings-worn-label">Equipado</span>
             </th>
             <th scope="col" class="narrow actions">
-              <span class="sr-only" id="trappings-actions-title">Действия</span>
+              <span class="sr-only" id="trappings-actions-title">Acciones</span>
               <svg class="svg-actions" role="img" aria-labelledBy="trappings-actions-title">
                 <use href="#actions" />
               </svg>
@@ -1755,7 +1755,7 @@
               </td>
               <td class="actions">
                 <button class="remove" type="button">
-                  <svg role="img" aria-label="Удалить">
+                  <svg role="img" aria-label="Eliminar">
                     <use href="#trash" />
                   </svg>
                 </button>
@@ -1778,7 +1778,7 @@
             </td>
             <td class="actions">
               <button class="remove" type="button">
-                <svg role="img" aria-label="Удалить">
+                <svg role="img" aria-label="Eliminar">
                   <use href="#trash" />
                 </svg>
               </button>
@@ -1787,37 +1787,37 @@
         </template>
       </fieldset>
       <fieldset class="encumbrance addition">
-        <legend id="encumbrance-title">Вес</legend>
+        <legend id="encumbrance-title">Impedimenta</legend>
         <table class="left-aligned" aria-labelledby="encumbrance-title">
           <tbody>
             <tr>
-              <th scope="row" class="narrow">Оружие</th>
+              <th scope="row" class="narrow">Armas</th>
               <td>
                 <output for="encumbrance-weapons-total" id="encumbrance-weapons" name="encumbrance-weapons"></output>
               </td>
             </tr>
             <tr>
-              <th scope="row" class="narrow">Броня</th>
+              <th scope="row" class="narrow">Armaduras</th>
               <td>
                 <output for="encumbrance-armour-total" id="encumbrance-armour" name="encumbrance-armour"></output>
               </td>
             </tr>
             <tr>
-              <th scope="row" class="narrow">Имущество</th>
+              <th scope="row" class="narrow">Accesorios</th>
               <td>
                 <output for="encumbrance-trappings-total" id="encumbrance-trappings" name="encumbrance-trappings"></output>
               </td>
             </tr>
             <tr>
               <th scope="row" class="narrow" id="encumbrance-max-label">
-                <abbr title="Максимальное значение веса">Макс вес</abbr>
+                <abbr title="Impedimenta Máxima">Imp. Máx.</abbr>
               </th>
               <td>
                 <input type="number" id="encumbrance-max" name="encumbrance-max" aria-labelledBy="encumbrance-max-label">
               </td>
             </tr>
             <tr>
-              <th scope="row" class="narrow">Общий вес</th>
+              <th scope="row" class="narrow">Total</th>
               <td>
                 <output class="encumbrance-total" for="" id="encumbrance-total" name="encumbrance-total"></output>
               </td>
@@ -1826,45 +1826,45 @@
         </table>
         <div id="encumbrance-state" class="encumbrance-state">
           <div class="encumbrance-state-penalty encumbrance-state-penalty-0">
-            <p>Без штрафов</p>
+            <p>Sin penalización</p>
           </div>
           <div hidden class="encumbrance-state-penalty encumbrance-state-penalty-1">
-            <p>Перегружен Ур. 1</p>
+            <p>Sobrecargado Nivel 1</p>
             <ul>
-              <li>-1 Перемещение (Мин: 3)</li>
-              <li>-10 Ловкость</li>
-              <li>+1 усталость</li>
+              <li>-1 Movimiento (Mín: 3)</li>
+              <li>-10 a Agilidad</li>
+              <li>+1 a Fatiga por Viaje</li>
             </ul>
           </div>
           <div hidden class="encumbrance-state-penalty encumbrance-state-penalty-2">
-            <p>Перегружен Ур. 2</p>
+            <p>Sobrecargado Nivel 2</p>
             <ul>
-              <li>-2 Перемещение (Мин: 3)</li>
-              <li>-20 Ловкость</li>
-              <li>+2 Усталось</li>
+              <li>-2 Movimiento (Mín: 3)</li>
+              <li>-20 a Agilidad</li>
+              <li>+2 a Fatiga por Viaje</li>
             </ul>
           </div>
           <div hidden class="encumbrance-state-penalty encumbrance-state-penalty-3">
-            <p>Перегружен Ур 3</p>
+            <p>Sobrecargado Nivel 3</p>
             <ul>
-              <li>Без движения</li>
+              <li>No puedes moverte</li>
             </ul>
           </div>
         </div>
       </fieldset>
       <fieldset class="wealth simple">
-        <legend id="wealth-title">Деньги</legend>
+        <legend id="wealth-title">Riqueza</legend>
         <table class="layout-fixed" aria-labelledby="wealth-title">
           <thead>
             <tr>
               <th scope="col" id="copper-label">
-                <abbr title="Медные Пенни">Медь</abbr>
+                <abbr title="Peniques de Bronce">P</abbr>
               </th>
               <th scope="col" id="silver-label">
-                <abbr title="Серебряные Шиллинги">Серебро</abbr>
+                <abbr title="Chelines de Plata">CP</abbr>
               </th>
               <th scope="col" id="gold-label">
-                <abbr title="Золотые Кроны">Золото</abbr>
+                <abbr title="Coronas de Oro">CO</abbr>
               </th>
             </tr>
           </thead>
@@ -1882,31 +1882,31 @@
             </tr>
           </tbody>
         </table>
-        <div class="change">1 Золотой = 20 Серебряных = 240 Медных</div>
+        <div class="change">1CO = 20CP = 240P</div>
       </fieldset>
       <fieldset class="psychology">
-        <legend class="sr-only" id="psychology-label">Психология</legend>
-        <div class="fake-legend" aria-hidden>Психология</div>
+        <legend class="sr-only" id="psychology-label">Psicología</legend>
+        <div class="fake-legend" aria-hidden>Psicología</div>
         <div class="psychology-content">
           <div contenteditable tabindex="0" role="textbox" aria-multiline="true" aria-labelledby="psychology-label"></div>
           <input type="hidden" name="psychology" id="psychology">
         </div>
       </fieldset>
       <fieldset class="corruption simple">
-        <legend class="sr-only">Скверна и Мутации</legend>
-        <div class="fake-legend" aria-hidden>Скверна и Мутации</div>
+        <legend class="sr-only">Corrupción y Mutaciones</legend>
+        <div class="fake-legend" aria-hidden>Corrupción y Mutaciones</div>
         <div class="corruption-wrapper">
           <div>
-            <label for="treshold">Порог</label>
+            <label for="treshold">Límite</label>
             <input type="number" name="treshold" id="treshold">
           </div>
           <div>
-            <label for="corruption">Очки скверны</label>
+            <label for="corruption">Puntos de Corrupción</label>
             <input type="number" name="corruption" id="corruption">
           </div>
         </div>
         <div class="corruption-wrapper corruption-mutation">
-          <span id="mutation-label">Мутации</span>
+          <span id="mutation-label">Mutaciones</span>
           <div>
             <div contenteditable role="textbox" aria-multiline="true" aria-labelledby="mutation-label"></div>
             <input type="hidden" name="mutation" id="mutation">
@@ -1914,34 +1914,34 @@
         </div>
       </fieldset>
       <fieldset class="weapons simple encumbrance-src custom" id="weapons">
-        <legend id="weapons-title">Оружие</legend>
+        <legend id="weapons-title">Armas</legend>
         <table aria-labelledby="weapons-title">
           <thead>
             <th scope="col">
-              <span id="weapons-name-label">Название</span>
+              <span id="weapons-name-label">Nombre</span>
             </th>
             <th scope="col">
-              <span id="weapons-group-label">Тип</span>
+              <span id="weapons-group-label">Grupo</span>
             </th>
             <th scope="col" class="narrow">
               <span id="weapons-encumbrance-label">
-                <abbr title="Вес">Вес</abbr>
+                <abbr title="Impedimenta">Imp.</abbr>
               </span>
             </th>
             <th scope="col">
-              <span id="weapons-range-label">Длина/Дальность</span>
+              <span id="weapons-range-label">Alcance/Rango</span>
             </th>
             <th scope="col">
-              <span id="weapons-damage-label">Урон</span>
+              <span id="weapons-damage-label">Daño</span>
             </th>
             <th scope="col">
-              <span id="weapons-qualities-label">Качества</span>
+              <span id="weapons-qualities-label">Cualidades</span>
             </th>
             <th scope="col" class="narrow">
-              <span id="weapons-worn-label">Снаряжен</span>
+              <span id="weapons-worn-label">Equipada</span>
             </th>
             <th scope="col" class="narrow actions">
-              <span class="sr-only" id="weapons-actions-title">Действия</span>
+              <span class="sr-only" id="weapons-actions-title">Acciones</span>
               <svg class="svg-actions" role="img" aria-labelledBy="weapons-actions-title">
                 <use href="#actions" />
               </svg>
@@ -1972,7 +1972,7 @@
               </td>
               <td class="actions">
                 <button class="remove" type="button">
-                  <svg role="img" aria-label="Удалить">
+                  <svg role="img" aria-label="Eliminar">
                     <use href="#trash" />
                   </svg>
                 </button>
@@ -2005,7 +2005,7 @@
             </td>
             <td class="actions">
               <button class="remove" type="button">
-                <svg role="img" aria-label="Удалить">
+                <svg role="img" aria-label="Eliminar">
                   <use href="#trash" />
                 </svg>
               </button>
@@ -2015,35 +2015,35 @@
         <output class="hidden" id="encumbrance-weapons-total"></output>
       </fieldset>
       <fieldset class="spells simple custom" id="spells">
-        <legend id="spells-title">Заклинания и Молитвы</legend>
+        <legend id="spells-title">Hechizos y Plegarias</legend>
         <div class="spells-wrapper">
-          <label for="sin">Грех</label>
+          <label for="sin">Pecado</label>
           <input type="number" name="sin" id="sin">
         </div>
         <table aria-labelledby="spells-title">
           <thead>
             <th scope="col">
-              <span id="spells-name-label">Название</span>
+              <span id="spells-name-label">Nombre</span>
             </th>
             <th scope="col" class="narrow">
               <span id="spells-cn-label">
-                <abbr title="Порог Сотворения">ПС</abbr>
+                <abbr title="Nivel de Lanzamiento">NL</abbr>
               </span>
             </th>
             <th scope="col" class="narrow">
-              <span id="spells-range-label">Дальность</span>
+              <span id="spells-range-label">Rango</span>
             </th>
             <th scope="col" class="narrow">
-              <span id="spells-target-label">Цель</span>
+              <span id="spells-target-label">Objetivo</span>
             </th>
             <th scope="col">
-              <span id="spells-duration-label">Длительность</span>
+              <span id="spells-duration-label">Duración</span>
             </th>
             <th scope="col" class="medium">
-              <span id="spells-effects-label">Эффект</span>
+              <span id="spells-effects-label">Efecto</span>
             </th>
             <th scope="col" class="narrow actions">
-              <span class="sr-only" id="spells-actions-title">Действия</span>
+              <span class="sr-only" id="spells-actions-title">Acciones</span>
               <svg class="svg-actions" role="img" aria-labelledBy="spells-actions-title">
                 <use href="#actions" />
               </svg>
@@ -2072,7 +2072,7 @@
               </td>
               <td class="actions">
                 <button class="remove" type="button">
-                  <svg role="img" aria-label="Удалить">
+                  <svg role="img" aria-label="Eliminar">
                     <use href="#trash" />
                   </svg>
                 </button>
@@ -2103,7 +2103,7 @@
             </td>
             <td class="actions">
               <button class="remove" type="button">
-                <svg role="img" aria-label="Удалить">
+                <svg role="img" aria-label="Eliminar">
                   <use href="#trash" />
                 </svg>
               </button>
@@ -2113,7 +2113,7 @@
       </fieldset>
     </div>
     <div class="modal" id="modal">
-      <button type="button" class="button-modal close-modal" id="close-modal" aria-label="Закрыть">
+      <button type="button" class="button-modal close-modal" id="close-modal" aria-label="Cerrar">
         <svg fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
           <path d="M9.16998 14.83L14.83 9.17004" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -2121,47 +2121,47 @@
         </svg>
       </button>
       <fieldset class="settings">
-        <legend>Настройки</legend>
+        <legend>Ajustes</legend>
         <div id="theme" class="simple theme">
-          <h2>Выбрать оформление</h2>
+          <h2>Elegir mi tema</h2>
           <input type="radio" name="color-scheme" id="color-scheme-1" value="light">
-          <label for="color-scheme-1">Светлая</label>
+          <label for="color-scheme-1">Claro</label>
           <input type="radio" name="color-scheme" id="color-scheme-2" value="dark">
-          <label for="color-scheme-2">Темная</label>
+          <label for="color-scheme-2">Oscuro</label>
           <input type="radio" name="color-scheme" id="color-scheme-3" value="auto" checked>
-          <label for="color-scheme-3">Автоматически</label>
-          <p class="notice">Автоматическое оформление будет зависеть от настроек системы.</p>
+          <label for="color-scheme-3">Auto</label>
+          <p class="notice">La opción "Auto" se basará en la configuración de su sistema operativo.</p>
         </div>
         <hr>
-        <h2>Управление данными</h2>
+        <h2>Gestión de datos</h2>
         <div class="settings-data">
           <div>
-            <h3>Экспорт локальный данных</h3>
-            <button type="button" class="data-button" id="export-button">Скачать мои данные</button>
-            <p class="notice">Данные будут сохранены в формате <strong>.json</strong>.<br>Локальные даные не будут удалены.</p>
+            <h3>Exportar mis datos locales</h3>
+            <button type="button" class="data-button" id="export-button">Descargar mis datos</button>
+            <p class="notice">El archivo de exportación tendrá formato <strong>.json</strong>.<br>Los datos locales no serán eliminados.</p>
           </div>
           <div>
-            <h3 id="import-db-label">Импортировать мои данные</h3>
+            <h3 id="import-db-label">Importar mis datos</h3>
             <input type="file" name="import-db" id="import-db" aria-labelledBy="import-db-label">
-            <button type="button" class="data-button" id="import-button">Отправить</button>
-            <p hidden class="error" id="import-db-error-empty">Файл не выбран</p>
-            <p hidden class="error" id="import-db-error-file">Формат файла с данными должен быть JSON</p>
-            <p hidden class="error" id="import-db-error">Произошла ошибка. Проверьте что вы предоставили файл из этого приложения в формате JSON, если все корректно - свяжитесь с администрацией.</p>
-            <p hidden class="success" id="import-db-success">Данные импортированы. 🎉</p>
-            <p class="notice">⚠️ Импорт данных перезапишет существующие локальные данные.</p>
+            <button type="button" class="data-button" id="import-button">Enviar</button>
+            <p hidden class="error" id="import-db-error-empty">Ningún archivo seleccionado.</p>
+            <p hidden class="error" id="import-db-error-file">El archivo de datos debe ser un archivo JSON.</p>
+            <p hidden class="error" id="import-db-error">Ha ocurrido un error. Compruebe que ha proporcionado un archivo JSON de la aplicación y, si es el caso, contacte al administrador.</p>
+            <p hidden class="success" id="import-db-success">Datos importados. 🎉</p>
+            <p class="notice">⚠️ Importar datos sobrescribirá cualquier dato actualmente guardado localmente.</p>
           </div>
           <div>
-            <h3>Очистить мои локальные данные</h3>
-            <button type="button" class="data-button" id="clear-button">Удалить</button>
-            <p class="notice">⚠️ Это действие не может быть отменено. Сначала сделайте резервную копию!</p>
+            <h3>Borrar mis datos locales</h3>
+            <button type="button" class="data-button" id="clear-button">Borrar</button>
+            <p class="notice">⚠️ Esta acción es irreversible. ¡Considere hacer una copia de seguridad primero!</p>
           </div>
         </div>
         <hr>
         <div>
-          <h2>Версия</h2>
-          <p>Текущая версия: <strong>2.4.0</strong></p>
-          <p>Чтобы ознакомиться с подробностями нажмите на ссылку ниже</p>
-          <p><a class="button" href="https://github.com/GoOz/wfrp-sheet/blob/main/CHANGELOG.md">Прочитать CHANGELOG.md (янгл. язык)</a></p>
+          <h2>Versión</h2>
+          <p>Versión actual: <strong>2.4.0</strong></p>
+          <p>Haga clic en el enlace de abajo para más información</p>
+          <p><a class="button" href="https://github.com/GoOz/wfrp-sheet/blob/main/CHANGELOG.md">Leer el CHANGELOG.md (en inglés)</a></p>
         </div>
       </fieldset>
     </div>
