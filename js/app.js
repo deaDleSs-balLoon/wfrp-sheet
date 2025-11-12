@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
   checkStorage();
 
+  let isLoading = true;
+
   // Collections
   const simpleInputs = document.querySelectorAll(".simple");
   const additionInputs = document.querySelectorAll(".addition");
@@ -48,6 +50,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   highlights.forEach((item) => {
     item.addEventListener("input", toggleHighlight);
   });
+  initializeHighlightHandlers();
   settingsTheme.addEventListener("change", setTheme);
   clearButton.addEventListener("click", clearData);
   exportButton.addEventListener("click", exportData);
@@ -56,8 +59,204 @@ document.addEventListener("DOMContentLoaded", (event) => {
     button.addEventListener("click", removeCustomItem);
   });
 
+  // Обработчик для полей опыта с поддержкой трёх форматов
+  function handleExperienceExpression(event) {
+    const input = event.target;
+    let value = input.value.trim();
+
+    // Если пусто - ничего не делаем
+    if (!value) return;
+
+    // Проверяем, что введено
+    let result;
+
+    // Вариант 1: Просто число (абсолютное значение)
+    if (/^\d+$/.test(value)) {
+      result = {
+        type: "absolute",
+        value: parseInt(value, 10)
+      };
+    }
+    // Вариант 2: Выражение (содержит + или -)
+    else if (value.includes("+") || value.includes("-")) {
+      result = parseExpression(value, input.value);
+      if (result === null) {
+        // Невалидное выражение
+        console.warn("Invalid expression:", value);
+        input.classList.add("error");
+        setTimeout(() => input.classList.remove("error"), 1500);
+        input.value = input.dataset.originalValue || "";
+        return;
+      }
+    }
+    // Вариант 3: Невалидный ввод
+    else {
+      console.warn("Invalid input:", value);
+      input.classList.add("error");
+      setTimeout(() => input.classList.remove("error"), 1500);
+      input.value = input.dataset.originalValue || "";
+      return;
+    }
+
+    // Применяем результат в зависимости от типа поля
+    if (input.id === "current-xp") {
+      handleCurrentXpResult(result);
+    } else if (input.id === "spent-xp") {
+      handleSpentXpResult(result, input.dataset.originalValue);
+    }
+  }
+
+  // Функция парсинга для выражений
+  function parseExpression(expression, currentFieldValue) {
+    const cleaned = expression.trim();
+
+    // Вариант 1: Выражение начинается с оператора (+10 или -20)
+    const startsWithOperatorMatch = cleaned.match(/^([+\-])(\d+)$/);
+    if (startsWithOperatorMatch) {
+      const operator = startsWithOperatorMatch[1];
+      const operand = parseInt(startsWithOperatorMatch[2], 10);
+      const current = parseInt(currentFieldValue, 10) || 0;
+
+      let resultValue;
+      if (operator === "+") {
+        resultValue = current + operand;
+      } else {
+        resultValue = current - operand;
+      }
+
+      return {
+        type: "shortform",
+        currentValue: current,
+        operator: operator,
+        operand: operand,
+        value: Math.max(0, resultValue)
+      };
+    }
+
+    // Вариант 2: Полное выражение (100+10 или 100-20)
+    const fullExpressionMatch = cleaned.match(/^(\d+)\s*([+\-])\s*(\d+)$/);
+    if (fullExpressionMatch) {
+      const left = parseInt(fullExpressionMatch[1], 10);
+      const operator = fullExpressionMatch[2];
+      const right = parseInt(fullExpressionMatch[3], 10);
+
+      let resultValue;
+      if (operator === "+") {
+        resultValue = left + right;
+      } else {
+        resultValue = left - right;
+      }
+
+      return {
+        type: "fullform",
+        originalLeft: left,
+        operator: operator,
+        right: right,
+        value: Math.max(0, resultValue)
+      };
+    }
+
+    // Невалидное выражение
+    return null;
+  }
+
+  // Обработчик результата для current-xp
+  function handleCurrentXpResult(result) {
+    const currentInput = document.getElementById("current-xp");
+
+    if (!currentInput) return;
+
+    // Для всех типов просто устанавливаем новое значение
+    currentInput.value = result.value;
+
+    // Триггерим input событие для пересчёта
+    currentInput.dispatchEvent(new Event("input", { bubbles: true }));
+  }
+
+  // Обработчик результата для spent-xp
+  function handleSpentXpResult(result, originalValue) {
+    const currentInput = document.getElementById("current-xp");
+    const spentInput = document.getElementById("spent-xp");
+
+    if (!currentInput || !spentInput) return;
+
+    const oldSpentValue = parseInt(spentInput.dataset.originalValue, 10) || 0;
+    const currentValue = parseInt(currentInput.value, 10) || 0;
+    const newSpentValue = result.value;
+    const diff = newSpentValue - oldSpentValue;
+
+    // Применяем разницу к current-xp
+    if (diff > 0) {
+      // Тратим опыт: вычитаем из current, добавляем к spent
+      if (diff > currentValue) {
+        console.warn(`Not enough experience. Current: ${currentValue}, trying to spend: ${diff}`);
+        spentInput.classList.add("error");
+        setTimeout(() => spentInput.classList.remove("error"), 1500);
+        spentInput.value = oldSpentValue;
+        return;
+      }
+
+      currentInput.value = currentValue - diff;
+      spentInput.value = newSpentValue;
+    } else if (diff < 0) {
+      // Возвращаем опыт: добавляем к current, вычитаем из spent
+      const refund = Math.abs(diff);
+
+      currentInput.value = currentValue + refund;
+      spentInput.value = newSpentValue;
+    } else {
+      // Разница 0 - ничего не меняется
+      spentInput.value = newSpentValue;
+    }
+
+    // НОВОЕ: Явно сохраняем только вычисленные значения (не выражения!)
+    if (!isLoading) {
+      saveToStorage("current-xp", currentInput.value);
+      saveToStorage("spent-xp", spentInput.value);
+    }
+
+    // Триггерим input событие только для current
+    currentInput.dispatchEvent(new Event("input", { bubbles: true }));
+  }
+
+  function saveToStorage(key, value) {
+    if (key.startsWith("_")) {
+      localStorage.setItem(key, JSON.stringify(value));
+    } else {
+      localStorage.setItem(key, value);
+    }
+  }
+
+
+  // Инициализация в DOMContentLoaded
+  const currentXpInput = document.getElementById("current-xp");
+  const spentXpInput = document.getElementById("spent-xp");
+
+  if (currentXpInput) {
+    // ВАЖНО: Сохраняем исходное значение при фокусе
+    currentXpInput.addEventListener("focus", (e) => {
+      e.target.dataset.originalValue = e.target.value;
+      console.log("[current-xp] Focus, saved value:", e.target.dataset.originalValue);
+    });
+    currentXpInput.addEventListener("change", handleExperienceExpression);
+    currentXpInput.addEventListener("blur", handleExperienceExpression);
+  }
+
+  if (spentXpInput) {
+    // ВАЖНО: Сохраняем исходное значение при фокусе
+    spentXpInput.addEventListener("focus", (e) => {
+      e.target.dataset.originalValue = e.target.value;
+      console.log("[spent-xp] Focus, saved value:", e.target.dataset.originalValue);
+    });
+    spentXpInput.addEventListener("change", handleExperienceExpression);
+    spentXpInput.addEventListener("blur", handleExperienceExpression);
+  }
+
+
   // Fill the sheet with stored data
   fillFromStorage();
+
+  isLoading = false;
 
   // Modal
   const modal = document.getElementById("modal");
@@ -370,6 +569,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     });
     if (highlight) {
       highlight.addEventListener("input", toggleHighlight);
+      const newRow = clone.querySelector("tr");
     }
     remove.addEventListener("click", removeCustomItem);
 
@@ -482,6 +682,49 @@ document.addEventListener("DOMContentLoaded", (event) => {
     } else {
       parent.classList.remove("highlighted");
     }
+  }
+
+  function initializeHighlightHandlers() {
+    // Обработчик клика на элементы с кнопками подсветки
+    document.addEventListener("click", handleHighlightClick);
+  }
+
+  // ОДНА функция для всех кликов на любые строки/заголовки с кнопками подсветки
+  function handleHighlightClick(event) {
+    if (event.target.closest('.highlight-toggle') ||
+        event.target.closest('label[for*="-hl"]')) {
+      return;
+    }
+
+    const row = event.target.closest("tr, th");
+
+    if (!row) {
+      clearAllHighlights();
+      return;
+    }
+
+    const hlButton = row.querySelector(".hl-wrapper-checkbox, .hl-charac");
+
+    if (!hlButton) return;
+
+    const isCharac = row.tagName === "TH";
+
+    // Проверяем, активна ли уже эта кнопка
+    const isAlreadyActive = hlButton.classList.contains("active");
+
+    // Скрываем все кнопки
+    clearAllHighlights();
+
+    // Если кнопка не была активна - активируем её
+    if (!isAlreadyActive) {
+      hlButton.classList.add("active");
+    }
+    // Если была активна - она уже скрыта (из clearAllHighlights)
+  }
+
+  function clearAllHighlights() {
+    document.querySelectorAll(".hl-wrapper-checkbox.active, .hl-charac.active")
+      .forEach(btn => btn.classList.remove("active"));
   }
 
   // Remove custom item row
