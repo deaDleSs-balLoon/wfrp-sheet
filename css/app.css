@@ -639,6 +639,11 @@ table.layout-fixed {
   position: relative;
 }
 
+.charac :is(th:focus-within, th:hover) .hl-wrapper-checkbox {
+  inset-block-end: 100%;
+  opacity: 1;
+}
+
 /* Points */
 .points {
   grid-area: points;
@@ -732,12 +737,15 @@ table.layout-fixed {
   flex-basis: 40%;
 }
 
+:is(.skills, .talents) :is(tr:focus-within, tr:hover) .hl-wrapper-checkbox {
+  flex-basis: 1rem;
+  padding-inline-start: 0.25rem;
+}
 .hl-wrapper {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
-  position: relative;
 }
 .highlight-toggle {
   margin: 0;
@@ -745,32 +753,19 @@ table.layout-fixed {
 .hl-wrapper-checkbox {
   flex: 0 0 0;
   padding: 0;
-  overflow: visible;
+  overflow: hidden;
   transition: all 200ms ease-in-out;
   direction: rtl;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 0;
-  opacity: 0;
-  pointer-events: none;
-  z-index: 10;
-  background-color: var(--bgcolor);
-  border-radius: 0.5rem;
-}
-.hl-wrapper-checkbox.active {
-  opacity: 1 !important;
-  pointer-events: auto !important;
 }
 .hl-wrapper-checkbox svg {
   width: 1rem;
   height: 1rem;
 }
 .hl-wrapper-checkbox .highlight-toggle:focus + label {
-  background-color: var(--bgcolor);
+  background-color: var(--hover);
 }
 .hl-wrapper-checkbox .highlight-toggle + label {
-  border-radius: 0.5rem;
+  border-radius: 0.25rem;
   display: inline-flex;
   cursor: pointer;
 }
@@ -786,25 +781,15 @@ table.layout-fixed {
 .hl-wrapper-checkbox .highlight-toggle:checked + label svg :last-child {
   display: inline-block;
 }
-
 .hl-charac {
-  /* Позиционируем как обычную кнопку - у правого края ячейки */
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 0;
-  z-index: 10;
+  inset-block-end: 50%;
+  z-index: 1;
+  inset-inline-end: 50%;
+  transform: translateX(-50%);
   opacity: 0;
-  pointer-events: none;
-  transition: opacity 200ms ease-in-out;
-  background-color: var(--bgcolor);
-  border-radius: 0.5rem;
+  transition: opacity 200ms ease-in-out, inset-block-end 200ms ease-in-out;
 }
-.hl-charac.active {
-  opacity: 1 !important;
-  pointer-events: auto !important;
-}
-
 .hl-wrapper-name {
   flex: 1 1 auto;
   overflow: hidden;

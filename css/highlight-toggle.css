@@ -1,0 +1,53 @@
+.charac :is(th:focus-within, th:hover) .hl-wrapper-checkbox {
+  inset-block-end: auto;
+  opacity: 0;
+}
+
+:is(.skills, .talents) :is(tr:focus-within, tr:hover) .hl-wrapper-checkbox {
+  flex-basis: initial;
+  padding-inline-start: initial;
+}
+
+.hl-wrapper {
+  position: relative;
+}
+
+.hl-wrapper-checkbox {
+  overflow: visible;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 10;
+  background-color: var(--bgcolor);
+  border-radius: 0.5rem
+}
+
+.hl-wrapper-checkbox.active {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+.hl-wrapper-checkbox .highlight-toggle:focus + label {
+  background-color: var(--bgcolor);
+}
+
+.hl-wrapper-checkbox .highlight-toggle + label {
+  border-radius: 0.5rem;
+}
+
+.hl-charac {
+  top: 50%;
+  right: 0;
+  z-index: 10;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 200ms ease-in-out;
+  background-color: var(--bgcolor);
+  border-radius: 0.5rem;
+  transform: translateY(-50%);
+  inset-inline-end: auto;
+  inset-block-end: auto;
+}
