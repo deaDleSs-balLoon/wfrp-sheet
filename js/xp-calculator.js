@@ -1,42 +1,41 @@
-// XP Calculator Module - расширение для вычислений в полях опыта
-// Подключается к app.js для добавления функционала вычислений в current-xp и spent-xp
+// XP Calculator Module - extends app.js with XP field calculation functionality
+// Adds support for three input formats in current-xp and spent-xp fields
 
 (function() {
   'use strict';
 
-  // Инициализация после загрузки DOM
+  // Initialize after DOM is loaded
   function initXpCalculator() {
     const currentXpInput = document.getElementById("current-xp");
     const spentXpInput = document.getElementById("spent-xp");
 
     if (!currentXpInput || !spentXpInput) {
-      console.warn("XP Calculator: поля current-xp или spent-xp не найдены");
+      console.warn("XP Calculator: current-xp or spent-xp fields not found");
       return;
     }
 
-    // Обработчик для полей опыта с поддержкой трёх форматов
+    // Handler for XP fields supporting three formats: absolute value, shortform (+/-N), fullform (N+/-M)
     function handleExperienceExpression(event) {
       const input = event.target;
       let value = input.value.trim();
 
-      // Если пусто - ничего не делаем
+      // Do nothing if empty
       if (!value) return;
 
-      // Проверяем, что введено
       let result;
 
-      // Вариант 1: Просто число (абсолютное значение)
+      // Format 1: Plain number (absolute value)
       if (/^\d+$/.test(value)) {
         result = {
           type: "absolute",
           value: parseInt(value, 10)
         };
       }
-      // Вариант 2: Выражение (содержит + или -)
+      // Format 2: Expression (contains + or -)
       else if (value.includes("+") || value.includes("-")) {
         result = parseExpression(value, input.dataset.originalValue || "0");
         if (result === null) {
-          // Невалидное выражение
+          // Invalid expression
           console.warn("Invalid expression:", value);
           input.classList.add("error");
           setTimeout(() => input.classList.remove("error"), 1500);
@@ -44,7 +43,7 @@
           return;
         }
       }
-      // Вариант 3: Невалидный ввод
+      // Format 3: Invalid input
       else {
         console.warn("Invalid input:", value);
         input.classList.add("error");
@@ -53,7 +52,7 @@
         return;
       }
 
-      // Применяем результат в зависимости от типа поля
+      // Apply result based on field type
       if (input.id === "current-xp") {
         handleCurrentXpResult(result);
       } else if (input.id === "spent-xp") {
@@ -61,11 +60,11 @@
       }
     }
 
-    // Функция парсинга для выражений
+    // Parse XP expressions
     function parseExpression(expression, currentFieldValue) {
       const cleaned = expression.trim();
 
-      // Вариант 1: Выражение начинается с оператора (+10 или -20)
+      // Format 1: Starts with operator (+10 or -20)
       const startsWithOperatorMatch = cleaned.match(/^([+\-])(\d+)$/);
       if (startsWithOperatorMatch) {
         const operator = startsWithOperatorMatch[1];
@@ -88,7 +87,7 @@
         };
       }
 
-      // Вариант 2: Полное выражение (100+10 или 100-20)
+      // Format 2: Full expression (100+10 or 100-20)
       const fullExpressionMatch = cleaned.match(/^(\d+)\s*([+\-])\s*(\d+)$/);
       if (fullExpressionMatch) {
         const left = parseInt(fullExpressionMatch[1], 10);
@@ -111,45 +110,50 @@
         };
       }
 
-      // Невалидное выражение
+      // Invalid expression
       return null;
     }
 
-    // Обработчик результата для current-xp
+    // Handle current-xp calculation result
     function handleCurrentXpResult(result) {
       const currentInput = document.getElementById("current-xp");
 
       if (!currentInput) return;
 
-      // Устанавливаем новое значение
+      // Set new value
       currentInput.value = result.value;
 
-      // Явно сохраняем только вычисленное значение
+      // Save only computed value (not expressions)
       if (typeof saveToStorage === 'function') {
         saveToStorage("current-xp", result.value.toString());
       } else {
         localStorage.setItem("current-xp", result.value.toString());
       }
+
+      // Update total-xp
+      if (window.updateTotalXp) {
+        window.updateTotalXp();
+      }
     }
 
-    // Обработчик результата для spent-xp
+    // Handle spent-xp calculation result
     function handleSpentXpResult(result, originalValue) {
       const currentInput = document.getElementById("current-xp");
       const spentInput = document.getElementById("spent-xp");
 
       if (!currentInput || !spentInput) return;
 
-      // Сохранённое исходное значение spent ДО редактирования
+      // Original spent value before editing
       const oldSpentValue = parseInt(spentInput.dataset.originalValue, 10) || 0;
       const currentValue = parseInt(currentInput.value, 10) || 0;
       const newSpentValue = result.value;
 
-      // Вычисляем разницу ТОЛЬКО от oldSpentValue
+      // Calculate difference from oldSpentValue ONLY
       const diff = newSpentValue - oldSpentValue;
 
-      // Применяем разницу к current-xp
+      // Apply difference to current-xp
       if (diff > 0) {
-        // Тратим опыт: вычитаем из current, добавляем к spent
+        // Spending experience: subtract from current, add to spent
         if (diff > currentValue) {
           console.warn(`Not enough experience. Current: ${currentValue}, trying to spend: ${diff}`);
           spentInput.classList.add("error");
@@ -161,17 +165,17 @@
         currentInput.value = currentValue - diff;
         spentInput.value = newSpentValue;
       } else if (diff < 0) {
-        // Возвращаем опыт: добавляем к current, вычитаем из spent
+        // Refunding experience: add to current, subtract from spent
         const refund = Math.abs(diff);
 
         currentInput.value = currentValue + refund;
         spentInput.value = newSpentValue;
       } else {
-        // Разница 0 - ничего не меняется
+        // No difference - nothing changes
         spentInput.value = newSpentValue;
       }
 
-      // Явно сохраняем только вычисленные значения (не выражения!)
+      // Save only computed values (not expressions!)
       if (typeof saveToStorage === 'function') {
         saveToStorage("current-xp", currentInput.value);
         saveToStorage("spent-xp", spentInput.value);
@@ -180,28 +184,16 @@
         localStorage.setItem("spent-xp", spentInput.value);
       }
 
-      // Принудительно обновляем total-xp
+      // Manually update total-xp after changing both values
       if (window.updateTotalXp) {
         window.updateTotalXp();
       }
     }
 
-    // Обновление total-xp
-    function updateTotalXp() {
-      const currentInput = document.getElementById("current-xp");
-      const spentInput = document.getElementById("spent-xp");
-      const totalOutput = document.getElementById("total-xp");
-
-      if (!currentInput || !spentInput || !totalOutput) return;
-
-      const current = parseInt(currentInput.value, 10) || 0;
-      const spent = parseInt(spentInput.value, 10) || 0;
-      totalOutput.textContent = current + spent;
-    }
-
-    // Инициализация событий
+    // Attach event handlers
     if (currentXpInput) {
       currentXpInput.addEventListener("focus", (e) => {
+        // Save original value on focus
         e.target.dataset.originalValue = e.target.value;
       });
       currentXpInput.addEventListener("change", handleExperienceExpression);
@@ -209,20 +201,33 @@
 
     if (spentXpInput) {
       spentXpInput.addEventListener("focus", (e) => {
+        // Save original value on focus
         e.target.dataset.originalValue = e.target.value;
       });
       spentXpInput.addEventListener("change", handleExperienceExpression);
     }
 
+    // Initial total-xp update when module loads
+    // Ensures total is recalculated after fillFromStorage() in app.js
+    if (window.updateTotalXp) {
+      window.updateTotalXp();
+    }
+
+    // Disable auto-update of total-xp after initialization
+    // Removes 'for' attribute so browser won't update automatically anymore
+    // Now only our code controls the updates
+    if (window.disableTotalXpAutoUpdate) {
+      window.disableTotalXpAutoUpdate();
+    }
+
     console.log("XP Calculator initialized");
   }
 
-  // Автоматическая инициализация при загрузке DOM
+  // Automatic initialization when DOM is loaded
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initXpCalculator);
   } else {
-    // DOM уже загружен
+    // DOM already loaded
     initXpCalculator();
   }
-
 })();
