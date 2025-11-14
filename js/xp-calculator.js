@@ -4,6 +4,55 @@
 (function() {
   'use strict';
 
+  // Error modal for user feedback
+  let errorModalElement = null;
+
+  // Initialize error modal
+  function initErrorModal() {
+    // Create error modal if it doesn't exist
+    if (!errorModalElement) {
+      errorModalElement = document.createElement('div');
+      errorModalElement.className = 'xp-error-modal';
+      errorModalElement.innerHTML = `
+        <div class="xp-error-dialog">
+          <div class="xp-error-title" id="xp-error-title">Error</div>
+          <div class="xp-error-message" id="xp-error-message"></div>
+          <button class="xp-error-close-btn" id="xp-error-close">Close</button>
+        </div>
+      `;
+      document.body.appendChild(errorModalElement);
+
+      // Close button handler
+      document.getElementById('xp-error-close').addEventListener('click', () => {
+        errorModalElement.classList.remove('active');
+      });
+
+      // Close on background click
+      errorModalElement.addEventListener('click', (e) => {
+        if (e.target === errorModalElement) {
+          errorModalElement.classList.remove('active');
+        }
+      });
+
+      // Close on Escape key
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && errorModalElement.classList.contains('active')) {
+          errorModalElement.classList.remove('active');
+        }
+      });
+    }
+  }
+
+  // Show error to user
+  function showError(title, message) {
+    if (!errorModalElement) {
+      initErrorModal();
+    }
+    document.getElementById('xp-error-title').textContent = title;
+    document.getElementById('xp-error-message').textContent = message;
+    errorModalElement.classList.add('active');
+  }
+
   // Initialize after DOM is loaded
   function initXpCalculator() {
     const currentXpInput = document.getElementById("current-xp");
@@ -14,10 +63,14 @@
       return;
     }
 
+    // Initialize error modal on load
+    initErrorModal();
+
     // Handler for XP fields supporting three formats: absolute value, shortform (+/-N), fullform (N+/-M)
     function handleExperienceExpression(event) {
       const input = event.target;
       let value = input.value.trim();
+      const originalValue = input.dataset.originalValue || "";
 
       // Do nothing if empty
       if (!value) return;
@@ -35,20 +88,41 @@
       else if (value.includes("+") || value.includes("-")) {
         result = parseExpression(value, input.dataset.originalValue || "0");
         if (result === null) {
-          // Invalid expression
+          // Invalid expression - RESTORE ORIGINAL VALUE AND SHOW ERROR
+          input.value = originalValue;
+          // Force restoration to storage immediately
+          if (typeof saveToStorage === 'function') {
+            saveToStorage(input.id, originalValue);
+          } else {
+            localStorage.setItem(input.id, originalValue);
+          }
+          // Recalculate total after restoration
+          if (window.updateTotalXp) {
+            window.updateTotalXp();
+          }
+          const errorMsg = "Invalid format. Use: number, +number, -number, or number+/-number\n\nExamples: 100, +10, -5, 100+20";
           console.warn("Invalid expression:", value);
-          input.classList.add("error");
-          setTimeout(() => input.classList.remove("error"), 1500);
-          input.value = input.dataset.originalValue || "";
+          showError("Invalid Expression", errorMsg);
           return;
         }
       }
       // Format 3: Invalid input
       else {
+        // Invalid input - RESTORE ORIGINAL VALUE AND SHOW ERROR
+        input.value = originalValue;
+        // Force restoration to storage immediately
+        if (typeof saveToStorage === 'function') {
+          saveToStorage(input.id, originalValue);
+        } else {
+          localStorage.setItem(input.id, originalValue);
+        }
+        // Recalculate total after restoration
+        if (window.updateTotalXp) {
+          window.updateTotalXp();
+        }
+        const errorMsg = "Invalid input. Use: number, +number, -number, or number+/-number\n\nExamples: 100, +10, -5, 100+20";
         console.warn("Invalid input:", value);
-        input.classList.add("error");
-        setTimeout(() => input.classList.remove("error"), 1500);
-        input.value = input.dataset.originalValue || "";
+        showError("Invalid Input", errorMsg);
         return;
       }
 
@@ -123,7 +197,7 @@
       // Set new value
       currentInput.value = result.value;
 
-      // Save only computed value (not expressions)
+      // Save only computed value as NUMBER, never expressions!
       if (typeof saveToStorage === 'function') {
         saveToStorage("current-xp", result.value.toString());
       } else {
@@ -155,10 +229,22 @@
       if (diff > 0) {
         // Spending experience: subtract from current, add to spent
         if (diff > currentValue) {
-          console.warn(`Not enough experience. Current: ${currentValue}, trying to spend: ${diff}`);
-          spentInput.classList.add("error");
-          setTimeout(() => spentInput.classList.remove("error"), 1500);
+          // NOT ENOUGH EXPERIENCE - RESTORE AND SHOW ERROR
           spentInput.value = oldSpentValue;
+          // Force restoration to storage immediately
+          if (typeof saveToStorage === 'function') {
+            saveToStorage("spent-xp", oldSpentValue.toString());
+          } else {
+            localStorage.setItem("spent-xp", oldSpentValue.toString());
+          }
+          // Recalculate total after restoration
+          if (window.updateTotalXp) {
+            window.updateTotalXp();
+          }
+          // Maximum new spent value = current (can only spend up to current XP)
+          const errorMsg = `Not enough current experience to spend.\n\nYou have: ${currentValue} current XP\nYou are trying to spend: ${diff}\n\nMaximum you can spend: ${currentValue} XP`;
+          console.warn(errorMsg);
+          showError("Not Enough Experience", errorMsg);
           return;
         }
 
@@ -175,7 +261,7 @@
         spentInput.value = newSpentValue;
       }
 
-      // Save only computed values (not expressions!)
+      // Save only computed values as NUMBERS, never expressions!
       if (typeof saveToStorage === 'function') {
         saveToStorage("current-xp", currentInput.value);
         saveToStorage("spent-xp", spentInput.value);
