@@ -416,11 +416,11 @@
                 <tr>
                   <td>
                     <label class="sr-only" for="current-xp">Experience to spend</label>
-                    <input type="text" id="current-xp" name="current-xp" class="simple" inputmode="numeric">
+                    <input type="number" id="current-xp" name="current-xp">
                   </td>
                   <td>
                     <label class="sr-only" for="spent-xp">Spent experience</label>
-                    <input type="text" id="spent-xp" name="spent-xp" class="simple" inputmode="numeric">
+                    <input type="number" id="spent-xp" name="spent-xp">
                   </td>
                   <td><output id="total-xp" name="total-xp" for="current-xp spent-xp"></output></td>
                 </tr>
@@ -2169,8 +2169,12 @@
     </div>
   </form>
   <script src="../js/total-xp-fixer.js"></script>
+  <script src="../js/input-event-guard.js"></script>
   <script src="../js/app.js"></script>
+  <script src="../js/input-type-converter.js"></script>
+  <script src="../js/expression-parser.js"></script>
   <script src="../js/xp-calculator.js"></script>
+  <script src="../js/advancement-calculator.js"></script>
   <script src="../js/highlight-toggle.js"></script>
 </body>
 </html>
