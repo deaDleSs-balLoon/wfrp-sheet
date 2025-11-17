@@ -1,0 +1,17 @@
+{%- comment -%}
+Error Modal: Insufficient Experience (Advancement)
+Used when user tries to advance characteristic/skill without enough XP
+The message will be populated with actual values by JavaScript
+Variables to replace: {current}, {cost}, {type}
+Place this in your HTML where error modals should appear
+{%- endcomment -%}
+
+<div class="xp-error-modal" id="modal-advancement-insufficient" data-modal-type="advancement-insufficient" style="display:none;">
+  <div class="xp-error-dialog">
+    <div class="xp-error-title">{{ 'points.experience.advancement.insufficientXp' | i18n }}</div>
+    <div class="xp-error-message" data-template="{{ 'points.experience.advancement.insufficientXpMessage' | i18n }}">
+      {{ 'points.experience.advancement.insufficientXpMessage' | i18n }}
+    </div>
+    <button class="xp-error-close-btn" onclick="document.getElementById('modal-advancement-insufficient').style.display='none'">{{ 'settings.close' | i18n }}</button>
+  </div>
+</div>

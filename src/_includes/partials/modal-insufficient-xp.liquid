@@ -1,0 +1,16 @@
+{%- comment -%}
+Error Modal: Insufficient Experience (XP spending)
+Used when user tries to spend more XP than available
+The message will be populated with actual values by JavaScript
+Place this in your HTML where error modals should appear
+{%- endcomment -%}
+
+<div class="xp-error-modal" id="modal-insufficient-xp" data-modal-type="insufficient-xp" style="display:none;">
+  <div class="xp-error-dialog">
+    <div class="xp-error-title">{{ 'points.experience.validation.insufficientXp' | i18n }}</div>
+    <div class="xp-error-message" data-i18n-template="points.experience.validation.insufficientXpMessage">
+      {{ 'points.experience.validation.insufficientXpMessage' | i18n }}
+    </div>
+    <button class="xp-error-close-btn" onclick="document.getElementById('modal-insufficient-xp').style.display='none'">{{ 'settings.close' | i18n }}</button>
+  </div>
+</div>

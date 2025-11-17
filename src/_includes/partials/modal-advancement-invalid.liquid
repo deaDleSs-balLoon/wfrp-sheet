@@ -1,0 +1,13 @@
+{%- comment -%}
+Error Modal: Invalid Advancement Input
+Used when user enters invalid expression in advancement field
+Place this in your HTML where error modals should appear
+{%- endcomment -%}
+
+<div class="xp-error-modal" id="modal-advancement-invalid" data-modal-type="advancement-invalid" style="display:none;">
+  <div class="xp-error-dialog">
+    <div class="xp-error-title">{{ 'points.experience.advancement.invalidInput' | i18n }}</div>
+    <div class="xp-error-message">{{ 'points.experience.advancement.invalidInputMessage' | i18n }}</div>
+    <button class="xp-error-close-btn" onclick="document.getElementById('modal-advancement-invalid').style.display='none'">{{ 'settings.close' | i18n }}</button>
+  </div>
+</div>

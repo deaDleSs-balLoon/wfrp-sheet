@@ -557,6 +557,89 @@ export default {
         pl: "Sum.",
         es: "Tot.",
       },
+      validation: {
+        invalidInput: {
+          fr: "Entrée invalide",
+          en: "Invalid Input",
+          ru: "Некорректный ввод",
+          pl: "Nieprawidłowe wejście",
+          es: "Entrada inválida"
+        },
+
+        invalidInputMessage: {
+          fr: "Format: nombre, +nombre, -nombre, ou nombre+/-nombre\n\nExemples: 5, +2, -1, 10+3",
+          en: "Format: number, +number, -number, or number+/-number\n\nExamples: 5, +2, -1, 10+3",
+          ru: "Формат: число, +число, -число или число+/-число\n\nПримеры: 5, +2, -1, 10+3",
+          pl: "Format: liczba, +liczba, -liczba lub liczba+/-liczba\n\nPrzykłady: 5, +2, -1, 10+3",
+          es: "Formato: número, +número, -número o número+/-número\n\nEjemplos: 5, +2, -1, 10+3"
+        },
+
+        insufficientXp: {
+          fr: "Expérience insuffisante",
+          en: "Insufficient Experience",
+          ru: "Недостаточно опыта",
+          pl: "Niewystarczające doświadczenie",
+          es: "Experiencia insuficiente"
+        },
+
+        insufficientXpMessage: {
+          fr: "Pas assez d'expérience à dépenser.\n\nVous avez: {current} XP\nCoût: {cost} XP",
+          en: "Not enough experience to spend.\n\nYou have: {current} XP\nCost: {cost} XP",
+          ru: "Недостаточно опыта для траты.\n\nУ вас есть: {current} XP\nСтоимость: {cost} XP",
+          pl: "Niewystarczające doświadczenie do wydania.\n\nMasz: {current} XP\nKoszt: {cost} XP",
+          es: "No hay experiencia suficiente para gastar.\n\nTienes: {current} XP\nCosto: {cost} XP"
+        }
+      },
+
+      advancement: {
+        invalidInput: {
+          fr: "Entrée invalide",
+          en: "Invalid Input",
+          ru: "Некорректный ввод",
+          pl: "Nieprawidłowe wejście",
+          es: "Entrada inválida"
+        },
+
+        invalidInputMessage: {
+          fr: "Format: nombre, +nombre, -nombre, ou nombre+/-nombre\n\nExemples: 5, +2, -1, 10+3",
+          en: "Format: number, +number, -number, or number+/-number\n\nExamples: 5, +2, -1, 10+3",
+          ru: "Формат: число, +число, -число или число+/-число\n\nПримеры: 5, +2, -1, 10+3",
+          pl: "Format: liczba, +liczba, -liczba lub liczba+/-liczba\n\nPrzykłady: 5, +2, -1, 10+3",
+          es: "Formato: número, +número, -número o número+/-número\n\nEjemplos: 5, +2, -1, 10+3"
+        },
+
+        insufficientXp: {
+          fr: "Expérience insuffisante",
+          en: "Insufficient Experience",
+          ru: "Недостаточно опыта",
+          pl: "Niewystarczające doświadczenie",
+          es: "Experiencia insuficiente"
+        },
+
+        insufficientXpMessage: {
+          fr: "Pas assez d'expérience pour progresser en {type}.\n\nVous avez: {current} XP actuels\nCoût: {cost} XP",
+          en: "Not enough experience to advance {type}.\n\nYou have: {current} current XP\nCost: {cost} XP",
+          ru: "Недостаточно опыта для развития {type}.\n\nУ вас есть: {current} текущего XP\nСтоимость: {cost} XP",
+          pl: "Niewystarczające doświadczenie do awansu {type}.\n\nMasz: {current} bieżącego XP\nKoszt: {cost} XP",
+          es: "No hay experiencia suficiente para avanzar {type}.\n\nTienes: {current} XP actual\nCosto: {cost} XP"
+        },
+
+        typeCharacteristic: {
+          fr: "caractéristique",
+          en: "characteristic",
+          ru: "характеристики",
+          pl: "cechy",
+          es: "característica"
+        },
+
+        typeSkill: {
+          fr: "compétence",
+          en: "skill",
+          ru: "навыка",
+          pl: "umiejętności",
+          es: "habilidad"
+        }
+      }
     },
   },
   movement: {
