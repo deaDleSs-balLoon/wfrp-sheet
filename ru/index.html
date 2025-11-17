@@ -2176,5 +2176,55 @@
   <script src="../js/xp-calculator.js"></script>
   <script src="../js/advancement-calculator.js"></script>
   <script src="../js/highlight-toggle.js"></script>
+  <!-- Error Modals for Calculators -->
+  <div class="xp-error-modal" id="modal-invalid-input" data-modal-type="invalid-input" style="display:none;">
+  <div class="xp-error-dialog">
+    <div class="xp-error-title">Некорректный ввод</div>
+    <div class="xp-error-message">Формат: число, +число, -число или число+/-число
+
+Примеры: 5, +2, -1, 10+3</div>
+    <button class="xp-error-close-btn" onclick="document.getElementById('modal-invalid-input').style.display='none'">Закрыть</button>
+  </div>
+</div>
+
+  <div class="xp-error-modal" id="modal-insufficient-xp" data-modal-type="insufficient-xp" style="display:none;">
+  <div class="xp-error-dialog">
+    <div class="xp-error-title">Недостаточно опыта</div>
+    <div class="xp-error-message" data-i18n-template="points.experience.validation.insufficientXpMessage">
+      Недостаточно опыта для траты.
+
+У вас есть: {current} XP
+Стоимость: {cost} XP
+    </div>
+    <button class="xp-error-close-btn" onclick="document.getElementById('modal-insufficient-xp').style.display='none'">Закрыть</button>
+  </div>
+</div>
+
+  <div class="xp-error-modal" id="modal-advancement-invalid" data-modal-type="advancement-invalid" style="display:none;">
+  <div class="xp-error-dialog">
+    <div class="xp-error-title">Некорректный ввод</div>
+    <div class="xp-error-message">Формат: число, +число, -число или число+/-число
+
+Примеры: 5, +2, -1, 10+3</div>
+    <button class="xp-error-close-btn" onclick="document.getElementById('modal-advancement-invalid').style.display='none'">Закрыть</button>
+  </div>
+</div>
+
+  <div class="xp-error-modal" id="modal-advancement-insufficient" data-modal-type="advancement-insufficient" style="display:none;">
+  <div class="xp-error-dialog">
+    <div class="xp-error-title">Недостаточно опыта</div>
+    <div class="xp-error-message" data-template="Недостаточно опыта для развития {type}.
+
+У вас есть: {current} текущего XP
+Стоимость: {cost} XP">
+      Недостаточно опыта для развития {type}.
+
+У вас есть: {current} текущего XP
+Стоимость: {cost} XP
+    </div>
+    <button class="xp-error-close-btn" onclick="document.getElementById('modal-advancement-insufficient').style.display='none'">Закрыть</button>
+  </div>
+</div>
+
 </body>
 </html>

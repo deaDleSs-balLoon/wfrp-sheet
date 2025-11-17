@@ -2176,5 +2176,55 @@
   <script src="../js/xp-calculator.js"></script>
   <script src="../js/advancement-calculator.js"></script>
   <script src="../js/highlight-toggle.js"></script>
+  <!-- Error Modals for Calculators -->
+  <div class="xp-error-modal" id="modal-invalid-input" data-modal-type="invalid-input" style="display:none;">
+  <div class="xp-error-dialog">
+    <div class="xp-error-title">Invalid Input</div>
+    <div class="xp-error-message">Format: number, +number, -number, or number+/-number
+
+Examples: 5, +2, -1, 10+3</div>
+    <button class="xp-error-close-btn" onclick="document.getElementById('modal-invalid-input').style.display='none'">Close</button>
+  </div>
+</div>
+
+  <div class="xp-error-modal" id="modal-insufficient-xp" data-modal-type="insufficient-xp" style="display:none;">
+  <div class="xp-error-dialog">
+    <div class="xp-error-title">Insufficient Experience</div>
+    <div class="xp-error-message" data-i18n-template="points.experience.validation.insufficientXpMessage">
+      Not enough experience to spend.
+
+You have: {current} XP
+Cost: {cost} XP
+    </div>
+    <button class="xp-error-close-btn" onclick="document.getElementById('modal-insufficient-xp').style.display='none'">Close</button>
+  </div>
+</div>
+
+  <div class="xp-error-modal" id="modal-advancement-invalid" data-modal-type="advancement-invalid" style="display:none;">
+  <div class="xp-error-dialog">
+    <div class="xp-error-title">Invalid Input</div>
+    <div class="xp-error-message">Format: number, +number, -number, or number+/-number
+
+Examples: 5, +2, -1, 10+3</div>
+    <button class="xp-error-close-btn" onclick="document.getElementById('modal-advancement-invalid').style.display='none'">Close</button>
+  </div>
+</div>
+
+  <div class="xp-error-modal" id="modal-advancement-insufficient" data-modal-type="advancement-insufficient" style="display:none;">
+  <div class="xp-error-dialog">
+    <div class="xp-error-title">Insufficient Experience</div>
+    <div class="xp-error-message" data-template="Not enough experience to advance {type}.
+
+You have: {current} current XP
+Cost: {cost} XP">
+      Not enough experience to advance {type}.
+
+You have: {current} current XP
+Cost: {cost} XP
+    </div>
+    <button class="xp-error-close-btn" onclick="document.getElementById('modal-advancement-insufficient').style.display='none'">Close</button>
+  </div>
+</div>
+
 </body>
 </html>

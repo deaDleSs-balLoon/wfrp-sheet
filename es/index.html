@@ -2176,5 +2176,55 @@
   <script src="../js/xp-calculator.js"></script>
   <script src="../js/advancement-calculator.js"></script>
   <script src="../js/highlight-toggle.js"></script>
+  <!-- Error Modals for Calculators -->
+  <div class="xp-error-modal" id="modal-invalid-input" data-modal-type="invalid-input" style="display:none;">
+  <div class="xp-error-dialog">
+    <div class="xp-error-title">Entrada inválida</div>
+    <div class="xp-error-message">Formato: número, +número, -número o número+/-número
+
+Ejemplos: 5, +2, -1, 10+3</div>
+    <button class="xp-error-close-btn" onclick="document.getElementById('modal-invalid-input').style.display='none'">Cerrar</button>
+  </div>
+</div>
+
+  <div class="xp-error-modal" id="modal-insufficient-xp" data-modal-type="insufficient-xp" style="display:none;">
+  <div class="xp-error-dialog">
+    <div class="xp-error-title">Experiencia insuficiente</div>
+    <div class="xp-error-message" data-i18n-template="points.experience.validation.insufficientXpMessage">
+      No hay experiencia suficiente para gastar.
+
+Tienes: {current} XP
+Costo: {cost} XP
+    </div>
+    <button class="xp-error-close-btn" onclick="document.getElementById('modal-insufficient-xp').style.display='none'">Cerrar</button>
+  </div>
+</div>
+
+  <div class="xp-error-modal" id="modal-advancement-invalid" data-modal-type="advancement-invalid" style="display:none;">
+  <div class="xp-error-dialog">
+    <div class="xp-error-title">Entrada inválida</div>
+    <div class="xp-error-message">Formato: número, +número, -número o número+/-número
+
+Ejemplos: 5, +2, -1, 10+3</div>
+    <button class="xp-error-close-btn" onclick="document.getElementById('modal-advancement-invalid').style.display='none'">Cerrar</button>
+  </div>
+</div>
+
+  <div class="xp-error-modal" id="modal-advancement-insufficient" data-modal-type="advancement-insufficient" style="display:none;">
+  <div class="xp-error-dialog">
+    <div class="xp-error-title">Experiencia insuficiente</div>
+    <div class="xp-error-message" data-template="No hay experiencia suficiente para avanzar {type}.
+
+Tienes: {current} XP actual
+Costo: {cost} XP">
+      No hay experiencia suficiente para avanzar {type}.
+
+Tienes: {current} XP actual
+Costo: {cost} XP
+    </div>
+    <button class="xp-error-close-btn" onclick="document.getElementById('modal-advancement-insufficient').style.display='none'">Cerrar</button>
+  </div>
+</div>
+
 </body>
 </html>

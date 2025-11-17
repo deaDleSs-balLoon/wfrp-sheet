@@ -1,170 +1,287 @@
-// Core Expression Parser & Calculator - shared utilities for all field calculators
-// Exports: parseExpression, showError, getAdvancementCost
+// Core Expression Parser
+
+// Handles expression parsing and modal display
+
+// Works with pre-rendered Liquid modal templates with i18n
+
+// CRITICAL: Cost calculation is based on THE STEP BEING COMPLETED, not the step being left
 
 (function() {
-  'use strict';
 
-  // Error modal element (shared)
-  let errorModalElement = null;
+'use strict';
 
-  // Advancement cost table [steps_from, steps_to, characteristic_cost, skill_cost]
-  const ADVANCEMENT_COSTS = [
-    [0, 5, 25, 10],
-    [6, 10, 30, 15],
-    [11, 15, 40, 20],
-    [16, 20, 50, 30],
-    [21, 25, 70, 40],
-    [26, 30, 90, 60],
-    [31, 35, 120, 80],
-    [36, 40, 150, 110],
-    [41, 45, 190, 140],
-    [46, 50, 230, 180],
-    [51, 55, 280, 220],
-    [56, 60, 330, 270],
-    [61, 65, 390, 320],
-    [66, 70, 450, 380],
-    [71, Infinity, 520, 440]
-  ];
+let ADVANCEMENT_COSTS = [];
 
-  // Get cost for one step at given level
-  function getCostForStep(stepNumber, isCharacteristic) {
-    const costIndex = isCharacteristic ? 2 : 3;
-    for (let row of ADVANCEMENT_COSTS) {
-      if (stepNumber >= row[0] && stepNumber <= row[1]) {
-        return row[costIndex];
-      }
-    }
-    return ADVANCEMENT_COSTS[ADVANCEMENT_COSTS.length - 1][costIndex];
-  }
+async function loadAdvancementCosts() {
 
-  // Calculate total cost to advance from currentSteps to newSteps
-  function getAdvancementCost(currentSteps, newSteps, isCharacteristic) {
-    if (newSteps <= currentSteps) return 0;
-    
-    let totalCost = 0;
-    for (let step = currentSteps; step < newSteps; step++) {
-      totalCost += getCostForStep(step, isCharacteristic);
-    }
-    return totalCost;
-  }
+try {
 
-  // Calculate refund (negative difference)
-  function getAdvancementRefund(currentSteps, newSteps, isCharacteristic) {
-    if (newSteps >= currentSteps) return 0;
-    
-    let totalRefund = 0;
-    for (let step = newSteps; step < currentSteps; step++) {
-      totalRefund += getCostForStep(step, isCharacteristic);
-    }
-    return totalRefund;
-  }
+const response = await fetch('../data/advancement-costs.json');
 
-  // Parse expression: number, +number, -number, or number+number
-  // For number inputs, also support expressions like "5+1"
-  function parseExpression(value, currentFieldValue) {
-    const cleaned = value.trim();
+const data = await response.json();
 
-    // Format 1: Plain number (absolute value)
-    if (/^\d+$/.test(cleaned)) {
-      return {
-        type: "absolute",
-        value: parseInt(cleaned, 10)
-      };
-    }
+ADVANCEMENT_COSTS = data.advancementCosts;
 
-    // Format 2: Shortform expression (+10 or -20)
-    const shortformMatch = cleaned.match(/^([+\-])(\d+)$/);
-    if (shortformMatch) {
-      const operator = shortformMatch[1];
-      const operand = parseInt(shortformMatch[2], 10);
-      const current = parseInt(currentFieldValue, 10) || 0;
+} catch (error) {
 
-      let resultValue;
-      if (operator === "+") {
-        resultValue = current + operand;
-      } else {
-        resultValue = current - operand;
-      }
+// Fallback to hardcoded
 
-      return {
-        type: "shortform",
-        value: Math.max(0, resultValue)
-      };
-    }
+ADVANCEMENT_COSTS = [
 
-    // Format 3: Full expression (100+10 or 100-20)
-    const fullformMatch = cleaned.match(/^(\d+)\s*([+\-])\s*(\d+)$/);
-    if (fullformMatch) {
-      const left = parseInt(fullformMatch[1], 10);
-      const operator = fullformMatch[2];
-      const right = parseInt(fullformMatch[3], 10);
+{stepsFrom: 0, stepsTo: 5, characteristicCost: 25, skillCost: 10},
 
-      let resultValue;
-      if (operator === "+") {
-        resultValue = left + right;
-      } else {
-        resultValue = left - right;
-      }
+{stepsFrom: 6, stepsTo: 10, characteristicCost: 30, skillCost: 15},
 
-      return {
-        type: "fullform",
-        value: Math.max(0, resultValue)
-      };
-    }
+{stepsFrom: 11, stepsTo: 15, characteristicCost: 40, skillCost: 20},
 
-    // Invalid expression
-    return null;
-  }
+{stepsFrom: 16, stepsTo: 20, characteristicCost: 50, skillCost: 30},
 
-  // Initialize error modal
-  function initErrorModal() {
-    if (!errorModalElement) {
-      errorModalElement = document.createElement('div');
-      errorModalElement.className = 'xp-error-modal';
-      errorModalElement.innerHTML = `
-        <div class="xp-error-dialog">
-          <div class="xp-error-title" id="error-title">Error</div>
-          <div class="xp-error-message" id="error-message"></div>
-          <button class="xp-error-close-btn" id="error-close">Close</button>
-        </div>
-      `;
-      document.body.appendChild(errorModalElement);
+{stepsFrom: 21, stepsTo: 25, characteristicCost: 70, skillCost: 40},
 
-      document.getElementById('error-close').addEventListener('click', () => {
-        errorModalElement.classList.remove('active');
-      });
+{stepsFrom: 26, stepsTo: 30, characteristicCost: 90, skillCost: 60},
 
-      errorModalElement.addEventListener('click', (e) => {
-        if (e.target === errorModalElement) {
-          errorModalElement.classList.remove('active');
-        }
-      });
+{stepsFrom: 31, stepsTo: 35, characteristicCost: 120, skillCost: 80},
 
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && errorModalElement.classList.contains('active')) {
-          errorModalElement.classList.remove('active');
-        }
-      });
-    }
-  }
+{stepsFrom: 36, stepsTo: 40, characteristicCost: 150, skillCost: 110},
 
-  // Show error modal
-  function showError(title, message) {
-    if (!errorModalElement) {
-      initErrorModal();
-    }
-    document.getElementById('error-title').textContent = title;
-    document.getElementById('error-message').textContent = message;
-    errorModalElement.classList.add('active');
-  }
+{stepsFrom: 41, stepsTo: 45, characteristicCost: 190, skillCost: 140},
 
-  // Export functions to global scope
-  window.ExpressionParser = {
-    parseExpression: parseExpression,
-    showError: showError,
-    getAdvancementCost: getAdvancementCost,
-    getAdvancementRefund: getAdvancementRefund
-  };
+{stepsFrom: 46, stepsTo: 50, characteristicCost: 230, skillCost: 180},
 
-  console.log("Expression Parser & Calculator initialized");
+{stepsFrom: 51, stepsTo: 55, characteristicCost: 280, skillCost: 220},
+
+{stepsFrom: 56, stepsTo: 60, characteristicCost: 330, skillCost: 270},
+
+{stepsFrom: 61, stepsTo: 65, characteristicCost: 390, skillCost: 320},
+
+{stepsFrom: 66, stepsTo: 70, characteristicCost: 450, skillCost: 380},
+
+{stepsFrom: 71, stepsTo: 999, characteristicCost: 520, skillCost: 440}
+
+];
+
+}
+
+}
+
+// Get cost for completing a specific step number
+
+// This is the cost to ACHIEVE step N (not the cost to leave it)
+
+// Example: getCostForStep(6, true) = cost to COMPLETE the 6th step = 30
+
+// getCostForStep(5, true) = cost to COMPLETE the 5th step = 25
+
+function getCostForStep(stepNumber, isCharacteristic) {
+
+const costKey = isCharacteristic ? 'characteristicCost' : 'skillCost';
+
+// Find which bracket this step belongs to
+
+for (let row of ADVANCEMENT_COSTS) {
+
+if (stepNumber >= row.stepsFrom && stepNumber <= row.stepsTo) {
+
+return row[costKey];
+
+}
+
+}
+
+return ADVANCEMENT_COSTS[ADVANCEMENT_COSTS.length - 1][costKey];
+
+}
+
+// Calculate total cost to advance from currentSteps to newSteps
+
+// Example: getAdvancementCost(1, 7, true)
+
+// Steps to complete: 2, 3, 4, 5, 6, 7
+
+// Costs: 25 + 25 + 25 + 25 + 30 + 30 = 160
+
+function getAdvancementCost(currentSteps, newSteps, isCharacteristic) {
+
+if (newSteps <= currentSteps) return 0;
+
+let totalCost = 0;
+
+// We complete steps from (currentSteps + 1) to newSteps inclusive
+
+for (let step = currentSteps + 1; step <= newSteps; step++) {
+
+totalCost += getCostForStep(step, isCharacteristic);
+
+}
+
+return totalCost;
+
+}
+
+// Calculate refund for going back from currentSteps to newSteps
+
+// Example: getAdvancementRefund(7, 5, true)
+
+// We remove steps: 7, 6
+
+// Costs: 30 + 30 = 60
+
+function getAdvancementRefund(currentSteps, newSteps, isCharacteristic) {
+
+if (newSteps >= currentSteps) return 0;
+
+let totalRefund = 0;
+
+// We remove steps from currentSteps down to (newSteps + 1) inclusive
+
+for (let step = currentSteps; step > newSteps; step--) {
+
+totalRefund += getCostForStep(step, isCharacteristic);
+
+}
+
+return totalRefund;
+
+}
+
+function parseExpression(value, currentFieldValue) {
+
+const cleaned = value.trim();
+
+// Absolute value: any positive number (not negative, as negative numbers are expressions)
+
+// Matches: 1, 42, 99
+
+if (/^\d+$/.test(cleaned)) {
+
+return { type: "absolute", value: parseInt(cleaned, 10) };
+
+}
+
+// Shortform with operator: +/- followed by digits
+
+// Matches: +5, -10
+
+const shortformMatch = cleaned.match(/^([+\-])(\d+)$/);
+
+if (shortformMatch) {
+
+const operator = shortformMatch[1];
+
+const operand = parseInt(shortformMatch[2], 10);
+
+const current = parseInt(currentFieldValue, 10) || 0;
+
+const resultValue = operator === "+" ? current + operand : current - operand;
+
+// Clamp to zero if result is negative
+
+return { type: "shortform", value: Math.max(0, resultValue) };
+
+}
+
+// Fullform with two numbers and operator: number +/- number
+
+// Matches: 5 + 3, 10-2, 7 - 4
+
+const fullformMatch = cleaned.match(/^(\d+)\s*([\+\-])\s*(\d+)$/);
+
+if (fullformMatch) {
+
+const left = parseInt(fullformMatch[1], 10);
+
+const operator = fullformMatch[2];
+
+const right = parseInt(fullformMatch[3], 10);
+
+const resultValue = operator === "+" ? left + right : left - right;
+
+// Clamp to zero if result is negative
+
+return { type: "fullform", value: Math.max(0, resultValue) };
+
+}
+
+return null;
+
+}
+
+// Show modal by ID with variable substitution
+
+function showModal(modalId, variables = {}) {
+
+const modal = document.getElementById(modalId);
+
+if (!modal) {
+
+console.error(`Modal ${modalId} not found`);
+
+return;
+
+}
+
+if (Object.keys(variables).length > 0) {
+
+const messageEl = modal.querySelector('.xp-error-message');
+
+if (messageEl) {
+
+let templateText = messageEl.dataset.template;
+
+if (!templateText) {
+
+templateText = messageEl.textContent;
+
+messageEl.dataset.template = templateText;
+
+}
+
+let finalText = templateText;
+
+Object.entries(variables).forEach(([key, value]) => {
+
+finalText = finalText.replace(new RegExp(`\\{${key}\\}`, 'g'), value);
+
+});
+
+messageEl.textContent = finalText;
+
+}
+
+}
+
+modal.style.display = 'flex';
+
+}
+
+function showError(titleText, messageText) {
+
+console.warn("showError() called with hardcoded strings. Consider using showModal() with i18n templates.");
+
+alert(titleText + "\n\n" + messageText);
+
+}
+
+window.ExpressionParser = {
+
+parseExpression: parseExpression,
+
+showModal: showModal,
+
+showError: showError,
+
+getAdvancementCost: getAdvancementCost,
+
+getAdvancementRefund: getAdvancementRefund,
+
+getCostForStep: getCostForStep,
+
+loadAdvancementCosts: loadAdvancementCosts
+
+};
+
+loadAdvancementCosts();
+
+console.log("Expression Parser initialized");
+
 })();
