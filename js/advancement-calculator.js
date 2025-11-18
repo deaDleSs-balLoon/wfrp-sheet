@@ -109,124 +109,91 @@
   // Handle advancement field change
   function handleAdvancementChange(event) {
     const field = event.target;
-    const isCharacteristic = field.dataset.isCharacteristic === 'true';
-    let value = field.value.trim();
-    const originalSteps = parseInt(field.dataset.originalValue || "0", 10);
 
-    // Do nothing if empty
-    if (!value) {
-      field.value = originalSteps;
-      // Immediately persist the original value to localStorage to prevent app.js overwriting
-      persistFieldValue(field.id, originalSteps.toString());
-      return;
-    }
-
-    // Parse expression using ExpressionParser
-    const result = window.ExpressionParser.parseExpression(value, field.dataset.originalValue || "0");
-    console.log("result is", result)
-
-    if (result === null) {
-      // Invalid expression - restore original value
-      field.value = originalSteps;
-      // Immediately save the original value to localStorage
-      persistFieldValue(field.id, originalSteps.toString());
-      // Show error dialog after storage is secured
-      window.ExpressionParser.showModal('modal-advancement-invalid');
-      return;
-    }
-
-    let newSteps = result.value;
-
-    // CRITICAL: Clamp to zero if result is negative
-    newSteps = Math.max(0, newSteps);
-
-    // Get XP fields
+    // Check if XP fields exist
     const currentXpField = document.getElementById("current-xp");
     const spentXpField = document.getElementById("spent-xp");
-
     if (!currentXpField || !spentXpField) {
-      field.value = originalSteps;
-      // Persist original value on error
-      persistFieldValue(field.id, originalSteps.toString());
       console.error("Cannot find XP fields");
       return;
     }
 
-    const currentXp = parseInt(currentXpField.value, 10) || 0;
-    const spentXp = parseInt(spentXpField.value, 10) || 0;
+    const isCharacteristic = field.dataset.isCharacteristic === 'true';
+    let value = field.value.trim();
+    const originalSteps = parseInt(field.dataset.originalValue || "0", 10);
 
-    field.value = newSteps;
+    // Prepare default values
+    let newSteps = originalSteps;
+    let newCurrentXp = parseInt(currentXpField.value, 10) || 0;
+    let newSpentXp = parseInt(spentXpField.value, 10) || 0;
+    let showErrorModal = null;
+    let modalData = {};
 
-    if (newSteps > originalSteps) {
-      // ADVANCEMENT: spending XP
-      const cost = window.ExpressionParser.getAdvancementCost(originalSteps, newSteps, isCharacteristic);
-
-      // Check if we have enough experience
-      if (cost > currentXp) {
-        field.value = originalSteps;
-        // Persist original value on insufficient experience
-        persistFieldValue(field.id, originalSteps.toString());
-        const typeLabel = isCharacteristic ? "characteristic" : "skill";
-        window.ExpressionParser.showModal('modal-advancement-insufficient', {
-          current: currentXp,
-          cost: cost,
-          type: typeLabel
-        });
-        return;
-      }
-
-      // Apply advancement: deduct from current, add to spent
-      const newCurrentXp = currentXp - cost;
-      const newSpentXp = spentXp + cost;
-      currentXpField.value = newCurrentXp;
-      spentXpField.value = newSpentXp;
-
-      // Save to storage ONLY if successful
-      if (typeof saveToStorage === 'function') {
-        saveToStorage("current-xp", newCurrentXp.toString());
-        saveToStorage("spent-xp", newSpentXp.toString());
-        saveToStorage(field.id, newSteps.toString());
-      } else {
-        localStorage.setItem("current-xp", newCurrentXp.toString());
-        localStorage.setItem("spent-xp", newSpentXp.toString());
-        localStorage.setItem(field.id, newSteps.toString());
-      }
-    } else if (newSteps < originalSteps) {
-      // REVERSAL: returning XP back
-      const refund = window.ExpressionParser.getAdvancementRefund(originalSteps, newSteps, isCharacteristic);
-
-      // Return XP from spent to current
-      const newCurrentXp = currentXp + refund;
-      const newSpentXp = Math.max(0, spentXp - refund);
-      currentXpField.value = newCurrentXp;
-      spentXpField.value = newSpentXp;
-
-      // Save to storage
-      if (typeof saveToStorage === 'function') {
-        saveToStorage("current-xp", newCurrentXp.toString());
-        saveToStorage("spent-xp", newSpentXp.toString());
-        saveToStorage(field.id, newSteps.toString());
-      } else {
-        localStorage.setItem("current-xp", newCurrentXp.toString());
-        localStorage.setItem("spent-xp", newSpentXp.toString());
-        localStorage.setItem(field.id, newSteps.toString());
-      }
+    // Process user input
+    if (!value) {
+      // Empty input - restore original value
+      newSteps = originalSteps;
     } else {
-      if (typeof saveToStorage === 'function') {
-        saveToStorage(field.id, newSteps.toString());
+      const result = window.ExpressionParser.parseExpression(value, field.dataset.originalValue || "0");
+
+      if (result === null) {
+        // Invalid expression
+        newSteps = originalSteps;
+        showErrorModal = 'modal-advancement-invalid';
       } else {
-        localStorage.setItem(field.id, newSteps.toString());
+        newSteps = Math.max(0, result.value);
+
+        // Calculate XP change
+        if (newSteps > originalSteps) {
+          const cost = window.ExpressionParser.getAdvancementCost(originalSteps, newSteps, isCharacteristic);
+
+          if (cost > newCurrentXp) {
+            // Not enough XP
+            newSteps = originalSteps;
+            showErrorModal = 'modal-advancement-insufficient';
+            modalData = {
+              current: newCurrentXp,
+              cost: cost,
+              type: isCharacteristic ? "characteristic" : "skill"
+            };
+          } else {
+            // Spend XP
+            newCurrentXp -= cost;
+            newSpentXp += cost;
+          }
+        } else if (newSteps < originalSteps) {
+          // Refund XP
+          const refund = window.ExpressionParser.getAdvancementRefund(originalSteps, newSteps, isCharacteristic);
+          newCurrentXp += refund;
+          newSpentXp = Math.max(0, newSpentXp - refund);
+        }
+        // If newSteps == originalSteps - no changes needed
       }
     }
 
-    // Update total XP
+    // Apply values to all fields
+    field.value = newSteps;
+    currentXpField.value = newCurrentXp;
+    spentXpField.value = newSpentXp;
+
+    // Save to storage using global saveToStorage function
+    window.saveToStorage(field.id, newSteps.toString());
+    window.saveToStorage("current-xp", newCurrentXp.toString());
+    window.saveToStorage("spent-xp", newSpentXp.toString());
+
+    // Update UI
     if (window.updateTotalXp) {
       window.updateTotalXp();
     }
 
-    // Update the display value of this characteristic/skill immediately
     updateAdvancementDisplay(field.id, isCharacteristic);
+
+    // Show error modal if needed
+    if (showErrorModal) {
+      window.ExpressionParser.showModal(showErrorModal, modalData);
+    }
   }
+
 
   // Automatic initialization when DOM is loaded
   if (document.readyState === 'loading') {

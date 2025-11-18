@@ -38,6 +38,16 @@
       totalOutput.removeAttribute('for');
     };
 
+    if (typeof window.saveToStorage === 'undefined') {
+      window.saveToStorage = function(key, value) {
+        if (key.startsWith("_")) {
+          localStorage.setItem(key, JSON.stringify(value));
+        } else {
+          localStorage.setItem(key, value);
+        }
+      };
+    }
+
     console.log('Total XP Fixer initialized');
   }
 

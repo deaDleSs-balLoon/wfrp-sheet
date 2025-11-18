@@ -86,7 +86,6 @@
     // Absolute value: any positive number (not negative, as negative numbers are expressions)
     // Matches: 1, 42, 99
     if (/^\d+$/.test(cleaned)) {
-      console.log("imhere absolute value detected")
       return { type: "absolute", value: parseInt(cleaned, 10) };
     }
 
@@ -98,7 +97,6 @@
       const operand = parseInt(shortformMatch[2], 10);
       const current = parseInt(currentFieldValue, 10) || 0;
       const resultValue = operator === "+" ? current + operand : current - operand;
-      console.log("imhere short form detected",current,operator,operand,resultValue,Math.max(0, resultValue))
       if (resultValue < 0) return { type: "shortform", value: 0 };
       // Clamp to zero if result is negative
       return { type: "shortform", value: Math.max(0, resultValue) };
@@ -112,12 +110,10 @@
       const operator = fullformMatch[2];
       const right = parseInt(fullformMatch[3], 10);
       const resultValue = operator === "+" ? left + right : left - right;
-      console.log("imhere full form detected",left,operator,right,resultValue, Math.max(0, resultValue))
       // Clamp to zero if result is negative
       return { type: "fullform", value: Math.max(0, resultValue) };
     }
 
-    console.log("will return null")
     return null;
   }
 
