@@ -1,0 +1,173 @@
+/* Preview Tooltip System with multiple tooltips */
+.preview-tooltip {
+  position: absolute;
+  background: #fff3cd;
+  border: 2px solid #ffc107;
+  border-radius: 8px;
+  padding: 8px 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  font-size: 12px;
+  min-width: 120px;
+  pointer-events: auto;
+  font-family: inherit;
+}
+
+.preview-tooltip::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+/* Main tooltip (above input field) */
+.preview-tooltip.main-tooltip {
+  background: #fff3cd;
+  border-color: #ffc107;
+  z-index: 1002;
+  transform: translateY(-100%); /* Поднимаем над полем */
+}
+
+.preview-tooltip.main-tooltip::after {
+  top: 100%; /* Хвостик начинается от нижней границы тултипа */
+  left: 20px;
+  border-width: 12px 10px 0 10px; /* Удлинённый хвостик */
+  border-color: #ffc107 transparent transparent transparent;
+}
+
+.preview-tooltip.main-tooltip.invalid {
+  background: #f8d7da;
+  border-color: #dc3545;
+}
+
+.preview-tooltip.main-tooltip.invalid::after {
+  border-color: #dc3545 transparent transparent transparent;
+}
+
+/* Value tooltips (simple number displays) */
+.preview-tooltip.value-tooltip {
+  background: #e7f3ff;
+  border-color: #0d6efd;
+  padding: 4px 8px;
+  min-width: auto;
+  z-index: 1001;
+}
+
+/* Right positioned value tooltips */
+.preview-tooltip.value-tooltip.right-position {
+  transform: translateY(-50%); /* Центрируем по вертикали */
+  margin-left: -5px; /* Хвостик заходит внутрь поля */
+}
+
+.preview-tooltip.value-tooltip.right-position::after {
+  top: 50%;
+  right: 100%;
+  transform: translateY(-50%);
+  border-width: 8px 12px 8px 0; /* Удлинённый горизонтальный хвостик */
+  border-color: transparent #0d6efd transparent transparent;
+}
+
+/* Top positioned value tooltips (for XP fields) */
+.preview-tooltip.value-tooltip.top-position {
+  transform: translateX(-50%) translateY(-100%); /* Поднимаем над полем */
+  margin-top: -5px; /* Хвостик заходит внутрь поля */
+}
+
+.preview-tooltip.value-tooltip.top-position::after {
+  top: 100%; /* Хвостик начинается от нижней границы тултипа */
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 12px 10px 0 10px; /* Удлинённый вертикальный хвостик */
+  border-color: #0d6efd transparent transparent transparent;
+}
+
+.preview-tooltip.value-tooltip.xp-tooltip {
+  background: #d1e7dd;
+  border-color: #198754;
+}
+
+.preview-tooltip.value-tooltip.xp-tooltip.top-position::after {
+  border-color: #198754 transparent transparent transparent;
+}
+
+.preview-tooltip.value-tooltip.negative {
+  background: #f8d7da;
+  border-color: #dc3545;
+}
+
+.preview-tooltip.value-tooltip.negative.top-position::after {
+  border-color: #dc3545 transparent transparent transparent;
+}
+
+/* Tooltip content */
+.preview-tooltip-content {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.preview-main-value {
+  font-weight: bold;
+  font-size: 14px;
+  color: #333;
+  text-align: center;
+}
+
+.preview-cost {
+  font-size: 11px;
+  color: #666;
+  text-align: center;
+}
+
+.preview-error {
+  font-size: 11px;
+  color: #dc3545;
+  text-align: center;
+  font-weight: bold;
+}
+
+.preview-buttons {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+}
+
+.preview-btn {
+  padding: 4px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 11px;
+  cursor: pointer;
+  background: white;
+  font-family: inherit;
+}
+
+.preview-btn.ok {
+  background: #28a745;
+  color: white;
+  border-color: #28a745;
+}
+
+.preview-btn.cancel {
+  background: #6c757d;
+  color: white;
+  border-color: #6c757d;
+}
+
+.preview-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.preview-btn:not(:disabled):hover {
+  opacity: 0.9;
+}
+
+/* Simple value display */
+.preview-simple-value {
+  font-weight: bold;
+  font-size: 13px;
+  color: #333;
+  text-align: center;
+}
