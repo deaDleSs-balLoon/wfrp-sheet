@@ -2227,5 +2227,74 @@ Koszt: {cost} XP
   </div>
 </div>
 
+  <template id="preview-tooltip-cost">
+  <div class="preview-tooltip-content">
+    <div class="preview-main-value"></div>
+    <div class="preview-cost">Koszt:  XP</div>
+    <div class="preview-buttons">
+      <button class="preview-btn cancel" type="button">Anuluj</button>
+      <button class="preview-btn ok" type="button">OK</button>
+    </div>
+  </div>
+</template>
+
+<template id="preview-tooltip-refund">
+  <div class="preview-tooltip-content">
+    <div class="preview-main-value"></div>
+    <div class="preview-cost">Zwrot:  XP</div>
+    <div class="preview-buttons">
+      <button class="preview-btn cancel" type="button">Anuluj</button>
+      <button class="preview-btn ok" type="button">OK</button>
+    </div>
+  </div>
+</template>
+
+<template id="preview-tooltip-nochange">
+  <div class="preview-tooltip-content">
+    <div class="preview-main-value"></div>
+    <div class="preview-cost">Bez zmian</div>
+    <div class="preview-buttons">
+      <button class="preview-btn cancel" type="button">Anuluj</button>
+      <button class="preview-btn ok" type="button">OK</button>
+    </div>
+  </div>
+</template>
+  <template id="preview-tooltip-error-invalid">
+  <div class="preview-tooltip-content invalid">
+    <div class="preview-main-value" style="color: #dc3545;"></div>
+    <div class="preview-error">Nieprawidłowe wyrażenie</div>
+    <div class="preview-buttons">
+      <button class="preview-btn cancel" type="button">Anuluj</button>
+    </div>
+  </div>
+</template>
+
+<template id="preview-tooltip-error-xpfields">
+  <div class="preview-tooltip-content invalid">
+    <div class="preview-main-value" style="color: #dc3545;"></div>
+    <div class="preview-error">Nie znaleziono pól XP</div>
+    <div class="preview-buttons">
+      <button class="preview-btn cancel" type="button">Anuluj</button>
+    </div>
+  </div>
+</template>
+
+<template id="preview-tooltip-error-insufficient">
+  <div class="preview-tooltip-content invalid">
+    <div class="preview-main-value" style="color: #dc3545;"></div>
+    <div class="preview-error">Niewystarczająco XP.
+
+Dostępne:  XP
+Koszt:  XP</div>
+    <div class="preview-buttons">
+      <button class="preview-btn cancel" type="button">Anuluj</button>
+    </div>
+  </div>
+</template> 
+  <template id="preview-tooltip-value">
+  <div class="preview-tooltip-content">
+    <div class="preview-simple-value"></div>
+  </div>
+</template>
 </body>
 </html>
