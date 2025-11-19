@@ -1927,4 +1927,62 @@ export default {
       },
     },
   },
+  advancement: {
+    cancel: {
+      fr: "Annuler",
+      en: "Cancel", 
+      ru: "Отмена",
+      pl: "Anuluj",
+      es: "Cancelar"
+    },
+    ok: {
+      fr: "OK",
+      en: "OK",
+      ru: "OK", 
+      pl: "OK",
+      es: "OK"
+    },
+    cost_xp: {
+      fr: "Coût : {{xp}} XP",
+      en: "Cost: {{xp}} XP",
+      ru: "Стоимость: {{xp}} XP",
+      pl: "Koszt: {{xp}} XP",
+      es: "Costo: {{xp}} XP"
+    },
+    refund_xp: {
+      fr: "Remboursement : {{xp}} XP",
+      en: "Refund: {{xp}} XP",
+      ru: "Возврат: {{xp}} XP",
+      pl: "Zwrot: {{xp}} XP", 
+      es: "Reembolso: {{xp}} XP"
+    },
+    no_changes: {
+      fr: "Aucun changement",
+      en: "No changes",
+      ru: "Без изменений",
+      pl: "Bez zmian",
+      es: "Sin cambios"
+    },
+    invalid_expression: {
+      fr: "Expression invalide",
+      en: "Invalid expression",
+      ru: "Неверное выражение",
+      pl: "Nieprawidłowe wyrażenie",
+      es: "Expresión inválida"
+    },
+    xp_fields_not_found: {
+      fr: "Champs XP non trouvés",
+      en: "XP fields not found", 
+      ru: "Не найдены поля опыта",
+      pl: "Nie znaleziono pól XP",
+      es: "Campos XP no encontrados"
+    },
+    insufficient_xp_message: {
+      fr: "Pas assez d'expérience.\n\nDisponible : {{current}} XP\nCoût : {{xp}} XP",
+      en: "Not enough XP.\n\nAvailable: {{current}} XP\nCost: {{xp}} XP",
+      ru: "Недостаточно XP.\n\nДоступно: {{current}} XP\nСтоимость: {{xp}} XP",
+      pl: "Niewystarczająco XP.\n\nDostępne: {{current}} XP\nKoszt: {{xp}} XP",
+      es: "No hay suficiente XP.\n\nDisponible: {{current}} XP\nCosto: {{xp}} XP"
+    }
+  },
 };
