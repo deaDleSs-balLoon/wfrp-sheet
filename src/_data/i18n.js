@@ -5,6 +5,7 @@ export default {
     ru: "Лист персонажа Warhammer Fantasy Role Play",
     pl: "Warhammer Fantasy Role Play: Karta Postaci",
     es: "Hoja de Personaje de Warhammer Fantasy Role Play",
+    it: "Warhammer Fantasy Role Play: Scheda personaggio",
   },
   desc: {
     fr: "Un outil en ligne pour gérer votre fiche de personnage pour le jeu de rôle Warhammer Fantasy Role Play",
@@ -12,6 +13,7 @@ export default {
     ru: "Онлайн инструмент для игры Warhammer Fantasy Role Play, который поможет в создании и редактировании листа персонажа",
     pl: "Narzędzie online do zarządzania kartą postaci w Warhammer Fantasy Role Play",
     es: "Una herramienta online para gestionar tu hoja de personaje para el juego de rol Warhammer Fantasy Role Play",
+    it: "Uno strumento online per aiutarti a gestire la scheda del tuo personaggio in Warhammer Fantasy Role Play",
   },
   h1: {
     fr: "Feuille de personnage",
@@ -19,6 +21,7 @@ export default {
     ru: "Лист персонажа",
     pl: "Karta Postaci",
     es: "Hoja de Personaje",
+    it: "Scheda personaggio",
   },
   actions: {
     title: {
@@ -27,6 +30,7 @@ export default {
       ru: "Действия",
       pl: "Akcje",
       es: "Acciones",
+      it: "Azioni",
     },
     delete: {
       fr: "Supprimer",
@@ -34,6 +38,7 @@ export default {
       ru: "Удалить",
       pl: "Usuń",
       es: "Eliminar",
+      it: "Cancella",
     },
   },
   info: {
@@ -43,6 +48,7 @@ export default {
       ru: "Данные персонажа",
       pl: "Informacje o postaci",
       es: "Información Personal del Personaje",
+      it: "Informazioni personali del personaggio",
     },
     name: {
       fr: "Nom",
@@ -50,6 +56,7 @@ export default {
       ru: "Имя",
       pl: "Imię",
       es: "Nombre",
+      it: "Nome",
     },
     species: {
       fr: "Race",
@@ -57,6 +64,7 @@ export default {
       ru: "Раса",
       pl: "Rasa",
       es: "Especie",
+      it: "Specie",
     },
     speciesOptions: {
       human: {
@@ -65,6 +73,7 @@ export default {
         ru: "Человек",
         pl: "Człowiek",
         es: "Humano",
+        it: "Umano",
       },
       halfling: {
         fr: "Halfling",
@@ -72,6 +81,7 @@ export default {
         ru: "Полурослик",
         pl: "Niziołek",
         es: "Mediano",
+        it: "Halfling",
       },
       dwarf: {
         fr: "Nain",
@@ -79,6 +89,7 @@ export default {
         ru: "Гном",
         pl: "Krasnolud",
         es: "Enano",
+        it: "Nano",
       },
       highElf: {
         fr: "Haut elfe",
@@ -86,6 +97,7 @@ export default {
         ru: "Высший Эльф",
         pl: "Wysoki Elf",
         es: "Alto Elfo",
+        it: "Alto Elfo",
       },
       woodElf: {
         fr: "Elfe sylvain",
@@ -93,6 +105,7 @@ export default {
         ru: "Лесной Эльф",
         pl: "Leśny Elf",
         es: "Elfo Silvano",
+        it: "Elfo Silvano",
       },
       ogre: {
         fr: "Ogre",
@@ -100,6 +113,7 @@ export default {
         ru: "Огр",
         pl: "Ogr",
         es: "Ogro",
+        it: "Ogre",
       },
       gnome: {
         fr: "Gnome",
@@ -107,6 +121,7 @@ export default {
         ru: "Карлик",
         pl: "Gnom",
         es: "Gnomo",
+        it: "Gnomo",
       },
     },
     class: {
@@ -115,6 +130,7 @@ export default {
       ru: "Класс",
       pl: "Klasa",
       es: "Clase",
+      it: "Classe",
     },
     career: {
       fr: "Carrière",
@@ -122,6 +138,7 @@ export default {
       ru: "Карьера",
       pl: "Profesja",
       es: "Carrera",
+      it: "Carriera",
     },
     careerTier: {
       fr: "Niveau de carrière",
@@ -129,6 +146,7 @@ export default {
       ru: "Ступень карьеры",
       pl: "Poziom profesji",
       es: "Nivel de Carrera",
+      it: "Livello di Carriera",
     },
     careerPath: {
       fr: "Schéma de carrière",
@@ -136,6 +154,7 @@ export default {
       ru: "Карьерный путь",
       pl: "Ścieżka profesji",
       es: "Itinerario de Carrera",
+      it: "Sentiero",
     },
     status: {
       fr: "Statut",
@@ -143,6 +162,7 @@ export default {
       ru: "Статус",
       pl: "Status",
       es: "Estatus",
+      it: "Status",
     },
     age: {
       fr: "Âge",
@@ -150,6 +170,7 @@ export default {
       ru: "Возраст",
       pl: "Wiek",
       es: "Edad",
+      it: "Età",
     },
     height: {
       fr: "Taille",
@@ -157,6 +178,7 @@ export default {
       ru: "Рост",
       pl: "Wzrost",
       es: "Altura",
+      it: "Altezza",
     },
     hair: {
       fr: "Cheveux",
@@ -164,6 +186,7 @@ export default {
       ru: "Волосы",
       pl: "Włosy",
       es: "Cabello",
+      it: "Capelli",
     },
     eyes: {
       fr: "Yeux",
@@ -171,6 +194,7 @@ export default {
       ru: "Глаза",
       pl: "Oczy",
       es: "Ojos",
+      it: "Occhi",
     },
   },
   charac: {
@@ -180,6 +204,7 @@ export default {
       ru: "Характеристики",
       pl: "Cechy",
       es: "Características",
+      it: "Caratteristiche",
     },
     highlight: {
       fr: "Surligner cette caratéristique",
@@ -187,6 +212,7 @@ export default {
       ru: "Подсветить характеристику",
       pl: "Podświetl tą cechę",
       es: "Resaltar esta característica",
+      it: "Evidenzia questa caratteristica",
     },
     ws: {
       full: {
@@ -195,6 +221,7 @@ export default {
         ru: "Ближний бой",
         pl: "Walka Wręcz",
         es: "Habilidad de Armas",
+        it: "Abilità di Combattimento",
       },
       abbr: {
         fr: "CC",
@@ -202,6 +229,7 @@ export default {
         ru: "ББ",
         pl: "WW",
         es: "HA",
+        it: "AC",
       },
     },
     bs: {
@@ -211,6 +239,7 @@ export default {
         ru: "Дистанционный бой",
         pl: "Umiejętności Strzeleckie",
         es: "Habilidad de Proyectiles",
+        it: "Abilità Balistica",
       },
       abbr: {
         fr: "CT",
@@ -218,6 +247,7 @@ export default {
         ru: "ДБ",
         pl: "US",
         es: "HP",
+        it: "AB",
       },
     },
     s: {
@@ -227,6 +257,7 @@ export default {
         ru: "Сила",
         pl: "Siła",
         es: "Fuerza",
+        it: "Forza",
       },
       abbr: {
         fr: "F",
@@ -234,6 +265,7 @@ export default {
         ru: "С",
         pl: "S",
         es: "F",
+        it: "F",
       },
     },
     t: {
@@ -243,6 +275,7 @@ export default {
         ru: "Выносливость",
         pl: "Wytrzymałość",
         es: "Resistencia",
+        it: "Resistenza",
       },
       abbr: {
         fr: "E",
@@ -250,6 +283,7 @@ export default {
         ru: "В",
         pl: "Wt",
         es: "R",
+        it: "R",
       },
     },
     i: {
@@ -259,6 +293,7 @@ export default {
         ru: "Инициатива",
         pl: "Inicjatywa",
         es: "Iniciativa",
+        it: "Iniziativa",
       },
       abbr: {
         fr: "I",
@@ -266,6 +301,7 @@ export default {
         ru: "И",
         pl: "I",
         es: "Ini",
+        it: "I",
       },
     },
     ag: {
@@ -275,6 +311,7 @@ export default {
         ru: "Проворство",
         pl: "Zwinność",
         es: "Agilidad",
+        it: "Agilità",
       },
       abbr: {
         fr: "Ag",
@@ -282,6 +319,7 @@ export default {
         ru: "Пр",
         pl: "Zw",
         es: "A",
+        it: "Agi",
       },
     },
     dex: {
@@ -291,6 +329,7 @@ export default {
         ru: "Ловкость",
         pl: "Zręczność",
         es: "Destreza",
+        it: "Destrezza",
       },
       abbr: {
         fr: "Dex",
@@ -298,6 +337,7 @@ export default {
         ru: "Л",
         pl: "Zr",
         es: "De",
+        it: "Des",
       },
     },
     int: {
@@ -307,6 +347,7 @@ export default {
         ru: "Интеллект",
         pl: "Inteligencja",
         es: "Inteligencia",
+        it: "Intelligenza",
       },
       abbr: {
         fr: "Int",
@@ -314,6 +355,7 @@ export default {
         ru: "Инт",
         pl: "Int",
         es: "I",
+        it: "Int",
       },
     },
     wp: {
@@ -323,6 +365,7 @@ export default {
         ru: "Сила воли",
         pl: "Siła Woli",
         es: "Voluntad",
+        it: "Volontà",
       },
       abbr: {
         fr: "FM",
@@ -330,6 +373,7 @@ export default {
         ru: "СВ",
         pl: "SW",
         es: "V",
+        it: "Vol",
       },
     },
     fel: {
@@ -339,6 +383,7 @@ export default {
         ru: "Харизма",
         pl: "Ogłada",
         es: "Empatía",
+        it: "Socialità",
       },
       abbr: {
         fr: "Soc",
@@ -346,6 +391,7 @@ export default {
         ru: "Х",
         pl: "Ogd",
         es: "E",
+        it: "Soc",
       },
     },
     initial: {
@@ -354,6 +400,7 @@ export default {
       ru: "Начальное значение",
       pl: "Początkowa",
       es: "Inicial",
+      it: "Base",
     },
     advances: {
       fr: "Augmentation",
@@ -361,6 +408,7 @@ export default {
       ru: "Шаги развития",
       pl: "Rozwinięcia",
       es: "Avances",
+      it: "Avanzamenti",
     },
     current: {
       fr: "Courantes",
@@ -368,6 +416,7 @@ export default {
       ru: "Текущее значение",
       pl: "Aktualna",
       es: "Actual",
+      it: "Attuale",
     },
   },
   points: {
@@ -378,6 +427,7 @@ export default {
         ru: "Судьба",
         pl: "Przeznaczenie",
         es: "Destino",
+        it: "Fato",
       },
       availablePoints: {
         fr: "Points de destin disponibles",
@@ -385,6 +435,7 @@ export default {
         ru: "Доступные очки судьбы",
         pl: "Dostępne punkty przeznaczenie",
         es: "Puntos de Destino disponibles",
+        it: "Punti fato disponibili",
       },
       totalPoints: {
         fr: "Points de destin total",
@@ -392,6 +443,7 @@ export default {
         ru: "Всего очков судьбы",
         pl: "Maksymalne punkty przeznaczenia",
         es: "Puntos de Destino totales",
+        it: "Punti fato totali",
       },
     },
     fortune: {
@@ -401,6 +453,7 @@ export default {
         ru: "Удача",
         pl: "Szczęście",
         es: "Fortuna",
+        it: "Fortuna",
       },
       availablePoints: {
         fr: "Points de chance disponibles",
@@ -408,6 +461,7 @@ export default {
         ru: "Доступные очки удачи",
         pl: "Dostępne punkty szczęścia",
         es: "Puntos de Fortuna disponibles",
+        it: "Punti fortuna disponibili",
       },
       totalPoints: {
         fr: "Points de chance total",
@@ -415,6 +469,7 @@ export default {
         ru: "Всего очков удачи",
         pl: "Maksymalne punkty szczęścia",
         es: "Puntos de Fortuna totales",
+        it: "Punti fortuna totali",
       },
     },
     resilience: {
@@ -424,6 +479,7 @@ export default {
         ru: "Упорство",
         pl: "Bohater",
         es: "Resiliencia",
+        it: "Resilienza",
       },
       abbr: {
         fr: "Rés.",
@@ -431,6 +487,7 @@ export default {
         ru: "Уп.",
         pl: "Boh.",
         es: "Resi.",
+        it: "Resi.",
       },
       availablePoints: {
         fr: "Points de résilience disponibles",
@@ -438,6 +495,7 @@ export default {
         ru: "Доступные очки упорства",
         pl: "Dostępne punkty bohatera",
         es: "Puntos de Resiliencia disponibles",
+        it: "Punti resilienza disponibili",
       },
       totalPoints: {
         fr: "Points de résilience total",
@@ -445,6 +503,7 @@ export default {
         ru: "Всего очков упорства",
         pl: "Maksymalne punkty bohatera",
         es: "Puntos de Resiliencia totales",
+        it: "Punti resilienza totali",
       },
     },
     resolve: {
@@ -454,6 +513,7 @@ export default {
         ru: "Решимость",
         pl: "Determinacja",
         es: "Resolución",
+        it: "Risolutezza",
       },
       abbr: {
         fr: "Déter.",
@@ -461,6 +521,7 @@ export default {
         ru: "Реш.",
         pl: "Det.",
         es: "Reso.",
+        it: "Riso.",
       },
       availablePoints: {
         fr: "Points de détermination disponibles",
@@ -468,6 +529,7 @@ export default {
         ru: "Доступные очки решимости",
         pl: "Dostępne punkty determinacji",
         es: "Puntos de Resolución disponibles",
+        it: "Punti risolutezza disponibili",
       },
       totalPoints: {
         fr: "Points de détermination total",
@@ -475,6 +537,7 @@ export default {
         ru: "Всего очков решимости",
         pl: "Maksymalne punkty determinacji",
         es: "Puntos de Resolución totales",
+        it: "Punti risolutezza disponibili",
       },
     },
     motivation: {
@@ -484,6 +547,7 @@ export default {
         ru: "Мотивация",
         pl: "Motywacja",
         es: "Motivación",
+        it: "Motivazione",
       },
       abbr: {
         fr: "Motiv.",
@@ -491,6 +555,7 @@ export default {
         ru: "Мотив.",
         pl: "Motyw.",
         es: "Motiv.",
+        it: "Motiv.",
       },
     },
     experience: {
@@ -500,6 +565,7 @@ export default {
         ru: "Опыт",
         pl: "Doświadczenie",
         es: "Experiencia",
+        it: "Esperienza",
       },
       current: {
         fr: "Actuelle",
@@ -507,6 +573,7 @@ export default {
         ru: "Запас",
         pl: "Aktualne",
         es: "Actual",
+        it: "Attuale",
       },
       currentAbbr: {
         fr: "Act.",
@@ -514,6 +581,7 @@ export default {
         ru: "Запас",
         pl: "Akt.",
         es: "Act.",
+        it: "Att.",
       },
       currentLabel: {
         fr: "Expérience à dépenser",
@@ -521,6 +589,7 @@ export default {
         ru: "Непотраченные очки опыта",
         pl: "Doświadczenie do wydania",
         es: "Experiencia por gastar",
+        it: "Esperienza da spendere",
       },
       spent: {
         fr: "Dépensée",
@@ -528,6 +597,7 @@ export default {
         ru: "Потрачено",
         pl: "Wydane",
         es: "Gastada",
+        it: "Spesa",
       },
       spentAbbr: {
         fr: "Dép.",
@@ -535,6 +605,7 @@ export default {
         ru: "Траты",
         pl: "Wyd.",
         es: "Gas.",
+        it: "Spe",
       },
       spentLabel: {
         fr: "Expérience dépensée",
@@ -542,6 +613,7 @@ export default {
         ru: "Потрачено очков опыта",
         pl: "Wydane doświadczenie",
         es: "Experiencia gastada",
+        it: "Esperienza spesa",
       },
       total: {
         fr: "Totale",
@@ -549,6 +621,7 @@ export default {
         ru: "Всего очков опыта",
         pl: "Suma",
         es: "Total",
+        it: "Totale",
       },
       totalAbbr: {
         fr: "Tot.",
@@ -556,6 +629,7 @@ export default {
         ru: "Всего",
         pl: "Sum.",
         es: "Tot.",
+        it: "Tot.",
       },
       validation: {
         invalidInput: {
@@ -649,6 +723,7 @@ export default {
       ru: "Перемещение",
       pl: "Szybkość",
       es: "Movimiento",
+      it: "Movimento",
     },
     walk: {
       fr: "Marche",
@@ -656,6 +731,7 @@ export default {
       ru: "Шаг",
       pl: "Chód",
       es: "Andar",
+      it: "Camminata",
     },
     run: {
       fr: "Course",
@@ -663,6 +739,7 @@ export default {
       ru: "Бег",
       pl: "Bieg",
       es: "Correr",
+      it: "Corsa",
     },
   },
   skills: {
@@ -672,6 +749,7 @@ export default {
       ru: "Общие навыки",
       pl: "Umiejętności podstawowe",
       es: "Habilidades Básicas",
+      it: "Abilità base",
     },
     customTitle: {
       fr: "Compétences avancées",
@@ -679,6 +757,7 @@ export default {
       ru: "Профессиональные навыки",
       pl: "Umiejętności zaawansowane",
       es: "Habilidades Avanzadas",
+      it: "Abilità avanzate",
     },
     name: {
       fr: "Nom",
@@ -686,6 +765,7 @@ export default {
       ru: "Навык",
       pl: "Nazwa",
       es: "Nombre",
+      it: "Nome",
     },
     charac: {
       fr: "Caractéristique",
@@ -693,6 +773,7 @@ export default {
       ru: "Характеристика",
       pl: "Cecha",
       es: "Característica",
+      it: "Caratteristica",
     },
     characAbbr: {
       fr: "Carac.",
@@ -700,6 +781,7 @@ export default {
       ru: "Хар.",
       pl: "Cecha",
       es: "Carac.",
+      it: "Carat.",
     },
     adv: {
       fr: "Augmentation",
@@ -707,6 +789,7 @@ export default {
       ru: "Шаги развития",
       pl: "Rozwinięcia",
       es: "Avance",
+      it: "Avanzamenti",
     },
     advAbbr: {
       fr: "Aug.",
@@ -714,6 +797,7 @@ export default {
       ru: "Шаги",
       pl: "Roz.",
       es: "Av.",
+      it: "Av.",
     },
     skill: {
       fr: "Compétence",
@@ -721,6 +805,7 @@ export default {
       ru: "Значение",
       pl: "Suma",
       es: "Habilidad",
+      it: "Totale",
     },
     skillAbbr: {
       fr: "Comp.",
@@ -728,6 +813,7 @@ export default {
       ru: "Знач.",
       pl: "Suma",
       es: "Habil.",
+      it: "Tot.",
     },
     highlight: {
       fr: "Surligner cette compétence",
@@ -735,6 +821,7 @@ export default {
       ru: "Подсветить навык",
       pl: "Oznacz tą umiejętność",
       es: "Resaltar esta habilidad",
+      it: "Evidenzia questa abilità",
     },
     basic: [
       {
@@ -746,6 +833,7 @@ export default {
           ru: "Искусство",
           pl: "Sztuka",
           es: "Arte",
+          it: "Arte",
         },
       },
       {
@@ -757,6 +845,7 @@ export default {
           ru: "Атлетика",
           pl: "Atletyka",
           es: "Atletismo",
+          it: "Atletica",
         },
       },
       {
@@ -768,6 +857,7 @@ export default {
           ru: "Хладнокровие",
           pl: "Opanowanie",
           es: "Frialdad",
+          it: "Freddezza",
         },
       },
       {
@@ -779,6 +869,7 @@ export default {
           ru: "Обаяние",
           pl: "Charyzma",
           es: "Carisma",
+          it: "Affascinare",
         },
       },
       {
@@ -790,6 +881,7 @@ export default {
           ru: "Верховая езда",
           pl: "Jeździectwo",
           es: "Montar",
+          it: "Cavalcare",
         },
       },
       {
@@ -801,6 +893,7 @@ export default {
           ru: "Лидерство",
           pl: "Dowodzenie",
           es: "Mando",
+          it: "Comandare",
         },
       },
       {
@@ -812,6 +905,7 @@ export default {
           ru: "Вождение",
           pl: "Powożenie",
           es: "Conducir",
+          it: "Condurre Carri",
         },
       },
       {
@@ -823,6 +917,7 @@ export default {
           ru: "Рукопашный бой (осн.)",
           pl: "Broń Biała (Podstawowa)",
           es: "A cuerpo (Básica)",
+          it: "Mischia (Base)",
         },
       },
       {
@@ -834,6 +929,7 @@ export default {
           ru: "Рукопашный бой",
           pl: "Broń Biała",
           es: "Cuerpo a cuerpo",
+          it: "Mischia",
         },
       },
       {
@@ -845,6 +941,7 @@ export default {
           ru: "Скрытность",
           pl: "Skradanie",
           es: "M. Silencioso",
+          it: "Nascondersi",
         },
       },
       {
@@ -856,6 +953,7 @@ export default {
           ru: "Артистизм",
           pl: "Występy",
           es: "Animar",
+          it: "Intrattenere",
         },
       },
       {
@@ -867,6 +965,7 @@ export default {
           ru: "Усмирение животных",
           pl: "Oswajanie",
           es: "Encantar Animales",
+          it: "Domare Animali",
         },
       },
       {
@@ -878,6 +977,7 @@ export default {
           ru: "Лазание",
           pl: "Wspinaczka",
           es: "Escalar",
+          it: "Arrampicarsi",
         },
       },
       {
@@ -889,6 +989,7 @@ export default {
           ru: "Уклонение",
           pl: "Unik",
           es: "Esquivar",
+          it: "Schivare",
         },
       },
       {
@@ -900,6 +1001,7 @@ export default {
           ru: "Запугивание",
           pl: "Zastraszanie",
           es: "Intimidar",
+          it: "Intimidire",
         },
       },
       {
@@ -911,6 +1013,7 @@ export default {
           ru: "Интуиция",
           pl: "Intuicja",
           es: "Intuición",
+          it: "Intuire",
         },
       },
       {
@@ -922,6 +1025,7 @@ export default {
           ru: "Торговля",
           pl: "Targowanie",
           es: "Regatear",
+          it: "Mercanteggiare",
         },
       },
       {
@@ -933,6 +1037,7 @@ export default {
           ru: "Ориентирование",
           pl: "Nawigacja",
           es: "Orientación",
+          it: "Orientarsi",
         },
       },
       {
@@ -944,6 +1049,7 @@ export default {
           ru: "Азартные игры",
           pl: "Hazard",
           es: "Jugar",
+          it: "Giocare d&apos;Azzardo",
         },
       },
       {
@@ -955,6 +1061,7 @@ export default {
           ru: "Наблюдательность",
           pl: "Percepcja",
           es: "Percepción",
+          it: "Percepire",
         },
       },
       {
@@ -966,6 +1073,7 @@ export default {
           ru: "Сплетничество",
           pl: "Plotkowanie",
           es: "Cotillear",
+          it: "Pettegolezzi",
         },
       },
       {
@@ -977,6 +1085,7 @@ export default {
           ru: "Гребля",
           pl: "Wioślarstwo",
           es: "Remar",
+          it: "Remare",
         },
       },
       {
@@ -988,6 +1097,7 @@ export default {
           ru: "Стойкость",
           pl: "Odporność",
           es: "Aguante",
+          it: "Tempra",
         },
       },
       {
@@ -999,6 +1109,7 @@ export default {
           ru: "Кутеж",
           pl: "Mocna głowa",
           es: "Consumir Alcohol",
+          it: "Reggere Alcolici",
         },
       },
       {
@@ -1010,6 +1121,7 @@ export default {
           ru: "Подкуп",
           pl: "Przekupstwo",
           es: "Sobornar",
+          it: "Corrompere",
         },
       },
       {
@@ -1021,6 +1133,7 @@ export default {
           ru: "Выживание",
           pl: "Sztuka Przetrwania",
           es: "Supervivencia",
+          it: "Sopravvivere",
         },
       },
     ],
@@ -1030,6 +1143,7 @@ export default {
       ru: "На основе характеристик",
       pl: "Podstawa",
       es: "Basada en Característica",
+      it: "Basato su Caratteristica",
     },
   },
   talents: {
@@ -1039,6 +1153,7 @@ export default {
       ru: "Таланты",
       pl: "Talenty",
       es: "Talentos",
+      it: "Talenti",
     },
     name: {
       fr: "Nom du talent",
@@ -1046,6 +1161,7 @@ export default {
       ru: "Талант",
       pl: "Talent",
       es: "Nombre del Talento",
+      it: "Nome",
     },
     taken: {
       fr: "Nombre de fois pris",
@@ -1053,6 +1169,7 @@ export default {
       ru: "Уровень",
       pl: "Poziom talentu",
       es: "Veces Adquirido",
+      it: "Grado",
     },
     takenAbbr: {
       fr: "Nbre pris",
@@ -1060,6 +1177,7 @@ export default {
       ru: "Уровень",
       pl: "Poziom",
       es: "Adq.",
+      it: "Grado",
     },
     desc: {
       fr: "Description",
@@ -1067,6 +1185,7 @@ export default {
       ru: "Описание",
       pl: "Opis",
       es: "Descripción",
+      it: "Descrizione",
     },
     highlight: {
       fr: "Surligner ce talent",
@@ -1074,6 +1193,7 @@ export default {
       ru: "Подсветить талант",
       pl: "Oznacz ten talent",
       es: "Resaltar este talento",
+      it: "Evidenzia questo talento",
     },
   },
   ambitions: {
@@ -1083,6 +1203,7 @@ export default {
       ru: "Амбиции",
       pl: "Ambicje",
       es: "Ambiciones",
+      it: "Ambizioni",
     },
     short: {
       fr: "À court terme",
@@ -1090,6 +1211,7 @@ export default {
       ru: "Краткосрочная",
       pl: "Ambicja krótkoterminowa",
       es: "Corto Plazo",
+      it: "Breve Termine",
     },
     long: {
       fr: "À long terme",
@@ -1097,6 +1219,7 @@ export default {
       ru: "Долгосрочная",
       pl: "Ambicja długoterminowa",
       es: "Largo Plazo",
+      it: "Lungo Termine",
     },
   },
   party: {
@@ -1106,6 +1229,7 @@ export default {
       ru: "Команда",
       pl: "Drużyna",
       es: "Grupo",
+      it: "Gruppo",
     },
     name: {
       fr: "Nom du groupe",
@@ -1113,6 +1237,7 @@ export default {
       ru: "Название команды",
       pl: "Nazwa drużyny",
       es: "Nombre del Grupo",
+      it: "Nome del Gruppo",
     },
     short: {
       fr: "À court terme",
@@ -1120,6 +1245,7 @@ export default {
       ru: "Краткосрочная амбиция",
       pl: "Ambicja drużynowa krótkoterminowa",
       es: "Corto Plazo",
+      it: "Breve Termine",
     },
     long: {
       fr: "À long terme",
@@ -1127,6 +1253,7 @@ export default {
       ru: "Долгосрочная амбиция",
       pl: "Ambicja drużynowa długoterminowa",
       es: "Largo Plazo",
+      it: "Lungo Termine",
     },
     members: {
       fr: "Membres",
@@ -1134,6 +1261,7 @@ export default {
       ru: "Члены команды",
       pl: "Członkowie drużyny",
       es: "Miembros",
+      it: "Membri",
     },
   },
   armour: {
@@ -1143,6 +1271,7 @@ export default {
       ru: "Броня",
       pl: "Pancerz",
       es: "Armadura",
+      it: "Armatura",
     },
     name: {
       fr: "Nom",
@@ -1150,6 +1279,7 @@ export default {
       ru: "Название",
       pl: "Nazwa",
       es: "Nombre",
+      it: "Nome",
     },
     locations: {
       fr: "Localisation",
@@ -1157,6 +1287,7 @@ export default {
       ru: "Зоны попадания",
       pl: "Lokacja",
       es: "Ubicaciones",
+      it: "Locazioni",
     },
     encumbrance: {
       fr: "Encombrement",
@@ -1164,6 +1295,7 @@ export default {
       ru: "Вес",
       pl: "Obciążenie",
       es: "Impedimenta",
+      it: "Ingombro",
     },
     encumbranceAbbr: {
       fr: "Enc",
@@ -1171,6 +1303,7 @@ export default {
       ru: "Вес",
       pl: "Obc",
       es: "Imp.",
+      it: "Ing",
     },
     points: {
       fr: "Points d&apos;armure",
@@ -1178,6 +1311,7 @@ export default {
       ru: "Класс брони",
       pl: "Punkty Pancerza",
       es: "Puntos de Armadura",
+      it: "Punti Armatura",
     },
     pointsAbbr: {
       fr: "PA",
@@ -1185,6 +1319,7 @@ export default {
       ru: "КБ",
       pl: "PP",
       es: "PA",
+      it: "PA",
     },
     qualities: {
       fr: "Atouts/Défauts",
@@ -1192,6 +1327,7 @@ export default {
       ru: "Качества",
       pl: "Cechy",
       es: "Cualidades",
+      it: "Qualità",
     },
     worn: {
       fr: "Porté",
@@ -1199,6 +1335,7 @@ export default {
       ru: "Снаряжен",
       pl: "Założony",
       es: "Equipada",
+      it: "Equipaggiata",
     },
   },
   armourPoints: {
@@ -1208,6 +1345,7 @@ export default {
       ru: "Класс брони (КБ)",
       pl: "Punkty Pancerza (PP)",
       es: "Puntos de Armadura (PA)",
+      it: "Punti Armatura (PA)",
     },
     head: {
       fr: "Tête",
@@ -1215,6 +1353,7 @@ export default {
       ru: "Голова",
       pl: "Głowa",
       es: "Cabeza",
+      it: "Testa",
     },
     rightArm: {
       fr: "Bras fort",
@@ -1222,6 +1361,7 @@ export default {
       ru: "Правая рука",
       pl: "Prawa ręka",
       es: "Brazo Derecho",
+      it: "Braccio Destro",
     },
     leftArm: {
       fr: "Bras faible",
@@ -1229,6 +1369,7 @@ export default {
       ru: "Левая рука",
       pl: "Lewa ręka",
       es: "Brazo Izquierdo",
+      it: "Braccio Sinistro",
     },
     body: {
       fr: "Corps",
@@ -1236,6 +1377,7 @@ export default {
       ru: "Торс",
       pl: "Korpus",
       es: "Cuerpo",
+      it: "Torso",
     },
     rightLeg: {
       fr: "Jambe droite",
@@ -1243,6 +1385,7 @@ export default {
       ru: "Правая нога",
       pl: "Prawa noga",
       es: "Pierna Derecha",
+      it: "Gamba Destra",
     },
     leftLeg: {
       fr: "Jambe gauche",
@@ -1250,6 +1393,7 @@ export default {
       ru: "Левая нога",
       pl: "Lewa noga",
       es: "Pierna Izquierda",
+      it: "Gamba Sinistra",
     },
     shield: {
       fr: "Bouclier",
@@ -1257,6 +1401,7 @@ export default {
       ru: "Щит",
       pl: "Tarcza",
       es: "Escudo",
+      it: "Scudo",
     },
   },
   wounds: {
@@ -1266,6 +1411,7 @@ export default {
       ru: "Здоровье",
       pl: "Żywotność",
       es: "Heridas",
+      it: "Ferite",
     },
     strengthBonus: {
       fr: "Bonus de Force",
@@ -1273,6 +1419,7 @@ export default {
       ru: "Рейтинг Силы",
       pl: "Bonus z Siły",
       es: "Bonificador de Fuerza",
+      it: "Bonus di Forza",
     },
     strengthBonusAbbr: {
       fr: "BF",
@@ -1280,6 +1427,7 @@ export default {
       ru: "РС",
       pl: "BS",
       es: "BF",
+      it: "BF",
     },
     toughnessBonus: {
       fr: "Bonus de d&apos;Endurance fois deux",
@@ -1287,6 +1435,7 @@ export default {
       ru: "Рейтинг Выносилвости помноженный на два",
       pl: "Podwojony bonus z Wytrzymałości",
       es: "Bonificador de Resistencia (x2)",
+      it: "Bonus di Resistenza per due",
     },
     toughnessBonusAbbr: {
       fr: "BEx2",
@@ -1294,6 +1443,7 @@ export default {
       ru: "РВх2",
       pl: "BWtx2",
       es: "BRx2",
+      it: "BRx2",
     },
     willPowerBonus: {
       fr: "Bonus de Force Mentale",
@@ -1301,6 +1451,7 @@ export default {
       ru: "Рейтинг Силы Воли",
       pl: "Bonus z Siły Woli",
       es: "Bonificador de Voluntad",
+      it: "Bonus di Volontà",
     },
     willPowerBonusAbbr: {
       fr: "BFM",
@@ -1308,6 +1459,7 @@ export default {
       ru: "РСВ",
       pl: "BSW",
       es: "BV",
+      it: "BVol",
     },
     hardy: {
       fr: "Niveau Dur à cuire",
@@ -1315,6 +1467,7 @@ export default {
       ru: "Здоровяк (ур.)",
       pl: "Twardziel (Poz)",
       es: "Recio",
+      it: "Gagliardo",
     },
     hardyLabel: {
       fr: "Niveau du talent Dur à cuire",
@@ -1322,6 +1475,7 @@ export default {
       ru: "Уровень таланта Здоровяк",
       pl: "Poziom talentu Twardziel",
       es: "Nivel del Talento Recio",
+      it: "Grado del Talento Gagliardo",
     },
     current: {
       fr: "Points de blessure actuels",
@@ -1329,6 +1483,7 @@ export default {
       ru: "Пункты здоровья",
       pl: "Aktualne rany",
       es: "Heridas",
+      it: "Ferite",
     },
   },
   trappings: {
@@ -1338,6 +1493,7 @@ export default {
       ru: "Имущество",
       pl: "Wyposażenie",
       es: "Accesorios",
+      it: "Averi",
     },
     name: {
       fr: "Nom",
@@ -1345,6 +1501,7 @@ export default {
       ru: "Название",
       pl: "Nazwa",
       es: "Nombre",
+      it: "Nome",
     },
     encumbrance: {
       fr: "Encombrement",
@@ -1352,6 +1509,7 @@ export default {
       ru: "Вес",
       pl: "Obiążenie",
       es: "Impedimenta",
+      it: "Ingombro",
     },
     encumbranceAbbr: {
       fr: "Enc",
@@ -1359,6 +1517,7 @@ export default {
       ru: "Вес",
       pl: "Obc",
       es: "Imp.",
+      it: "Ing",
     },
     worn: {
       fr: "Porté",
@@ -1366,6 +1525,7 @@ export default {
       ru: "Снаряжен",
       pl: "Założone",
       es: "Equipado",
+      it: "Equipaggiato",
     },
   },
   encumbrance: {
@@ -1375,6 +1535,7 @@ export default {
       ru: "Вес",
       pl: "Obiążenie",
       es: "Impedimenta",
+      it: "Ingombro",
     },
     weapons: {
       fr: "Armes",
@@ -1382,6 +1543,7 @@ export default {
       ru: "Оружие",
       pl: "Broń",
       es: "Armas",
+      it: "Armi",
     },
     armour: {
       fr: "Armures",
@@ -1389,6 +1551,7 @@ export default {
       ru: "Броня",
       pl: "Pancerz",
       es: "Armaduras",
+      it: "Armatura",
     },
     trappings: {
       fr: "Possessions",
@@ -1396,6 +1559,7 @@ export default {
       ru: "Имущество",
       pl: "Wyposażenie",
       es: "Accesorios",
+      it: "Averi",
     },
     max: {
       fr: "Encombrement maximum",
@@ -1403,6 +1567,7 @@ export default {
       ru: "Максимальное значение веса",
       pl: "Maksymalne Obciążenie",
       es: "Impedimenta Máxima",
+      it: "Ingombro Massimo",
     },
     maxAbbr: {
       fr: "Enc. max",
@@ -1410,6 +1575,7 @@ export default {
       ru: "Макс вес",
       pl: "Max Obc",
       es: "Imp. Máx.",
+      it: "Max Ing",
     },
     total: {
       fr: "Total",
@@ -1417,6 +1583,7 @@ export default {
       ru: "Общий вес",
       pl: "Suma",
       es: "Total",
+      it: "Totale",
     },
     penalty0: {
       title: {
@@ -1425,6 +1592,7 @@ export default {
         ru: "Без штрафов",
         pl: "Kara",
         es: "Sin penalización",
+        it: "Nessuna penalità",
       },
     },
     penalty1: {
@@ -1434,6 +1602,7 @@ export default {
         ru: "Перегружен Ур. 1",
         pl: "Przeciążony Poz 1",
         es: "Sobrecargado Nivel 1",
+        it: "Sovraccarico Liv. 1",
       },
       p1: {
         fr: "-1 mouvement (Min: 3)",
@@ -1441,6 +1610,7 @@ export default {
         ru: "-1 Перемещение (Мин: 3)",
         pl: "-1 Szybkość (Min: 3)",
         es: "-1 Movimiento (Mín: 3)",
+        it: "-1 Movimento (minimo 3)",
       },
       p2: {
         fr: "-10 en agilité",
@@ -1448,6 +1618,7 @@ export default {
         ru: "-10 Ловкость",
         pl: "-10 Zwinność",
         es: "-10 a Agilidad",
+        it: "-10 Agilità",
       },
       p3: {
         fr: "+1 fatigue du voyage",
@@ -1455,6 +1626,7 @@ export default {
         ru: "+1 усталость",
         pl: "+1 Zmęczenie podróżą",
         es: "+1 a Fatiga por Viaje",
+        it: "+1 Affaticato",
       },
     },
     penalty2: {
@@ -1464,6 +1636,7 @@ export default {
         ru: "Перегружен Ур. 2",
         pl: "Przeciążony Poz 2",
         es: "Sobrecargado Nivel 2",
+        it: "Sovraccarico Liv. 2"
       },
       p1: {
         fr: "-2 mouvement (Min: 3)",
@@ -1471,6 +1644,7 @@ export default {
         ru: "-2 Перемещение (Мин: 3)",
         pl: "-2 Szybkość (Min: 3)",
         es: "-2 Movimiento (Mín: 3)",
+        it: "-2 Movimento (minimo 2)",
       },
       p2: {
         fr: "-20 en agilité",
@@ -1478,6 +1652,7 @@ export default {
         ru: "-20 Ловкость",
         pl: "-20 Zwinność",
         es: "-20 a Agilidad",
+        it: "-20 Agilità",
       },
       p3: {
         fr: "+2 fatigue du voyage",
@@ -1485,6 +1660,7 @@ export default {
         ru: "+2 Усталось",
         pl: "+2 Zmęczenie podróżą",
         es: "+2 a Fatiga por Viaje",
+        it: "+2 Affaticamento",
       },
     },
     penalty3: {
@@ -1494,6 +1670,7 @@ export default {
         ru: "Перегружен Ур 3",
         pl: "Przeciążony Poz 3",
         es: "Sobrecargado Nivel 3",
+        it: "Sovraccarico Liv. 3",
       },
       p1: {
         fr: "Vous ne pouvez plus vous déplacer",
@@ -1501,6 +1678,7 @@ export default {
         ru: "Без движения",
         pl: "Nie możesz się poruszać",
         es: "No puedes moverte",
+        it: "Immobilizzato",
       },
     },
   },
@@ -1511,6 +1689,7 @@ export default {
       ru: "Деньги",
       pl: "Zamożność",
       es: "Riqueza",
+      it: "Ricchezza",
     },
     copper: {
       fr: "Sous de cuivre",
@@ -1518,6 +1697,7 @@ export default {
       ru: "Медные Пенни",
       pl: "Brązowe Pensy",
       es: "Peniques de Bronce",
+      it: "Penny d&apos;Ottone",
     },
     copperAbbr: {
       fr: "sc",
@@ -1525,6 +1705,7 @@ export default {
       ru: "Медь",
       pl: "P",
       es: "P",
+      it: "p",
     },
     silver: {
       fr: "Pistoles d&apos;argent",
@@ -1532,6 +1713,7 @@ export default {
       ru: "Серебряные Шиллинги",
       pl: "Srebrne Szylingi",
       es: "Chelines de Plata",
+      it: "Scellini d&apos;Argento",
     },
     silverAbbr: {
       fr: "/-",
@@ -1539,6 +1721,7 @@ export default {
       ru: "Серебро",
       pl: "S",
       es: "CP",
+      it: "s",
     },
     gold: {
       fr: "Couronnes d&apos;or",
@@ -1546,6 +1729,7 @@ export default {
       ru: "Золотые Кроны",
       pl: "Złote Korony",
       es: "Coronas de Oro",
+      it: "Corone d&apos;Oro",
     },
     goldAbbr: {
       fr: "CO",
@@ -1553,6 +1737,7 @@ export default {
       ru: "Золото",
       pl: "ZK",
       es: "CO",
+      it: "Co",
     },
     change: {
       fr: "1CO = 20/- = 240sc",
@@ -1560,6 +1745,7 @@ export default {
       ru: "1 Золотой = 20 Серебряных = 240 Медных",
       pl: "1ZK = 20S = 240P",
       es: "1CO = 20CP = 240P",
+      it: "1Co = 20s = 240p",
     },
   },
   psychology: {
@@ -1569,6 +1755,7 @@ export default {
       ru: "Психология",
       pl: "Psychologia",
       es: "Psicología",
+      it: "Psicologia",
     },
   },
   corruption: {
@@ -1578,6 +1765,7 @@ export default {
       ru: "Скверна и Мутации",
       pl: "Zepsucie i Mutacje",
       es: "Corrupción y Mutaciones",
+      it: "Corruzione & Mutazioni",
     },
     threshold: {
       fr: "Seuil",
@@ -1585,6 +1773,7 @@ export default {
       ru: "Порог",
       pl: "Limit",
       es: "Límite",
+      it: "Limite",
     },
     points: {
       fr: "Points de corruption",
@@ -1592,6 +1781,7 @@ export default {
       ru: "Очки скверны",
       pl: "Punkty Zepsucia",
       es: "Puntos de Corrupción",
+      it: "Punti di Corruzione",
     },
     mutations: {
       fr: "Mutations",
@@ -1599,6 +1789,7 @@ export default {
       ru: "Мутации",
       pl: "Mutacje",
       es: "Mutaciones",
+      it: "Mutazioni",
     },
   },
   weapons: {
@@ -1608,6 +1799,7 @@ export default {
       ru: "Оружие",
       pl: "Broń",
       es: "Armas",
+      it: "Armi",
     },
     name: {
       fr: "Nom",
@@ -1615,6 +1807,7 @@ export default {
       ru: "Название",
       pl: "Nazwa",
       es: "Nombre",
+      it: "Nome",
     },
     group: {
       fr: "Groupe",
@@ -1622,6 +1815,7 @@ export default {
       ru: "Тип",
       pl: "Kategoria",
       es: "Grupo",
+      it: "Gruppo",
     },
     encumbrance: {
       fr: "Encombrement",
@@ -1629,6 +1823,7 @@ export default {
       ru: "Вес",
       pl: "Obiążenie",
       es: "Impedimenta",
+      it: "Ingombro",
     },
     encumbranceAbbr: {
       fr: "Enc",
@@ -1636,6 +1831,7 @@ export default {
       ru: "Вес",
       pl: "Obc",
       es: "Imp.",
+      it: "Ing",
     },
     range: {
       fr: "Portée/Allonge",
@@ -1643,6 +1839,7 @@ export default {
       ru: "Длина/Дальность",
       pl: "Zasięg",
       es: "Alcance/Rango",
+      it: "Gittata/Portata",
     },
     damage: {
       fr: "Dégâts",
@@ -1650,6 +1847,7 @@ export default {
       ru: "Урон",
       pl: "Obrażenia",
       es: "Daño",
+      it: "Danno",
     },
     qualities: {
       fr: "Atouts/Défauts",
@@ -1657,6 +1855,7 @@ export default {
       ru: "Качества",
       pl: "Cechy",
       es: "Cualidades",
+      it: "Qualità",
     },
     worn: {
       fr: "Porté",
@@ -1664,6 +1863,7 @@ export default {
       ru: "Снаряжен",
       pl: "Wyposażona",
       es: "Equipada",
+      it: "Equipaggiata",
     },
   },
   spells: {
@@ -1673,6 +1873,7 @@ export default {
       ru: "Заклинания и Молитвы",
       pl: "Czary i Modlitwy",
       es: "Hechizos y Plegarias",
+      it: "Incantesimi e Preghiere",
     },
     name: {
       fr: "Nom",
@@ -1680,6 +1881,7 @@ export default {
       ru: "Название",
       pl: "Nazwa",
       es: "Nombre",
+      it: "Nome",
     },
     cn: {
       fr: "Niveau d&apos;incantation",
@@ -1687,6 +1889,7 @@ export default {
       ru: "Порог Сотворения",
       pl: "Poziom Czaru",
       es: "Nivel de Lanzamiento",
+      it: "Valore di Lancio",
     },
     cnAbbr: {
       fr: "NI",
@@ -1694,6 +1897,7 @@ export default {
       ru: "ПС",
       pl: "PC",
       es: "NL",
+      it: "VL",
     },
     range: {
       fr: "Portée",
@@ -1701,6 +1905,7 @@ export default {
       ru: "Дальность",
       pl: "Zasięg",
       es: "Rango",
+      it: "Gittata",
     },
     target: {
       fr: "Cible",
@@ -1708,6 +1913,7 @@ export default {
       ru: "Цель",
       pl: "Cel",
       es: "Objetivo",
+      it: "Bersaglio",
     },
     duration: {
       fr: "Durée",
@@ -1715,6 +1921,7 @@ export default {
       ru: "Длительность",
       pl: "Czas trwania",
       es: "Duración",
+      it: "Durata",
     },
     effects: {
       fr: "Effets",
@@ -1722,6 +1929,7 @@ export default {
       ru: "Эффект",
       pl: "Efekt",
       es: "Efecto",
+      it: "Effetto",
     },
     sin: {
       fr: "Péché",
@@ -1729,6 +1937,7 @@ export default {
       ru: "Грех",
       pl: "Punkty Grzechu",
       es: "Pecado",
+      it: "Peccato",
     },
   },
   settings: {
@@ -1738,6 +1947,7 @@ export default {
       ru: "Настройки",
       pl: "Ustawienia",
       es: "Ajustes",
+      it: "Impostazioni",
     },
     close: {
       fr: "Fermer",
@@ -1745,6 +1955,7 @@ export default {
       ru: "Закрыть",
       pl: "Zamknij",
       es: "Cerrar",
+      it: "Chiudi",
     },
     open: {
       fr: "Ouvrir les paramètres",
@@ -1752,6 +1963,7 @@ export default {
       ru: "Открыть настройки",
       pl: "Otwórz ustawienia",
       es: "Abrir ajustes",
+      it: "Apri impostazioni",
     },
     theme: {
       title: {
@@ -1760,6 +1972,7 @@ export default {
         ru: "Выбрать оформление",
         pl: "Wybierz motyw",
         es: "Elegir mi tema",
+        it: "Scegli il tema",
       },
       light: {
         fr: "Clair",
@@ -1767,6 +1980,7 @@ export default {
         ru: "Светлая",
         pl: "Jasny",
         es: "Claro",
+        it: "Chiaro",
       },
       dark: {
         fr: "Foncé",
@@ -1774,6 +1988,7 @@ export default {
         ru: "Темная",
         pl: "Ciemny",
         es: "Oscuro",
+        it: "Scuro",
       },
       auto: {
         fr: "Auto",
@@ -1781,6 +1996,7 @@ export default {
         ru: "Автоматически",
         pl: "Auto",
         es: "Auto",
+        it: "Auto",
       },
       notice: {
         fr: 'Le choix "auto" s&apos;affichera selon la préférence paramétrée dans votre système d&apos;exploitation.',
@@ -1788,6 +2004,7 @@ export default {
         ru: "Автоматическое оформление будет зависеть от настроек системы.",
         pl: "Opcja 'auto' jest zależna od ustawienia w systemie operacyjnym.",
         es: 'La opción "Auto" se basará en la configuración de su sistema operativo.',
+        it: "L&apos;impostazione Auto si baserà sulla configurazione del sistema operativo."
       },
     },
     data: {
@@ -1797,6 +2014,7 @@ export default {
         ru: "Управление данными",
         pl: "Zarządzanie danymi",
         es: "Gestión de datos",
+        it: "Gestione dei dati",
       },
     },
     export: {
@@ -1806,6 +2024,7 @@ export default {
         ru: "Экспорт локальный данных",
         pl: "Eksportuj dane",
         es: "Exportar mis datos locales",
+        it: "Esporta i dati locali",
       },
       button: {
         fr: "Télécharger mes données",
@@ -1813,6 +2032,7 @@ export default {
         ru: "Скачать мои данные",
         pl: "Pobierz dane",
         es: "Descargar mis datos",
+        it: "Scarica i miei dati",
       },
       notice: {
         fr: "Le fichier d&apos;export sera au format <strong>.json</strong>.<br>Les données locales ne seront pas supprimées.",
@@ -1820,6 +2040,7 @@ export default {
         ru: "Данные будут сохранены в формате <strong>.json</strong>.<br>Локальные даные не будут удалены.",
         pl: "Eksportujesz dane do formatu <strong>.json</strong>. Dane nie zostaną usunięte z przeglądarki.",
         es: "El archivo de exportación tendrá formato <strong>.json</strong>.<br>Los datos locales no serán eliminados.",
+        it: "Il file di esportazione avrà un formato <strong>.json</strong>.<br>I dati locali non saranno cancellati.",
       },
     },
     clear: {
@@ -1829,6 +2050,7 @@ export default {
         ru: "Очистить мои локальные данные",
         pl: "Wyczyść moje lokalne dane",
         es: "Borrar mis datos locales",
+        it: "Cancella i dati locali",
       },
       button: {
         fr: "Supprimer",
@@ -1836,6 +2058,7 @@ export default {
         ru: "Удалить",
         pl: "Usuń",
         es: "Borrar",
+        it: "Cancella",
       },
       notice: {
         fr: "⚠️ Cette action est irréversible. Pensez à faire une sauvegarde avant !",
@@ -1843,6 +2066,7 @@ export default {
         ru: "⚠️ Это действие не может быть отменено. Сначала сделайте резервную копию!",
         pl: "⚠️ Tego działania nie można cofnąć. Najpierw zrób kopię zapasową!",
         es: "⚠️ Esta acción es irreversible. ¡Considere hacer una copia de seguridad primero!",
+        it: "⚠️ Questa azione non può essere annullata. Esegui un backup prima!"
       },
     },
     import: {
@@ -1852,6 +2076,7 @@ export default {
         ru: "Импортировать мои данные",
         pl: "Importuj dane",
         es: "Importar mis datos",
+        it: "Importa i miei dati"
       },
       button: {
         fr: "Envoyer",
@@ -1859,6 +2084,7 @@ export default {
         ru: "Отправить",
         pl: "Wyślij",
         es: "Enviar",
+        it: "Invia",
       },
       notice: {
         fr: "⚠️ Importer des données écrasera toute donnée actuellement enregistrée localement.",
@@ -1866,6 +2092,7 @@ export default {
         ru: "⚠️ Импорт данных перезапишет существующие локальные данные.",
         pl: "⚠️ Importowanie danych nadpisze obecnie zapisane dane w przeglądarce.",
         es: "⚠️ Importar datos sobrescribirá cualquier dato actualmente guardado localmente.",
+        it: "⚠️ Importare i dati sovrascriverà qualsiasi dato locale già presente.",
       },
       success: {
         fr: "Données importées. 🎉",
@@ -1873,6 +2100,7 @@ export default {
         ru: "Данные импортированы. 🎉",
         pl: "Dane zaimportowane. 🎉",
         es: "Datos importados. 🎉",
+        it: "Dati importati. 🎉",
       },
       errorEmpty: {
         fr: "Aucun fichier selectionné.",
@@ -1880,6 +2108,7 @@ export default {
         ru: "Файл не выбран",
         pl: "Nie wybrano żadnego pliku",
         es: "Ningún archivo seleccionado.",
+        it: "Nessun file selezionato",
       },
       errorFile: {
         fr: "Le fichier doit être un fichier JSON.",
@@ -1887,6 +2116,7 @@ export default {
         ru: "Формат файла с данными должен быть JSON",
         pl: "Plik danych musi być w formacie JSON.",
         es: "El archivo de datos debe ser un archivo JSON.",
+        it: "Il file deve essere un file JSON",
       },
       error: {
         fr: "Une erreur est survenue. Vérifiez que vous avez bien fourni un fichier JSON provenant de l&apos;app et, le cas échéant, contactez l&apos;administrateur.",
@@ -1894,6 +2124,7 @@ export default {
         ru: "Произошла ошибка. Проверьте что вы предоставили файл из этого приложения в формате JSON, если все корректно - свяжитесь с администрацией.",
         pl: "Wystąpił błąd. Sprawdź, czy wybrałeś plik eksportowany z aplikacji. Jeżeli tak, skontaktuj się z administratorem.",
         es: "Ha ocurrido un error. Compruebe que ha proporcionado un archivo JSON de la aplicación y, si es el caso, contacte al administrador.",
+        it: "Si è verificato un errore. Controlla di aver selezionato un file JSON generato dall&apos;app, altrimenti contatta l&apos;admin.",
       },
     },
     version: {
@@ -1903,6 +2134,7 @@ export default {
         ru: "Версия",
         pl: "Wersja",
         es: "Versión",
+        it: "Versione",
       },
       desc: {
         fr: "Version actuelle :",
@@ -1910,6 +2142,7 @@ export default {
         ru: "Текущая версия:",
         pl: "Aktualna wersja:",
         es: "Versión actual:",
+        it: "Versione attuale:",
       },
       more: {
         fr: "Cliquez sur le lien dessous pour plus d&apos;informations",
@@ -1917,6 +2150,7 @@ export default {
         ru: "Чтобы ознакомиться с подробностями нажмите на ссылку ниже",
         pl: "Kliknij w poniższy link po więcej informacji",
         es: "Haga clic en el enlace de abajo para más información",
+        it: "Clicca sul link successivo per maggiori informazioni",
       },
       link: {
         fr: "Lire le CHANGELOG.md (en anglais)",
@@ -1924,6 +2158,7 @@ export default {
         ru: "Прочитать CHANGELOG.md (янгл. язык)",
         pl: "Przeczytaj plik CHANGELOG.md (po angielsku)",
         es: "Leer el CHANGELOG.md (en inglés)",
+        it: "Leggi le CHANGELOG.md (in inglese)",
       },
     },
   },
