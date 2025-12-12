@@ -19,7 +19,6 @@
   <link rel="stylesheet" href="../css/app.css">
   <link rel="stylesheet" href="../css/highlight-toggle.css">
   <link rel="stylesheet" href="../css/error-modal.css">
-  <link rel="stylesheet" href="../css/preview-tooltip.css">
 </head>
 <body>
   <svg id="sprite">
@@ -2162,7 +2161,7 @@
         <hr>
         <div>
           <h2>Version</h2>
-          <p>Version actuelle : <strong>2.5.0</strong></p>
+          <p>Version actuelle : <strong>2.4.0</strong></p>
           <p>Cliquez sur le lien dessous pour plus d&apos;informations</p>
           <p><a class="button" href="https://github.com/GoOz/wfrp-sheet/blob/main/CHANGELOG.md">Lire le CHANGELOG.md (en anglais)</a></p>
         </div>
@@ -2227,74 +2226,5 @@ Coût: {cost} XP
   </div>
 </div>
 
-  <template id="preview-tooltip-cost">
-  <div class="preview-tooltip-content">
-    <div class="preview-main-value"></div>
-    <div class="preview-cost">Coût :  XP</div>
-    <div class="preview-buttons">
-      <button class="preview-btn cancel" type="button">Annuler</button>
-      <button class="preview-btn ok" type="button">OK</button>
-    </div>
-  </div>
-</template>
-
-<template id="preview-tooltip-refund">
-  <div class="preview-tooltip-content">
-    <div class="preview-main-value"></div>
-    <div class="preview-cost">Remboursement :  XP</div>
-    <div class="preview-buttons">
-      <button class="preview-btn cancel" type="button">Annuler</button>
-      <button class="preview-btn ok" type="button">OK</button>
-    </div>
-  </div>
-</template>
-
-<template id="preview-tooltip-nochange">
-  <div class="preview-tooltip-content">
-    <div class="preview-main-value"></div>
-    <div class="preview-cost">Aucun changement</div>
-    <div class="preview-buttons">
-      <button class="preview-btn cancel" type="button">Annuler</button>
-      <button class="preview-btn ok" type="button">OK</button>
-    </div>
-  </div>
-</template>
-  <template id="preview-tooltip-error-invalid">
-  <div class="preview-tooltip-content invalid">
-    <div class="preview-main-value" style="color: #dc3545;"></div>
-    <div class="preview-error">Expression invalide</div>
-    <div class="preview-buttons">
-      <button class="preview-btn cancel" type="button">Annuler</button>
-    </div>
-  </div>
-</template>
-
-<template id="preview-tooltip-error-xpfields">
-  <div class="preview-tooltip-content invalid">
-    <div class="preview-main-value" style="color: #dc3545;"></div>
-    <div class="preview-error">Champs XP non trouvés</div>
-    <div class="preview-buttons">
-      <button class="preview-btn cancel" type="button">Annuler</button>
-    </div>
-  </div>
-</template>
-
-<template id="preview-tooltip-error-insufficient">
-  <div class="preview-tooltip-content invalid">
-    <div class="preview-main-value" style="color: #dc3545;"></div>
-    <div class="preview-error">Pas assez d'expérience.
-
-Disponible :  XP
-Coût :  XP</div>
-    <div class="preview-buttons">
-      <button class="preview-btn cancel" type="button">Annuler</button>
-    </div>
-  </div>
-</template> 
-  <template id="preview-tooltip-value">
-  <div class="preview-tooltip-content">
-    <div class="preview-simple-value"></div>
-  </div>
-</template>
 </body>
 </html>
